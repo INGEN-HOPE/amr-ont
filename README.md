@@ -1,7 +1,9 @@
  <p>Please visit <a href="https://ingen-hope.github.io/amr-ont/" target="_blank">https://ingen-hope.github.io/amr-ont/</a> 
  For the complete manual.</p>
-
-<p>Welcome to the 2nd Indo-Vietnam Hands-On Training Workshop on Understanding Antimicrobial Resistance (AMR)! As AMR continues to pose a significant threat to global health, it is essential that we harness innovative technologies to combat this challenge. This module is designed to provide you with both the theoretical knowledge and practical skills needed to investigate AMR mechanisms using state-of-the-art methods. For more information, visit <a href="https://ingen-hope.github.io/amr-ont.github.io/" target="_blank">this link</a>.</p>
+ 
+ <h1>Understanding Antimicrobial Resistance (AMR) using Nanopore</h1>
+ 
+<p>Welcome to the 2nd Indo-Vietnam Hands-On Training Workshop on Understanding Antimicrobial Resistance (AMR)! As AMR continues to pose a significant threat to global health, it is essential that we harness innovative technologies to combat this challenge. This module is designed to provide you with both the theoretical knowledge and practical skills needed to investigate AMR mechanisms using state-of-the-art methods.</p>
 
 <p>Welcome to the 2nd Indo-Vietnam Hands-On Training Workshop on Understanding Antimicrobial Resistance (AMR)! As AMR continues to pose a significant threat to global health, it is essential that we harness innovative technologies to combat this challenge. This module is designed to provide you with both the theoretical knowledge and practical skills needed to investigate AMR mechanisms using state-of-the-art methods.</p>
 <p>Throughout this workshop, we will explore the transformative potential of nanopore sequencing technology, which enables real-time, high-throughput analysis of microbial genomes. When combined with advanced computational biology tools, nanopore sequencing offers unprecedented insights into the genetic factors contributing to antimicrobial resistance, allowing us to monitor its emergence and dissemination in various contexts.</p>

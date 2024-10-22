@@ -5,7 +5,7 @@
 <h3>Workshop Modules</h3>
 <ul>
     <li>
-        <p><strong><a href="module1.html">Module 1: Introduction to Nanopore Sequencing and Library Preparation</a></strong><br>Gain insights into the fundamentals of nanopore sequencing technology and the critical steps involved in library preparation.</p>
+        <p><strong><a href="module1.html" target="_blank">Module 1: Introduction to Nanopore Sequencing and Library Preparation</a></strong><br>Gain insights into the fundamentals of nanopore sequencing technology and the critical steps involved in library preparation.</p>
     </li>
     <li>
         <p><strong>Module 2: Sequencing on the MK1c Device</strong><br>Experience hands-on training with the MK1c device, learning the practical aspects of conducting nanopore sequencing.</p>

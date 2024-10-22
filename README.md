@@ -1,7 +1,7 @@
  <p>Please visit <a href="https://ingen-hope.github.io/amr-ont/" target="_blank">https://ingen-hope.github.io/amr-ont/</a> 
  For the complete manual.</p>
  
- <h1>Understanding Antimicrobial Resistance (AMR) using Nanopore</h1>
+ <h1>Understanding Antimicrobial Resistance (AMR) using Nanopore Techniques and Computational Biology</h1>
  
 <p>Welcome to the 2nd Indo-Vietnam Hands-On Training Workshop on Understanding Antimicrobial Resistance (AMR)! As AMR continues to pose a significant threat to global health, it is essential that we harness innovative technologies to combat this challenge. This module is designed to provide you with both the theoretical knowledge and practical skills needed to investigate AMR mechanisms using state-of-the-art methods.</p>
 

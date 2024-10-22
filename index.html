@@ -4,53 +4,140 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Understanding Antimicrobial Resistance (AMR)</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            line-height: 1.6;
-            margin: 20px;
-        }
-        h1, h3 {
-            color: #333;
-        }
-        ul {
-            list-style-type: none;
-            padding: 0;
-        }
-        li {
-            margin: 10px 0;
-        }
-        a {
-            text-decoration: none;
-            color: #0066cc;
-        }
-        a:hover {
-            text-decoration: underline;
-        }
-    </style>
-</head>
-<body>
+<style>
+    body {
+        font-family: Calibri, sans-serif;
+        font-size: 12pt;
+        margin: 20px 10%;
+        padding-top: 120px; /* Adjust this padding as needed */
+        overflow-wrap: break-word;
+    }
 
-    <h1>Understanding Antimicrobial Resistance (AMR) Using Nanopore Technology and Computational Biology</h1>
+    /* Fixed header styles */
+    .fixed-header {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        background-color: #7AB2D3; 
+        padding: 0;
+        z-index: 1000;
+        text-align: center;
+        box-shadow: 0px 4px 2px -2px gray;
+    }
+
+    .fixed-header h1 {
+        margin: 0;
+        padding: 20px; /* Default padding */
+        font-size: 50px; /* Default font size */
+        font-weight: bold;
+        color: white;
+        line-height: 1.2; /* Adjust line height for better spacing */
+    }
+
+    h2 {
+        margin-top: 0;
+        line-height: 107%;
+    }
+
+    p {
+        margin: 0 0 12pt 0; /* Adjust bottom margin */
+        line-height: 110%;
+    }
+
+    /* Responsive styles for smaller screens */
+    @media (max-width: 1200px) {
+        .fixed-header h1 {
+            font-size: 45px; /* Slightly smaller font size */
+            padding: 15px; /* Slightly smaller padding */
+        }
+    }
+
+    @media (max-width: 992px) {
+        .fixed-header h1 {
+            font-size: 40px; /* Further decrease font size */
+            padding: 10px; /* Further decrease padding */
+        }
+
+        body {
+            padding-top: 100px; /* Adjust padding for smaller screens */
+        }
+    }
+
+    @media (max-width: 768px) {
+        .fixed-header h1 {
+            font-size: 35px; /* Further decrease font size */
+            padding: 8px; /* Further decrease padding */
+        }
+
+        body {
+            padding-top: 90px; /* Adjust padding for smaller screens */
+        }
+    }
+
+    @media (max-width: 480px) {
+        .fixed-header h1 {
+            font-size: 28px; /* Much smaller font size */
+            padding: 5px; /* Much smaller padding */
+        }
+
+        body {
+            padding-top: 70px; /* Adjust padding for very small screens */
+        }
+    }
+
+    /* Module list styling */
+    ul {
+        list-style-type: none;
+        padding: 0;
+    }
+
+    li {
+        margin: 10px 0;
+    }
+
+    a {
+        text-decoration: none;
+        color: #0066cc;
+    }
+
+    a:hover {
+        text-decoration: underline;
+    }
+</style>
+
+</head>
+<body lang="EN-US" spellcheck="false">
+
+    <!-- Fixed header section -->
+    <div class="fixed-header">
+        <h1>Understanding Antimicrobial Resistance (AMR)</h1>
+    </div>
+	  <div class="WordSection1">
     <p>Welcome to the 2nd Indo-Vietnam Hands-On Training Workshop on Understanding Antimicrobial Resistance (AMR)! As AMR continues to pose a significant threat to global health, it is essential that we harness innovative technologies to combat this challenge. This module is designed to provide you with both the theoretical knowledge and practical skills needed to investigate AMR mechanisms using state-of-the-art methods.</p>
     <p>Throughout this workshop, we will explore the transformative potential of nanopore sequencing technology, which enables real-time, high-throughput analysis of microbial genomes. When combined with advanced computational biology tools, nanopore sequencing offers unprecedented insights into the genetic factors contributing to antimicrobial resistance, allowing us to monitor its emergence and dissemination in various contexts.</p>
     <p>By the conclusion of this workshop, you will have gained a solid understanding of AMR, practical experience with nanopore sequencing techniques, and the skills to analyze sequencing data effectively using bioinformatics approaches. Our collaborative efforts will not only enhance our individual expertise but also strengthen ties between participants from India and Vietnam, fostering a network dedicated to addressing AMR.</p>
-    
-    <h3>Workshop Modules</h3>
+    </div>
+
+    <p style="bottom: 10px; right: 10px; position: absolute;">
+        <a href="https://wordtohtml.net" target="_blank"></a>
+    </p>
+<h3>Workshop Modules</h3>
     <ul>
         <li>
             <p><strong><a href="module1.html" target="_blank">Module 1: Introduction to Nanopore Sequencing and Library Preparation</a></strong><br>Gain insights into the fundamentals of nanopore sequencing technology and the critical steps involved in library preparation.</p>
         </li>
         <li>
-            <p><strong>Module 2: Sequencing on the MK1c Device</strong><br>Experience hands-on training with the MK1c device, learning the practical aspects of conducting nanopore sequencing.</p>
+            <p><strong><a href="module2.html" target="_blank">Module 2: Sequencing on the MK1c Device</a></strong><br>Experience hands-on training with the MK1c device, learning the practical aspects of conducting nanopore sequencing.</p>
         </li>
         <li>
-            <p><strong>Module 3: Nanopore-Based Data Analysis and AMR Detection</strong><br>Delve into data analysis techniques specific to nanopore sequencing, focusing on identifying antimicrobial resistance markers.</p>
+            <p><strong><a href="module3.html" target="_blank">Module 3: Nanopore-Based Data Analysis and AMR Detection</a></strong><br>Delve into data analysis techniques specific to nanopore sequencing, focusing on identifying antimicrobial resistance markers.</p>
         </li>
         <li>
-            <p><strong>Module 4: AMR Detection in Illumina-Based Sequencing Reads</strong><br>Explore methods for detecting AMR in Illumina sequencing data, understanding how different technologies complement each other.</p>
+            <p><strong><a href="module4.html" target="_blank">Module 4: AMR Detection in Illumina Sequencing Data</a></strong><br>Explore methodologies for detecting antimicrobial resistance in datasets generated by Illumina sequencing technologies.</p>
+			<p><strong><a href="annuexre.html" target="_blank">Annuexre I</a></strong><br>Detailed Protocol for Whole Genome Sequencing with Nanopore Sequencing Platform.</p>
         </li>
+        <li>
     </ul>
-
 </body>
 </html>

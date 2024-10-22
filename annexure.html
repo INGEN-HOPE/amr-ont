@@ -1,0 +1,947 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+
+    <style>
+        /* Existing CSS styles */
+        body {
+            font-family: Calibri, sans-serif;
+            font-size: 12pt;
+            margin: 20px 10%; /* Reduced top margin */
+            padding-top: 120px; /* Increase padding to match the larger header box */
+        }
+
+        /* Fixed header styles */
+        .fixed-header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background-color: #7AB2D3; /* Match the original background color */
+            padding: 0;
+            z-index: 1000;
+            text-align: center;
+            box-shadow: 0px 4px 2px -2px gray; /* Add a shadow for clearer separation */
+        }
+
+        .fixed-header h1 {
+            margin: 0;
+            padding: 30px; /* Increase the padding to make the box bigger */
+            font-size: 50px;
+            font-weight: bold;
+            color: white; /* Change the text color to white */
+            text-align: center;
+            line-height: 1.5; /* Adjust the line-height for better spacing */
+        }
+
+        /* Responsive styles for smaller screens */
+        @media (max-width: 1024px) {
+            body {
+                margin: 10px 7%; /* Reduce top margin for smaller screens */
+            }
+        }
+
+        @media (max-width: 768px) {
+            body {
+                margin: 5px 5%; /* Further reduce top margin on smaller devices */
+            }
+        }
+
+        @media (max-width: 480px) {
+            body {
+                margin: 5px 2%; /* Minimal margins for mobile devices */
+            }
+
+            .fixed-header h1 {
+                font-size: 24px; /* Adjust header font size for small screens */
+                padding: 20px; /* Adjust padding for smaller screens */
+            }
+        }
+    </style>
+	
+    <title></title>
+</head>
+
+<body lang="EN-US" spellcheck="false" style="overflow-wrap: break-word;">
+
+    <!-- Fixed header section -->
+    <div class="fixed-header">
+        <h1>Annexure I</h1>
+    </div>
+	<p style='margin:1cm;font-size:15px;font-family:"Arial MT";text-align:center;line-height:115%;'><strong><u><span style='font-size:20px;line-height:115%;font-family:"Times New Roman",serif;'>Detailed Protocol for Whole Genome Sequencing with Nanopore Sequencing Platform</span></u></strong></p>
+<p style='margin:0cm;font-size:15px;font-family:"Arial MT";text-align:justify;line-height:115%;'><span style='font-size:16px;line-height:115%;font-family:"Times New Roman",serif;'>A. Oxford Nanopore Kit</span></p>
+<p style='margin:0cm;font-size:15px;font-family:"Arial MT";text-align:justify;line-height:115%;'><span style='font-size:16px;line-height:115%;font-family:"Times New Roman",serif;'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;1. Native Barcoding kit 96v14 (SQK-NBD114.96)</span></p>
+<p style='margin:0cm;font-size:15px;font-family:"Arial MT";text-align:justify;line-height:115%;'><span style='font-size:16px;line-height:115%;font-family:"Times New Roman",serif;'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span></p>
+<table style="margin: 0 auto; border-collapse: collapse; border: none; width: 536px;">
+    <tbody>
+        <tr>
+            <td rowspan="13" style="width: 176pt; border: 1pt solid windowtext; padding: 0cm 5.4pt; vertical-align: top;">
+                <p style='margin: 0cm; font-size: 15px; font-family: "Arial MT"; text-align: justify; line-height: 115%;'>
+                    <span style='font-size: 16px; line-height: 115%; font-family: "Times New Roman", serif;'>Kit content:</span>
+                </p>
+            </td>
+            <td style="width: 225.4pt; border-top: 1pt solid windowtext; border-right: 1pt solid windowtext; border-bottom: 1pt solid windowtext; border-image: initial; border-left: none; padding: 0cm 5.4pt; vertical-align: top;">
+                <p style='margin: 0cm; font-size: 15px; font-family: "Arial MT"; text-align: justify; line-height: 115%;'>
+                    <span style='font-size: 16px; line-height: 115%; font-family: "Times New Roman", serif;'>96 Native Barcodes (NB01-96)</span>
+                </p>
+            </td>
+        </tr>
+        <tr>
+            <td style="width: 225.4pt; border-top: none; border-left: none; border-bottom: 1pt solid windowtext; border-right: 1pt solid windowtext; padding: 0cm 5.4pt; vertical-align: top;">
+                <p style='margin: 0cm; font-size: 15px; font-family: "Arial MT"; text-align: justify; line-height: 115%;'>
+                    <span style='font-size: 16px; line-height: 115%; font-family: "Times New Roman", serif;'>Native Adaptor (NA)</span>
+                </p>
+            </td>
+        </tr>
+        <tr>
+            <td style="width: 225.4pt; border-top: none; border-left: none; border-bottom: 1pt solid windowtext; border-right: 1pt solid windowtext; padding: 0cm 5.4pt; vertical-align: top;">
+                <p style='margin: 0cm; font-size: 15px; font-family: "Arial MT"; text-align: justify; line-height: 115%;'>
+                    <span style='font-size: 16px; line-height: 115%; font-family: "Times New Roman", serif;'>Sequencing Buffer (SB)</span>
+                </p>
+            </td>
+        </tr>
+        <tr>
+            <td style="width: 225.4pt; border-top: none; border-left: none; border-bottom: 1pt solid windowtext; border-right: 1pt solid windowtext; padding: 0cm 5.4pt; vertical-align: top;">
+                <p style='margin: 0cm; font-size: 15px; font-family: "Arial MT"; text-align: justify; line-height: 115%;'>
+                    <span style='font-size: 16px; line-height: 115%; font-family: "Times New Roman", serif;'>Library Beads (LIB)</span>
+                </p>
+            </td>
+        </tr>
+        <tr>
+            <td style="width: 225.4pt; border-top: none; border-left: none; border-bottom: 1pt solid windowtext; border-right: 1pt solid windowtext; padding: 0cm 5.4pt; vertical-align: top;">
+                <p style='margin: 0cm; font-size: 15px; font-family: "Arial MT"; text-align: justify; line-height: 115%;'>
+                    <span style='font-size: 16px; line-height: 115%; font-family: "Times New Roman", serif;'>Library Solution (LIS)</span>
+                </p>
+            </td>
+        </tr>
+        <tr>
+            <td style="width: 225.4pt; border-top: none; border-left: none; border-bottom: 1pt solid windowtext; border-right: 1pt solid windowtext; padding: 0cm 5.4pt; vertical-align: top;">
+                <p style='margin: 0cm; font-size: 15px; font-family: "Arial MT"; text-align: justify; line-height: 115%;'>
+                    <span style='font-size: 16px; line-height: 115%; font-family: "Times New Roman", serif;'>Elution Buffer (EB)</span>
+                </p>
+            </td>
+        </tr>
+        <tr>
+            <td style="width: 225.4pt; border-top: none; border-left: none; border-bottom: 1pt solid windowtext; border-right: 1pt solid windowtext; padding: 0cm 5.4pt; vertical-align: top;">
+                <p style='margin: 0cm; font-size: 15px; font-family: "Arial MT"; text-align: justify; line-height: 115%;'>
+                    <span style='font-size: 16px; line-height: 115%; font-family: "Times New Roman", serif;'>AMPure XP Beads (AXP beads)</span>
+                </p>
+            </td>
+        </tr>
+        <tr>
+            <td style="width: 225.4pt; border-top: none; border-left: none; border-bottom: 1pt solid windowtext; border-right: 1pt solid windowtext; padding: 0cm 5.4pt; vertical-align: top;">
+                <p style='margin: 0cm; font-size: 15px; font-family: "Arial MT"; text-align: justify; line-height: 115%;'>
+                    <span style='font-size: 16px; line-height: 115%; font-family: "Times New Roman", serif;'>Long Fragment Buffer (LFB)</span>
+                </p>
+            </td>
+        </tr>
+        <tr>
+            <td style="width: 225.4pt; border-top: none; border-left: none; border-bottom: 1pt solid windowtext; border-right: 1pt solid windowtext; padding: 0cm 5.4pt; vertical-align: top;">
+                <p style='margin: 0cm; font-size: 15px; font-family: "Arial MT"; text-align: justify; line-height: 115%;'>
+                    <span style='font-size: 16px; line-height: 115%; font-family: "Times New Roman", serif;'>Short Fragment Buffer (SFB)</span>
+                </p>
+            </td>
+        </tr>
+        <tr>
+            <td style="width: 225.4pt; border-top: none; border-left: none; border-bottom: 1pt solid windowtext; border-right: 1pt solid windowtext; padding: 0cm 5.4pt; vertical-align: top;">
+                <p style='margin: 0cm; font-size: 15px; font-family: "Arial MT"; text-align: justify; line-height: 115%;'>
+                    <span style='font-size: 16px; line-height: 115%; font-family: "Times New Roman", serif;'>EDTA (Blue cap or clear cap)</span>
+                </p>
+            </td>
+        </tr>
+        <tr>
+            <td style="width: 225.4pt; border-top: none; border-left: none; border-bottom: 1pt solid windowtext; border-right: 1pt solid windowtext; padding: 0cm 5.4pt; vertical-align: top;">
+                <p style='margin: 0cm; font-size: 15px; font-family: "Arial MT"; text-align: justify; line-height: 115%;'>
+                    <span style='font-size: 16px; line-height: 115%; font-family: "Times New Roman", serif;'>Flow Cell Flush (FCF)</span>
+                </p>
+            </td>
+        </tr>
+        <tr>
+            <td style="width: 225.4pt; border-top: none; border-left: none; border-bottom: 1pt solid windowtext; border-right: 1pt solid windowtext; padding: 0cm 5.4pt; vertical-align: top;">
+                <p style='margin: 0cm; font-size: 15px; font-family: "Arial MT"; text-align: justify; line-height: 115%;'>
+                    <span style='font-size: 16px; line-height: 115%; font-family: "Times New Roman", serif;'>Flow Cell Tether (FCT)</span>
+                </p>
+            </td>
+        </tr>
+        <tr>
+            <td style="width: 225.4pt; border-top: none; border-left: none; border-bottom: 1pt solid windowtext; border-right: 1pt solid windowtext; padding: 0cm 5.4pt; vertical-align: top;">
+                <p style='margin: 0cm; font-size: 15px; font-family: "Arial MT"; text-align: justify; line-height: 115%;'>
+                    <span style='font-size: 16px; line-height: 115%; font-family: "Times New Roman", serif;'>DNA Control Sample (DCS)</span>
+                </p>
+            </td>
+        </tr>
+    </tbody>
+</table>
+
+<p style='margin:0cm;font-size:15px;font-family:"Arial MT";text-align:justify;line-height:115%;'><span style='font-size:16px;line-height:115%;font-family:"Times New Roman",serif;'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span></p>
+<p style='margin:0cm;font-size:15px;font-family:"Arial MT";margin-bottom:12.0pt;text-align:justify;line-height:115%;'><span style='font-size:16px;line-height:115%;font-family:"Times New Roman",serif;'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;2. Flow Cell Wash Kit (EXP-WSH004)</span></p>
+<table style="margin: 0 auto;border-collapse: collapse;border: none;width: 536px;">
+    <tbody>
+        <tr>
+            <td rowspan="3" style="width: 176pt;border: 1pt solid windowtext;padding: 0cm 5.4pt;vertical-align: top;">
+                <p style='margin:0cm;font-size:15px;font-family:"Arial MT";text-align:justify;line-height:115%;'><span style='font-size:16px;line-height:115%;font-family:"Times New Roman",serif;'>Kit content:</span></p>
+            </td>
+            <td style="width: 225.4pt;border-top: 1pt solid windowtext;border-right: 1pt solid windowtext;border-bottom: 1pt solid windowtext;border-image: initial;border-left: none;padding: 0cm 5.4pt;vertical-align: top;">
+                <p style='margin:0cm;font-size:15px;font-family:"Arial MT";text-align:justify;line-height:115%;'><span style='font-size:16px;line-height:115%;font-family:"Times New Roman",serif;'>Wash Mix Solution (WMX)</span></p>
+            </td>
+        </tr>
+        <tr>
+            <td style="width: 225.4pt;border-top: none;border-left: none;border-bottom: 1pt solid windowtext;border-right: 1pt solid windowtext;padding: 0cm 5.4pt;vertical-align: top;">
+                <p style='margin:0cm;font-size:15px;font-family:"Arial MT";text-align:justify;line-height:115%;'><span style='font-size:16px;line-height:115%;font-family:"Times New Roman",serif;'>Diluent (DIL)</span></p>
+            </td>
+        </tr>
+        <tr>
+            <td style="width: 225.4pt;border-top: none;border-left: none;border-bottom: 1pt solid windowtext;border-right: 1pt solid windowtext;padding: 0cm 5.4pt;vertical-align: top;">
+                <p style='margin:0cm;font-size:15px;font-family:"Arial MT";text-align:justify;line-height:115%;'><span style='font-size:16px;line-height:115%;font-family:"Times New Roman",serif;'>Storage (S)</span></p>
+            </td>
+        </tr>
+    </tbody>
+</table>
+<p style='margin:0cm;font-size:15px;font-family:"Arial MT";text-align:justify;line-height:115%;'><span style='font-size:16px;line-height:115%;font-family:"Times New Roman",serif;'>&nbsp;</span></p>
+<p style='margin:0cm;font-size:15px;font-family:"Arial MT";text-align:justify;text-indent:36.0pt;line-height:115%;'><span style='font-size:16px;line-height:115%;font-family:"Times New Roman",serif;'>3. Flow Cell (R10.4.1) (FLO-MIN114)</span></p>
+<p style='margin:0cm;font-size:15px;font-family:"Arial MT";text-align:justify;text-indent:36.0pt;line-height:115%;'><span style='font-size:16px;line-height:115%;font-family:"Times New Roman",serif;'>4. MK1c device or GridION</span></p>
+<p style='margin:0cm;font-size:15px;font-family:"Arial MT";text-align:justify;text-indent:36.0pt;line-height:115%;'><span style='font-size:16px;line-height:115%;font-family:"Times New Roman",serif;'>&nbsp;</span></p>
+<p style='margin:0cm;font-size:15px;font-family:"Arial MT";margin-bottom:12.0pt;text-align:justify;line-height:115%;'><span style='font-size:16px;line-height:115%;font-family:"Times New Roman",serif;'>B. NEB Reagents</span></p>
+<table style="margin: 0 auto; border-collapse: collapse; border: none; width: 536px;">
+    <tbody>
+        <tr>
+            <td style="width: 262.2pt; border: 1pt solid windowtext; padding: 0cm 5.4pt; vertical-align: top;">
+                <p style='margin: 0cm; font-size: 15px; font-family: "Arial MT"; line-height: 115%;'>
+                    <span style='font-size: 16px; line-height: 115%; font-family: "Times New Roman", serif;'>LunaScript RT SuperMix Kit</span>
+                </p>
+            </td>
+            <td style="width: 139.2pt; border-top: 1pt solid windowtext; border-right: 1pt solid windowtext; border-bottom: 1pt solid windowtext; border-image: initial; border-left: none; padding: 0cm 5.4pt; vertical-align: top;">
+                <p style='margin: 0cm; font-size: 15px; font-family: "Arial MT"; text-align: center; line-height: 115%;'>
+                    <span style='font-size: 16px; line-height: 115%; font-family: "Times New Roman", serif;'>E3010L</span>
+                </p>
+            </td>
+        </tr>
+        <tr>
+            <td style="width: 262.2pt; border-right: 1pt solid windowtext; border-bottom: 1pt solid windowtext; border-left: 1pt solid windowtext; border-image: initial; border-top: none; padding: 0cm 5.4pt; vertical-align: top;">
+                <p style='margin: 0cm; font-size: 15px; font-family: "Arial MT"; line-height: 115%;'>
+                    <span style='font-size: 16px; line-height: 115%; font-family: "Times New Roman", serif;'>Q5 Hot Start High-Fidelity 2X Master Mix</span>
+                </p>
+            </td>
+            <td style="width: 139.2pt; border-top: none; border-left: none; border-bottom: 1pt solid windowtext; border-right: 1pt solid windowtext; padding: 0cm 5.4pt; vertical-align: top;">
+                <p style='margin: 0cm; font-size: 15px; font-family: "Arial MT"; text-align: center; line-height: 115%;'>
+                    <span style='font-size: 16px; line-height: 115%; font-family: "Times New Roman", serif;'>M0494S</span>
+                </p>
+            </td>
+        </tr>
+        <tr>
+            <td style="width: 262.2pt; border-right: 1pt solid windowtext; border-bottom: 1pt solid windowtext; border-left: 1pt solid windowtext; border-image: initial; border-top: none; padding: 0cm 5.4pt; vertical-align: top;">
+                <p style='margin: 0cm; font-size: 15px; font-family: "Arial MT"; line-height: 115%;'>
+                    <span style='font-size: 16px; line-height: 115%; font-family: "Times New Roman", serif;'>NEBNext Ultra II End Repair/dA Tailing Module</span>
+                </p>
+            </td>
+            <td style="width: 139.2pt; border-top: none; border-left: none; border-bottom: 1pt solid windowtext; border-right: 1pt solid windowtext; padding: 0cm 5.4pt; vertical-align: top;">
+                <p style='margin: 0cm; font-size: 15px; font-family: "Arial MT"; text-align: center; line-height: 115%;'>
+                    <span style='font-size: 16px; line-height: 115%; font-family: "Times New Roman", serif;'>E7546L</span>
+                </p>
+            </td>
+        </tr>
+        <tr>
+            <td style="width: 262.2pt; border-right: 1pt solid windowtext; border-bottom: 1pt solid windowtext; border-left: 1pt solid windowtext; border-image: initial; border-top: none; padding: 0cm 5.4pt; vertical-align: top;">
+                <p style='margin: 0cm; font-size: 15px; font-family: "Arial MT"; line-height: 115%;'>
+                    <span style='font-size: 16px; line-height: 115%; font-family: "Times New Roman", serif;'>Blunt/TA Ligase Master Mix</span>
+                </p>
+            </td>
+            <td style="width: 139.2pt; border-top: none; border-left: none; border-bottom: 1pt solid windowtext; border-right: 1pt solid windowtext; padding: 0cm 5.4pt; vertical-align: top;">
+                <p style='margin: 0cm; font-size: 15px; font-family: "Arial MT"; text-align: center; line-height: 115%;'>
+                    <span style='font-size: 16px; line-height: 115%; font-family: "Times New Roman", serif;'>M0367L</span>
+                </p>
+            </td>
+        </tr>
+        <tr>
+            <td style="width: 262.2pt; border-right: 1pt solid windowtext; border-bottom: 1pt solid windowtext; border-left: 1pt solid windowtext; border-image: initial; border-top: none; padding: 0cm 5.4pt; vertical-align: top;">
+                <p style='margin: 0cm; font-size: 15px; font-family: "Arial MT"; line-height: 115%;'>
+                    <span style='font-size: 16px; line-height: 115%; font-family: "Times New Roman", serif;'>NEBNext Quick Ligation Module</span>
+                </p>
+            </td>
+            <td style="width: 139.2pt; border-top: none; border-left: none; border-bottom: 1pt solid windowtext; border-right: 1pt solid windowtext; padding: 0cm 5.4pt; vertical-align: top;">
+                <p style='margin: 0cm; font-size: 15px; font-family: "Arial MT"; text-align: center; line-height: 115%;'>
+                    <span style='font-size: 16px; line-height: 115%; font-family: "Times New Roman", serif;'>E6056S</span>
+                </p>
+            </td>
+        </tr>
+    </tbody>
+</table>
+
+<p style='margin:0cm;font-size:15px;font-family:"Arial MT";text-align:justify;line-height:115%;'><span style='font-size:16px;line-height:115%;font-family:"Times New Roman",serif;'>&nbsp;</span></p>
+<p style='margin:0cm;font-size:15px;font-family:"Arial MT";text-align:justify;line-height:115%;'><span style='font-size:16px;line-height:115%;font-family:"Times New Roman",serif;'>C. Invitrogen reagents&nbsp;</span></p>
+<p style='margin:0cm;font-size:15px;font-family:"Arial MT";text-align:justify;line-height:115%;'><span style='font-size:16px;line-height:115%;font-family:"Times New Roman",serif;'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;Qubit dsDNA HS Assay kit (Ref No. Q32854) &ndash; For DNA concentration measurement</span></p>
+<p style='margin:0cm;font-size:15px;font-family:"Arial MT";text-align:justify;line-height:115%;'><strong><span style='font-size:16px;line-height:115%;font-family:"Times New Roman",serif;'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span></strong></p>
+<p style='margin:0cm;font-size:15px;font-family:"Arial MT";text-align:justify;line-height:115%;'><strong><span style='font-size:16px;line-height:115%;font-family:"Times New Roman",serif;'>&nbsp;</span></strong></p>
+<p style='margin:0cm;font-size:15px;font-family:"Arial MT";text-align:justify;line-height:115%;'><strong><span style='font-size:16px;line-height:115%;font-family:"Times New Roman",serif;'>Stepwise protocol</span></strong></p>
+<p style='margin:0cm;font-size:15px;font-family:"Arial MT";text-align:justify;line-height:115%;'><strong><span style='font-size:16px;line-height:115%;font-family:"Times New Roman",serif;'>Step I: cDNA Synthesis</span></strong></p>
+<ol style="list-style-type: decimal;margin-left: 26px;">
+    <li><span style='line-height:115%;font-family:"Times New Roman",serif;font-size:16px;'>Thaw RNA (samples) on ice.&nbsp;</span></li>
+    <li><span style='line-height:115%;font-family:"Times New Roman",serif;font-size:16px;'>Aliquot 11 &micro;l RNA from each samples into a 96 well plate.</span></li>
+    <li><span style='line-height:115%;font-family:"Times New Roman",serif;font-size:16px;'>Add 2.75 &mu;l of Luna Script RT supermix to each well. It is recommended to perform this step while placing the 96-well plate on ice.&nbsp;</span></li>
+    <li><span style='line-height:115%;font-family:"Times New Roman",serif;font-size:16px;'>Mix by Pipetting and seal the plate. Give a short spin to the plate. &nbsp;&nbsp;</span></li>
+    <li><span style='line-height:115%;font-family:"Times New Roman",serif;font-size:16px;'>Place the plate in a thermal cycler with the following conditions. The thermal cycler should be pre-set on 25</span><span style="line-height:115%;font-family:Symbol;font-size:16px;"><span style="font-family:Symbol;">&deg;</span></span><span style='line-height:115%;font-family:"Times New Roman",serif;font-size:16px;'>&nbsp;C.&nbsp;</span></li>
+</ol>
+<div align="center" style='margin-top:0cm;margin-right:0cm;margin-bottom:8.0pt;margin-left:0cm;font-size:11.0pt;font-family:"Calibri",sans-serif;'>
+    <table style="border: none;width: 243px;border-collapse: collapse;">
+        <tbody>
+            <tr>
+                <td colspan="3" style="width:182.6pt;border:solid windowtext 1.0pt;padding:0cm 5.4pt 0cm 5.4pt;height:23.45pt;">
+                    <p style='margin-top:0cm;margin-right:0cm;margin-bottom:0cm;margin-left:0cm;font-size:11.0pt;font-family:"Calibri",sans-serif;text-align:center;line-height:normal;'><strong><span style='font-size:16px;font-family:  "Times New Roman";color:black;'>Thermal cycler Conditions</span></strong></p>
+                </td>
+            </tr>
+            <tr>
+                <td style="width:73.1pt;border:solid windowtext 1.0pt;border-top:none;padding:  0cm 5.4pt 0cm 5.4pt;height:20.25pt;">
+                    <p style='margin-top:0cm;margin-right:0cm;margin-bottom:0cm;margin-left:0cm;font-size:11.0pt;font-family:"Calibri",sans-serif;text-align:center;line-height:normal;'><strong><span style='font-size:16px;font-family:  "Times New Roman";color:black;'>T<sup>o&nbsp;</sup>(&deg;C)</span></strong></p>
+                </td>
+                <td style="width:61.9pt;border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;padding:0cm 5.4pt 0cm 5.4pt;height:20.25pt;">
+                    <p style='margin-top:0cm;margin-right:0cm;margin-bottom:0cm;margin-left:0cm;font-size:11.0pt;font-family:"Calibri",sans-serif;text-align:center;line-height:normal;'><strong><span style='font-size:16px;font-family:  "Times New Roman";color:black;'>Duration</span></strong></p>
+                </td>
+                <td style="width:47.6pt;border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;padding:0cm 5.4pt 0cm 5.4pt;height:20.25pt;">
+                    <p style='margin-top:0cm;margin-right:0cm;margin-bottom:0cm;margin-left:0cm;font-size:11.0pt;font-family:"Calibri",sans-serif;text-align:center;line-height:normal;'><strong><span style='font-size:16px;font-family:  "Times New Roman";color:black;'>Cycles</span></strong></p>
+                </td>
+            </tr>
+            <tr>
+                <td style="width:73.1pt;border:solid windowtext 1.0pt;border-top:none;padding:  0cm 5.4pt 0cm 5.4pt;height:21.25pt;">
+                    <p style='margin-top:0cm;margin-right:0cm;margin-bottom:0cm;margin-left:0cm;font-size:11.0pt;font-family:"Calibri",sans-serif;text-align:center;line-height:normal;'><span style='font-size:16px;font-family:  "Times New Roman";color:black;'>25</span></p>
+                </td>
+                <td style="width:61.9pt;border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;padding:0cm 5.4pt 0cm 5.4pt;height:21.25pt;">
+                    <p style='margin-top:0cm;margin-right:0cm;margin-bottom:0cm;margin-left:0cm;font-size:11.0pt;font-family:"Calibri",sans-serif;text-align:center;line-height:normal;'><span style='font-size:16px;font-family:  "Times New Roman";color:black;'>2 min</span></p>
+                </td>
+                <td style="width:47.6pt;border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;padding:0cm 5.4pt 0cm 5.4pt;height:21.25pt;">
+                    <p style='margin-top:0cm;margin-right:0cm;margin-bottom:0cm;margin-left:0cm;font-size:11.0pt;font-family:"Calibri",sans-serif;text-align:center;line-height:normal;'><span style='font-size:16px;font-family:  "Times New Roman";color:black;'>1X</span></p>
+                </td>
+            </tr>
+            <tr>
+                <td style="width:73.1pt;border:solid windowtext 1.0pt;border-top:none;padding:  0cm 5.4pt 0cm 5.4pt;height:20.15pt;">
+                    <p style='margin-top:0cm;margin-right:0cm;margin-bottom:0cm;margin-left:0cm;font-size:11.0pt;font-family:"Calibri",sans-serif;text-align:center;line-height:normal;'><span style='font-size:16px;font-family:  "Times New Roman";color:black;'>55</span></p>
+                </td>
+                <td style="width:61.9pt;border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;padding:0cm 5.4pt 0cm 5.4pt;height:20.15pt;">
+                    <p style='margin-top:0cm;margin-right:0cm;margin-bottom:0cm;margin-left:0cm;font-size:11.0pt;font-family:"Calibri",sans-serif;text-align:center;line-height:normal;'><span style='font-size:16px;font-family:  "Times New Roman";color:black;'>10 min</span></p>
+                </td>
+                <td style="width:47.6pt;border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;padding:0cm 5.4pt 0cm 5.4pt;height:20.15pt;">
+                    <p style='margin-top:0cm;margin-right:0cm;margin-bottom:0cm;margin-left:0cm;font-size:11.0pt;font-family:"Calibri",sans-serif;text-align:center;line-height:normal;'><span style='font-size:16px;font-family:  "Times New Roman";color:black;'>1X</span></p>
+                </td>
+            </tr>
+            <tr>
+                <td style="width:73.1pt;border:solid windowtext 1.0pt;border-top:none;padding:  0cm 5.4pt 0cm 5.4pt;height:23.45pt;">
+                    <p style='margin-top:0cm;margin-right:0cm;margin-bottom:0cm;margin-left:0cm;font-size:11.0pt;font-family:"Calibri",sans-serif;text-align:center;line-height:normal;'><span style='font-size:16px;font-family:  "Times New Roman";color:black;'>95</span></p>
+                </td>
+                <td style="width:61.9pt;border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;padding:0cm 5.4pt 0cm 5.4pt;height:23.45pt;">
+                    <p style='margin-top:0cm;margin-right:0cm;margin-bottom:0cm;margin-left:0cm;font-size:11.0pt;font-family:"Calibri",sans-serif;text-align:center;line-height:normal;'><span style='font-size:16px;font-family:  "Times New Roman";color:black;'>1 min</span></p>
+                </td>
+                <td style="width:47.6pt;border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;padding:0cm 5.4pt 0cm 5.4pt;height:23.45pt;">
+                    <p style='margin-top:0cm;margin-right:0cm;margin-bottom:0cm;margin-left:0cm;font-size:11.0pt;font-family:"Calibri",sans-serif;text-align:center;line-height:normal;'><span style='font-size:16px;font-family:  "Times New Roman";color:black;'>1X</span></p>
+                </td>
+            </tr>
+            <tr>
+                <td style="width:73.1pt;border:solid windowtext 1.0pt;border-top:none;padding:  0cm 5.4pt 0cm 5.4pt;height:23.45pt;">
+                    <p style='margin-top:0cm;margin-right:0cm;margin-bottom:0cm;margin-left:0cm;font-size:11.0pt;font-family:"Calibri",sans-serif;text-align:center;line-height:normal;'><span style='font-size:16px;font-family:  "Times New Roman";color:black;'>4</span></p>
+                </td>
+                <td style="width:61.9pt;border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;padding:0cm 5.4pt 0cm 5.4pt;height:23.45pt;">
+                    <p style='margin-top:0cm;margin-right:0cm;margin-bottom:0cm;margin-left:0cm;font-size:11.0pt;font-family:"Calibri",sans-serif;text-align:center;line-height:normal;'><span style='font-size:16px;font-family:  "Times New Roman";color:black;'>10 min</span></p>
+                </td>
+                <td style="width:47.6pt;border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;padding:0cm 5.4pt 0cm 5.4pt;height:23.45pt;">
+                    <p style='margin-top:0cm;margin-right:0cm;margin-bottom:0cm;margin-left:0cm;font-size:11.0pt;font-family:"Calibri",sans-serif;text-align:center;line-height:normal;'><span style='font-size:16px;font-family:  "Times New Roman";color:black;'>1X</span></p>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+<p style='margin:0cm;font-size:15px;font-family:"Arial MT";text-align:justify;line-height:115%;'><strong><span style='font-size:16px;line-height:115%;font-family:"Times New Roman",serif;'>&nbsp;</span></strong></p>
+<p style='margin:0cm;font-size:15px;font-family:"Arial MT";margin-top:12.0pt;margin-right:0cm;margin-bottom:12.0pt;margin-left:0cm;text-align:justify;line-height:115%;'><strong><span style='font-size:16px;line-height:115%;font-family:"Times New Roman",serif;'>Step II: Amplicon PCR (tiling PCR)</span></strong></p>
+<ol class="decimal_type" style="list-style-type: decimal;margin-left: 26px;">
+    <li><span style='line-height:115%;font-family:"Times New Roman",serif;font-size:16px;'>Divide the primers sets in two pool namely pool1 and pool 2. Add equal amount from all odd set of primer in pool1 and even set of primer in pool2.&nbsp;</span></li>
+    <li><span style='line-height:115%;font-family:"Times New Roman",serif;font-size:16px;'>Label two 96-well plates as Pool 1/Pool 2</span></li>
+    <li><span style='line-height:115%;font-family:"Times New Roman",serif;font-size:16px;'>Prepare master mix for both pool1 and pool 2 using the below template for a single reaction.&nbsp;</span></li>
+</ol>
+<div align="center" style='margin-top:0cm;margin-right:0cm;margin-bottom:8.0pt;margin-left:0cm;font-size:11.0pt;font-family:"Calibri",sans-serif;'>
+    <table style="border: none;width: 333px;border-collapse: collapse;">
+        <tbody>
+            <tr>
+                <td style="width: 136.35pt;border: 1pt solid windowtext;padding: 0cm 5.4pt;height: 16pt;vertical-align: bottom;">
+                    <p style='margin-top:0cm;margin-right:0cm;margin-bottom:8.0pt;margin-left:0cm;font-size:11.0pt;font-family:"Calibri",sans-serif;text-align:center;line-height:normal;'><strong><span style='font-size:16px;font-family:"Times New Roman";color:black;'>Reagent</span></strong></p>
+                </td>
+                <td style="width: 2cm;border-top: 1pt solid windowtext;border-right: 1pt solid windowtext;border-bottom: 1pt solid windowtext;border-image: initial;border-left: none;padding: 0cm 5.4pt;height: 16pt;vertical-align: bottom;">
+                    <p style='margin-top:0cm;margin-right:0cm;margin-bottom:8.0pt;margin-left:0cm;font-size:11.0pt;font-family:"Calibri",sans-serif;text-align:center;line-height:normal;'><strong><span style='font-size:16px;font-family:"Times New Roman";color:black;'>Pool 1</span></strong></p>
+                </td>
+                <td style="width: 2cm;border-top: 1pt solid windowtext;border-right: 1pt solid windowtext;border-bottom: 1pt solid windowtext;border-image: initial;border-left: none;padding: 0cm 5.4pt;height: 16pt;vertical-align: bottom;">
+                    <p style='margin-top:0cm;margin-right:0cm;margin-bottom:8.0pt;margin-left:0cm;font-size:11.0pt;font-family:"Calibri",sans-serif;text-align:center;line-height:normal;'><strong><span style='font-size:16px;font-family:"Times New Roman";color:black;'>Pool 2</span></strong></p>
+                </td>
+            </tr>
+            <tr>
+                <td style="width: 136.35pt;border-right: 1pt solid windowtext;border-bottom: 1pt solid windowtext;border-left: 1pt solid windowtext;border-image: initial;border-top: none;padding: 0cm 5.4pt;height: 16pt;vertical-align: bottom;">
+                    <p style='margin-top:0cm;margin-right:0cm;margin-bottom:8.0pt;margin-left:0cm;font-size:11.0pt;font-family:"Calibri",sans-serif;line-height:normal;'><span style='font-size:16px;font-family:  "Times New Roman";color:black;'>cDNA</span></p>
+                </td>
+                <td style="width: 2cm;border-top: none;border-left: none;border-bottom: 1pt solid windowtext;border-right: 1pt solid windowtext;padding: 0cm 5.4pt;height: 16pt;vertical-align: bottom;">
+                    <p style='margin-top:0cm;margin-right:0cm;margin-bottom:8.0pt;margin-left:0cm;font-size:11.0pt;font-family:"Calibri",sans-serif;text-align:center;line-height:normal;'><span style='font-size:16px;font-family:"Times New Roman";color:black;'>-</span></p>
+                </td>
+                <td style="width: 2cm;border-top: none;border-left: none;border-bottom: 1pt solid windowtext;border-right: 1pt solid windowtext;padding: 0cm 5.4pt;height: 16pt;vertical-align: bottom;">
+                    <p style='margin-top:0cm;margin-right:0cm;margin-bottom:8.0pt;margin-left:0cm;font-size:11.0pt;font-family:"Calibri",sans-serif;text-align:center;line-height:normal;'><span style='font-size:16px;font-family:"Times New Roman";color:black;'>-</span></p>
+                </td>
+            </tr>
+            <tr>
+                <td style="width: 136.35pt;border-right: 1pt solid windowtext;border-bottom: 1pt solid windowtext;border-left: 1pt solid windowtext;border-image: initial;border-top: none;padding: 0cm 5.4pt;height: 16pt;vertical-align: bottom;">
+                    <p style='margin-top:0cm;margin-right:0cm;margin-bottom:8.0pt;margin-left:0cm;font-size:11.0pt;font-family:"Calibri",sans-serif;line-height:normal;'><span style='font-size:16px;font-family:  "Times New Roman";color:black;'>Pool primers (10 &micro;M)</span></p>
+                </td>
+                <td style="width:2.0cm;border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;padding:0cm 5.4pt 0cm 5.4pt;height:16.0pt;">
+                    <p style='margin-top:0cm;margin-right:0cm;margin-bottom:8.0pt;margin-left:0cm;font-size:11.0pt;font-family:"Calibri",sans-serif;text-align:center;line-height:normal;'><span style='font-size:16px;font-family:"Times New Roman";color:black;'>1.5&nbsp;</span><span style='font-size:16px;font-family:"Times New Roman",serif;'>&micro;l</span><span style='font-size:16px;font-family:"Times New Roman";color:black;'>&nbsp;</span></p>
+                </td>
+                <td style="width:2.0cm;border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;padding:0cm 5.4pt 0cm 5.4pt;height:16.0pt;">
+                    <p style='margin-top:0cm;margin-right:0cm;margin-bottom:8.0pt;margin-left:0cm;font-size:11.0pt;font-family:"Calibri",sans-serif;text-align:center;line-height:normal;'><span style='font-size:16px;font-family:"Times New Roman";color:black;'>1.5&nbsp;</span><span style='font-size:16px;font-family:"Times New Roman",serif;'>&micro;l</span></p>
+                </td>
+            </tr>
+            <tr>
+                <td style="width: 136.35pt;border-right: 1pt solid windowtext;border-bottom: 1pt solid windowtext;border-left: 1pt solid windowtext;border-image: initial;border-top: none;padding: 0cm 5.4pt;height: 16pt;vertical-align: bottom;">
+                    <p style='margin-top:0cm;margin-right:0cm;margin-bottom:8.0pt;margin-left:0cm;font-size:11.0pt;font-family:"Calibri",sans-serif;line-height:normal;'><span style='font-size:16px;font-family:  "Times New Roman";color:black;'>Q5 hot start high-fidelity 2X master mix</span></p>
+                </td>
+                <td style="width:2.0cm;border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;padding:0cm 5.4pt 0cm 5.4pt;height:16.0pt;">
+                    <p style='margin-top:0cm;margin-right:0cm;margin-bottom:8.0pt;margin-left:0cm;font-size:11.0pt;font-family:"Calibri",sans-serif;text-align:center;line-height:normal;'><span style='font-size:16px;font-family:"Times New Roman";color:black;'>12.5&nbsp;</span><span style='font-size:16px;font-family:"Times New Roman",serif;'>&micro;l</span></p>
+                </td>
+                <td style="width:2.0cm;border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;padding:0cm 5.4pt 0cm 5.4pt;height:16.0pt;">
+                    <p style='margin-top:0cm;margin-right:0cm;margin-bottom:8.0pt;margin-left:0cm;font-size:11.0pt;font-family:"Calibri",sans-serif;text-align:center;line-height:normal;'><span style='font-size:16px;font-family:"Times New Roman";color:black;'>12.5&nbsp;</span><span style='font-size:16px;font-family:"Times New Roman",serif;'>&micro;l</span></p>
+                </td>
+            </tr>
+            <tr>
+                <td style="width:136.35pt;border:solid windowtext 1.0pt;border-top:none;padding:  0cm 5.4pt 0cm 5.4pt;height:16.0pt;">
+                    <p style='margin-top:0cm;margin-right:0cm;margin-bottom:8.0pt;margin-left:0cm;font-size:11.0pt;font-family:"Calibri",sans-serif;line-height:normal;'><span style='font-size:16px;font-family:  "Times New Roman";color:black;'>Nuclease free water&nbsp;</span></p>
+                </td>
+                <td style="width:2.0cm;border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;padding:0cm 5.4pt 0cm 5.4pt;height:16.0pt;">
+                    <p style='margin-top:0cm;margin-right:0cm;margin-bottom:8.0pt;margin-left:0cm;font-size:11.0pt;font-family:"Calibri",sans-serif;text-align:center;line-height:normal;'><span style='font-size:16px;font-family:"Times New Roman";color:black;'>9.0&nbsp;</span><span style='font-size:16px;font-family:"Times New Roman",serif;'>&micro;l</span></p>
+                </td>
+                <td style="width:2.0cm;border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;padding:0cm 5.4pt 0cm 5.4pt;height:16.0pt;">
+                    <p style='margin-top:0cm;margin-right:0cm;margin-bottom:8.0pt;margin-left:0cm;font-size:11.0pt;font-family:"Calibri",sans-serif;text-align:center;line-height:normal;'><span style='font-size:16px;font-family:"Times New Roman";color:black;'>9.0&nbsp;</span><span style='font-size:16px;font-family:"Times New Roman",serif;'>&micro;l</span></p>
+                </td>
+            </tr>
+            <tr>
+                <td style="width: 136.35pt;border-right: 1pt solid windowtext;border-bottom: 1pt solid windowtext;border-left: 1pt solid windowtext;border-image: initial;border-top: none;padding: 0cm 5.4pt;height: 16pt;vertical-align: bottom;">
+                    <p style='margin-top:0cm;margin-right:0cm;margin-bottom:8.0pt;margin-left:0cm;font-size:11.0pt;font-family:"Calibri",sans-serif;line-height:normal;'><span style='font-size:16px;font-family:  "Times New Roman";color:black;'>Final volume</span></p>
+                </td>
+                <td style="width: 2cm;border-top: none;border-left: none;border-bottom: 1pt solid windowtext;border-right: 1pt solid windowtext;padding: 0cm 5.4pt;height: 16pt;vertical-align: bottom;">
+                    <p style='margin-top:0cm;margin-right:0cm;margin-bottom:8.0pt;margin-left:0cm;font-size:11.0pt;font-family:"Calibri",sans-serif;text-align:center;line-height:normal;'><span style='font-size:16px;font-family:"Times New Roman";color:black;'>25.0&nbsp;</span><span style='font-size:16px;font-family:"Times New Roman",serif;'>&micro;l</span></p>
+                </td>
+                <td style="width: 2cm;border-top: none;border-left: none;border-bottom: 1pt solid windowtext;border-right: 1pt solid windowtext;padding: 0cm 5.4pt;height: 16pt;vertical-align: bottom;">
+                    <p style='margin-top:0cm;margin-right:0cm;margin-bottom:8.0pt;margin-left:0cm;font-size:11.0pt;font-family:"Calibri",sans-serif;text-align:center;line-height:normal;'><span style='font-size:16px;font-family:"Times New Roman";color:black;'>25.0&nbsp;</span><span style='font-size:16px;font-family:"Times New Roman",serif;'>&micro;l</span></p>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+<p style='margin-top:5.0pt;margin-right:31.55pt;margin-bottom:8.0pt;margin-left:36.0pt;font-size:11.0pt;font-family:"Calibri",sans-serif;text-align:justify;line-height:115%;'><em><span style='font-size:16px;line-height:115%;font-family:"Times New Roman",serif;'>&nbsp;</span></em></p>
+<ol start="4" style="list-style-type: decimal;margin-left: 26px;">
+    <li><span style='line-height:115%;font-family:"Times New Roman",serif;font-size:16px;'>Mix the content thoroughly using the pipette. Avoid introducing bubbles while mixing.&nbsp;</span></li>
+    <li><span style='line-height:115%;font-family:"Times New Roman",serif;font-size:16px;'>Aliquot 23 &micro;l of master mix from pool1 and pool 2 in each well of the plate label with Pool <strong>1</strong> &amp; Pool <strong>2&nbsp;</strong>respectively.<strong>&nbsp;</strong></span></li>
+    <li><span style='line-height:115%;font-family:"Times New Roman",serif;font-size:16px;'>Add 2 &micro;l of cDNA (from step I) to the each well of the plate label with pool 1 and pool 2. Mix well by pipetting.&nbsp;</span></li>
+    <li><span style='line-height:115%;font-family:"Times New Roman",serif;font-size:16px;'>Seal the plates tightly, give a short spin to the plates.&nbsp;</span></li>
+    <li><span style='line-height:115%;font-family:"Times New Roman",serif;font-size:16px;'>Place the plate in a thermal cycler.&nbsp;</span></li>
+    <li><span style='line-height:115%;font-family:"Times New Roman",serif;font-size:16px;'>Thermal cycler conditions:</span></li>
+</ol>
+<div align="center" style='margin-top:0cm;margin-right:0cm;margin-bottom:8.0pt;margin-left:0cm;font-size:11.0pt;font-family:"Calibri",sans-serif;'>
+    <table style="border: none;width: 283px;border-collapse: collapse;">
+        <tbody>
+            <tr>
+                <td colspan="3" style="width:212.6pt;border:solid windowtext 1.0pt;padding:0cm 5.4pt 0cm 5.4pt;height:16.0pt;">
+                    <p style='margin-top:0cm;margin-right:0cm;margin-bottom:8.0pt;margin-left:0cm;font-size:11.0pt;font-family:"Calibri",sans-serif;text-align:center;line-height:normal;'><strong><span style='font-size:16px;font-family:"Times New Roman";color:black;'>Thermal cycler Conditions</span></strong></p>
+                </td>
+            </tr>
+            <tr>
+                <td style="width:70.85pt;border:solid windowtext 1.0pt;border-top:none;padding:  0cm 5.4pt 0cm 5.4pt;height:18.0pt;">
+                    <p style='margin-top:0cm;margin-right:0cm;margin-bottom:8.0pt;margin-left:0cm;font-size:11.0pt;font-family:"Calibri",sans-serif;text-align:center;line-height:normal;'><strong><span style='font-size:16px;font-family:"Times New Roman";color:black;'>T<sup>o&nbsp;</sup>(&deg;C)</span></strong></p>
+                </td>
+                <td style="width:3.0cm;border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;padding:0cm 5.4pt 0cm 5.4pt;height:18.0pt;">
+                    <p style='margin-top:0cm;margin-right:0cm;margin-bottom:8.0pt;margin-left:0cm;font-size:11.0pt;font-family:"Calibri",sans-serif;text-align:center;line-height:normal;'><strong><span style='font-size:16px;font-family:"Times New Roman";color:black;'>Duration</span></strong></p>
+                </td>
+                <td style="width:2.0cm;border-top:none;border-left:none;border-bottom:  solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;padding:  0cm 5.4pt 0cm 5.4pt;height:18.0pt;">
+                    <p style='margin-top:0cm;margin-right:0cm;margin-bottom:8.0pt;margin-left:0cm;font-size:11.0pt;font-family:"Calibri",sans-serif;text-align:center;line-height:normal;'><strong><span style='font-size:16px;font-family:"Times New Roman";color:black;'>Cycles</span></strong></p>
+                </td>
+            </tr>
+            <tr>
+                <td style="width:70.85pt;border:solid windowtext 1.0pt;border-top:none;padding:  0cm 5.4pt 0cm 5.4pt;height:18.25pt;">
+                    <p style='margin-top:0cm;margin-right:0cm;margin-bottom:8.0pt;margin-left:0cm;font-size:11.0pt;font-family:"Calibri",sans-serif;text-align:center;line-height:normal;'><span style='font-size:16px;font-family:"Times New Roman";color:black;'>98</span></p>
+                </td>
+                <td style="width:3.0cm;border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;padding:0cm 5.4pt 0cm 5.4pt;height:18.25pt;">
+                    <p style='margin-top:0cm;margin-right:0cm;margin-bottom:8.0pt;margin-left:0cm;font-size:11.0pt;font-family:"Calibri",sans-serif;text-align:center;line-height:normal;'><span style='font-size:16px;font-family:"Times New Roman";color:black;'>30 sec</span></p>
+                </td>
+                <td style="width:2.0cm;border-top:none;border-left:none;border-bottom:  solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;padding:  0cm 5.4pt 0cm 5.4pt;height:18.25pt;">
+                    <p style='margin-top:0cm;margin-right:0cm;margin-bottom:8.0pt;margin-left:0cm;font-size:11.0pt;font-family:"Calibri",sans-serif;text-align:center;line-height:normal;'><span style='font-size:16px;font-family:"Times New Roman";color:black;'>1X</span></p>
+                </td>
+            </tr>
+            <tr>
+                <td style="width:70.85pt;border:solid windowtext 1.0pt;border-top:none;padding:  0cm 5.4pt 0cm 5.4pt;height:16.0pt;">
+                    <p style='margin-top:0cm;margin-right:0cm;margin-bottom:8.0pt;margin-left:0cm;font-size:11.0pt;font-family:"Calibri",sans-serif;text-align:center;line-height:normal;'><span style='font-size:16px;font-family:"Times New Roman";color:black;'>98</span></p>
+                </td>
+                <td style="width:3.0cm;border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;padding:0cm 5.4pt 0cm 5.4pt;height:16.0pt;">
+                    <p style='margin-top:0cm;margin-right:0cm;margin-bottom:8.0pt;margin-left:0cm;font-size:11.0pt;font-family:"Calibri",sans-serif;text-align:center;line-height:normal;'><span style='font-size:16px;font-family:"Times New Roman";color:black;'>15 sec</span></p>
+                </td>
+                <td rowspan="2" style="width:2.0cm;border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;padding:0cm 5.4pt 0cm 5.4pt;height:16.0pt;">
+                    <p style='margin-top:0cm;margin-right:0cm;margin-bottom:8.0pt;margin-left:0cm;font-size:11.0pt;font-family:"Calibri",sans-serif;text-align:center;line-height:normal;'><span style='font-size:16px;font-family:"Times New Roman";color:black;'>32X</span></p>
+                </td>
+            </tr>
+            <tr>
+                <td style="width:70.85pt;border:solid windowtext 1.0pt;border-top:none;padding:  0cm 5.4pt 0cm 5.4pt;height:16.0pt;">
+                    <p style='margin-top:0cm;margin-right:0cm;margin-bottom:8.0pt;margin-left:0cm;font-size:11.0pt;font-family:"Calibri",sans-serif;text-align:center;line-height:normal;'><span style='font-size:16px;font-family:"Times New Roman";color:black;'>50</span></p>
+                </td>
+                <td style="width:3.0cm;border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;padding:0cm 5.4pt 0cm 5.4pt;height:16.0pt;">
+                    <p style='margin-top:0cm;margin-right:0cm;margin-bottom:8.0pt;margin-left:0cm;font-size:11.0pt;font-family:"Calibri",sans-serif;text-align:center;line-height:normal;'><span style='font-size:16px;font-family:"Times New Roman";color:black;'>5 min</span></p>
+                </td>
+            </tr>
+            <tr>
+                <td style="width:70.85pt;border:solid windowtext 1.0pt;border-top:none;padding:  0cm 5.4pt 0cm 5.4pt;height:16.0pt;">
+                    <p style='margin-top:0cm;margin-right:0cm;margin-bottom:8.0pt;margin-left:0cm;font-size:11.0pt;font-family:"Calibri",sans-serif;text-align:center;line-height:normal;'><span style='font-size:16px;font-family:"Times New Roman";color:black;'>4</span></p>
+                </td>
+                <td style="width:3.0cm;border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;padding:0cm 5.4pt 0cm 5.4pt;height:16.0pt;">
+                    <p style='margin-top:0cm;margin-right:0cm;margin-bottom:8.0pt;margin-left:0cm;font-size:11.0pt;font-family:"Calibri",sans-serif;text-align:center;line-height:normal;'><span style='font-size:16px;font-family:"Times New Roman";color:black;'>10 min</span></p>
+                </td>
+                <td style="width:2.0cm;border-top:none;border-left:none;border-bottom:  solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;padding:  0cm 5.4pt 0cm 5.4pt;height:16.0pt;">
+                    <p style='margin-top:0cm;margin-right:0cm;margin-bottom:8.0pt;margin-left:0cm;font-size:11.0pt;font-family:"Calibri",sans-serif;text-align:center;line-height:normal;'><span style='font-size:16px;font-family:"Times New Roman";color:black;'>1X</span></p>
+                </td>
+            </tr>
+            <tr>
+                <td style="width:70.85pt;border:solid windowtext 1.0pt;border-top:none;padding:  0cm 5.4pt 0cm 5.4pt;height:16.0pt;">
+                    <p style='margin-top:0cm;margin-right:0cm;margin-bottom:8.0pt;margin-left:0cm;font-size:11.0pt;font-family:"Calibri",sans-serif;text-align:center;line-height:normal;'><span style='font-size:16px;font-family:"Times New Roman";color:black;'>10</span></p>
+                </td>
+                <td style="width:3.0cm;border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;padding:0cm 5.4pt 0cm 5.4pt;height:16.0pt;">
+                    <p style='margin-top:0cm;margin-right:0cm;margin-bottom:8.0pt;margin-left:0cm;font-size:11.0pt;font-family:"Calibri",sans-serif;text-align:center;line-height:normal;'><span style='font-size:16px;font-family:"Times New Roman";color:black;'>&infin;</span></p>
+                </td>
+                <td style="width:2.0cm;border-top:none;border-left:none;border-bottom:  solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;padding:  0cm 5.4pt 0cm 5.4pt;height:16.0pt;">
+                    <p style='margin-top:0cm;margin-right:0cm;margin-bottom:8.0pt;margin-left:0cm;font-size:11.0pt;font-family:"Calibri",sans-serif;text-align:center;line-height:normal;'><span style='font-size:16px;font-family:"Times New Roman";color:black;'>1X</span></p>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+<p style='margin-top:0cm;margin-right:31.55pt;margin-bottom:8.0pt;margin-left:0cm;font-size:11.0pt;font-family:"Calibri",sans-serif;text-align:justify;line-height:115%;'><span style='font-size:16px;line-height:115%;font-family:"Times New Roman",serif;'>&nbsp;</span></p>
+<p style='margin-top:5.0pt;margin-right:31.55pt;margin-bottom:12.0pt;margin-left:0cm;font-size:11.0pt;font-family:"Calibri",sans-serif;text-align:justify;line-height:115%;'><strong><span style='font-size:16px;line-height:115%;font-family:"Times New Roman",serif;'>Step III: Purification of PCR product&nbsp;</span></strong></p>
+<ol style="list-style-type: decimal;margin-left: 26px;">
+    <li><span style='line-height:115%;font-family:"Times New Roman",serif;font-size:16px;'>Bring the AXP beads and Qubit reagents at room temperature. Make sure AXP beads are at room temperature before its use to avoid the clump formation.&nbsp;</span></li>
+    <li><span style='line-height:115%;font-family:"Times New Roman",serif;font-size:16px;'>Briefly spin the plate label with pool 1 and pool 2.&nbsp;</span></li>
+    <li><strong><span style='line-height:115%;font-family:"Times New Roman",serif;font-size:16px;'>Carefully pool the pool 1 and pool 2 together for each sample. Avoid any cross mixing/contamination while pooling</span></strong><span style='line-height:115%;font-family:"Times New Roman",serif;font-size:16px;'>.&nbsp;</span></li>
+    <li><span style='line-height:115%;font-family:"Times New Roman",serif;font-size:16px;'>Give a short spin to the plate containing pooled PCR product. Measure the volume of pooled PCR product in each well.&nbsp;</span></li>
+    <li><span style='line-height:115%;font-family:"Times New Roman",serif;font-size:16px;'>Vortex the AXP beads.&nbsp;</span></li>
+    <li><span style='line-height:115%;font-family:"Times New Roman",serif;font-size:16px;'>Add equal volume of AXP beads to the each well.&nbsp;</span></li>
+    <li><span style='line-height:115%;font-family:"Times New Roman",serif;font-size:16px;'>Seal the plate tightly and vortex for 10 min (rpm 700 to 900).</span></li>
+    <li><span style='line-height:115%;font-family:"Times New Roman",serif;font-size:16px;'>Spin down the plate and gently remove the seal. Place the plate on a magnetic rack. Wait for 2-5 min for the separation of the beads. Observe for the clear and colourless supernatant.&nbsp;</span></li>
+    <li><span style='line-height:115%;font-family:"Times New Roman",serif;font-size:16px;'>Using a multichannel pipette, carefully discard the supernatant.&nbsp;</span></li>
+    <li><span style='line-height:115%;font-family:"Times New Roman",serif;font-size:16px;'>Wash the AXP beads pellet by adding 200 &micro;l freshly prepared 80% ethanol, wait 30 seconds. Using a multichannel pipette, remove the ethanol without disturbing the pellet.</span></li>
+    <li><span style='line-height:115%;font-family:"Times New Roman",serif;font-size:16px;'>Repeat the ethanol wash of the pellet as per step 10.&nbsp;</span></li>
+    <li><span style='line-height:115%;font-family:"Times New Roman",serif;font-size:16px;'>Remove any residual ethanol drops using 10 &micro;l pipette. Allow to air dry the pellet for 2 to 5 min.</span></li>
+    <li><span style='line-height:115%;font-family:"Times New Roman",serif;font-size:16px;'>Remove the plate from a magnetic rack and resuspend the pellet in 16 &micro;l of nuclease free water.&nbsp;</span></li>
+    <li><span style='line-height:115%;font-family:"Times New Roman",serif;font-size:16px;'>Incubate the plate for 2 min at RT.&nbsp;</span></li>
+    <li><span style='line-height:115%;font-family:"Times New Roman",serif;font-size:16px;'>Briefly spin down the plate and keep it at a magnetic rack for 2 min. Elute 15 &micro;l of clear supernatant in a fresh plate.&nbsp;</span></li>
+    <li><span style='line-height:115%;font-family:"Times New Roman",serif;font-size:16px;'>Quantify the purified PCR product using Qubit. (Nanodrop is not recommended)</span></li>
+</ol>
+<p style='margin-top:5.0pt;margin-right:31.55pt;margin-bottom:12.0pt;margin-left:0cm;font-size:11.0pt;font-family:"Calibri",sans-serif;text-align:justify;line-height:115%;'><strong><span style='font-size:16px;line-height:115%;font-family:"Times New Roman",serif;'>Step IV: End-prep</span></strong></p>
+<ol class="decimal_type" style="list-style-type: decimal;margin-left: 26px;">
+    <li><span style='line-height:115%;font-family:"Times New Roman",serif;font-size:16px;'>Take out Ultra II end prep buffer from -20 &deg;C and thaw at RT.</span></li>
+    <li><span style='line-height:115%;font-family:"Times New Roman",serif;font-size:16px;'>Take a fresh 96-well plate. Label as end-prep plate.&nbsp;</span></li>
+    <li><span style='line-height:115%;font-family:"Times New Roman",serif;font-size:16px;'>Set the end-prep reaction as follow</span></li>
+</ol>
+<div align="center" style='margin-top:0cm;margin-right:0cm;margin-bottom:8.0pt;margin-left:0cm;font-size:11.0pt;font-family:"Calibri",sans-serif;'>
+    <table style="border: none;width: 321px;border-collapse: collapse;">
+        <tbody>
+            <tr>
+                <td style="width: 148.8pt;border: 1pt solid windowtext;padding: 0cm 5.4pt;height: 16pt;vertical-align: bottom;">
+                    <p style='margin-top:0cm;margin-right:0cm;margin-bottom:8.0pt;margin-left:0cm;font-size:11.0pt;font-family:"Calibri",sans-serif;text-align:center;line-height:normal;'><strong><span style='font-size:16px;font-family:"Times New Roman";color:black;'>Reagent</span></strong></p>
+                </td>
+                <td style="width: 92.15pt;border-top: 1pt solid windowtext;border-right: 1pt solid windowtext;border-bottom: 1pt solid windowtext;border-image: initial;border-left: none;padding: 0cm 5.4pt;height: 16pt;vertical-align: bottom;">
+                    <p style='margin-top:0cm;margin-right:0cm;margin-bottom:8.0pt;margin-left:0cm;font-size:11.0pt;font-family:"Calibri",sans-serif;text-align:center;line-height:normal;'><strong><span style='font-size:16px;font-family:"Times New Roman";color:black;'>Volume&nbsp;</span></strong></p>
+                </td>
+            </tr>
+            <tr>
+                <td style="width: 148.8pt;border-right: 1pt solid windowtext;border-bottom: 1pt solid windowtext;border-left: 1pt solid windowtext;border-image: initial;border-top: none;padding: 0cm 5.4pt;height: 16pt;vertical-align: bottom;">
+                    <p style='margin-top:0cm;margin-right:0cm;margin-bottom:8.0pt;margin-left:0cm;font-size:11.0pt;font-family:"Calibri",sans-serif;text-align:center;line-height:normal;'><span style='font-size:16px;font-family:"Times New Roman";color:black;'>Purified PCR product</span></p>
+                </td>
+                <td style="width: 92.15pt;border-top: none;border-left: none;border-bottom: 1pt solid windowtext;border-right: 1pt solid windowtext;padding: 0cm 5.4pt;height: 16pt;vertical-align: bottom;">
+                    <p style='margin-top:0cm;margin-right:0cm;margin-bottom:8.0pt;margin-left:0cm;font-size:11.0pt;font-family:"Calibri",sans-serif;text-align:center;line-height:normal;'><span style='font-size:16px;font-family:"Times New Roman";color:black;'>52.0 ng (x&nbsp;</span><span style='font-size:16px;font-family:"Times New Roman",serif;'>&micro;l)</span></p>
+                </td>
+            </tr>
+            <tr>
+                <td style="width: 148.8pt;border-right: 1pt solid windowtext;border-bottom: 1pt solid windowtext;border-left: 1pt solid windowtext;border-image: initial;border-top: none;padding: 0cm 5.4pt;height: 16pt;vertical-align: bottom;">
+                    <p style='margin-top:0cm;margin-right:0cm;margin-bottom:8.0pt;margin-left:0cm;font-size:11.0pt;font-family:"Calibri",sans-serif;text-align:center;line-height:normal;'><span style='font-size:16px;font-family:"Times New Roman";color:black;'>NFW</span></p>
+                </td>
+                <td style="width: 92.15pt;border-top: none;border-left: none;border-bottom: 1pt solid windowtext;border-right: 1pt solid windowtext;padding: 0cm 5.4pt;height: 16pt;vertical-align: bottom;">
+                    <p style='margin-top:0cm;margin-right:0cm;margin-bottom:8.0pt;margin-left:0cm;font-size:11.0pt;font-family:"Calibri",sans-serif;text-align:center;line-height:normal;'><span style='font-size:16px;font-family:"Times New Roman";color:black;'>12.5&nbsp;</span><span style='font-size:16px;font-family:"Times New Roman",serif;'>&micro;l</span><span style='font-size:16px;font-family:"Times New Roman";color:black;'>&nbsp;&ndash; x&nbsp;</span><span style='font-size:16px;font-family:"Times New Roman",serif;'>&micro;l</span></p>
+                </td>
+            </tr>
+            <tr>
+                <td style="width: 148.8pt;border-right: 1pt solid windowtext;border-bottom: 1pt solid windowtext;border-left: 1pt solid windowtext;border-image: initial;border-top: none;padding: 0cm 5.4pt;height: 16pt;vertical-align: bottom;">
+                    <p style='margin-top:0cm;margin-right:0cm;margin-bottom:8.0pt;margin-left:0cm;font-size:11.0pt;font-family:"Calibri",sans-serif;text-align:center;line-height:normal;'><span style='font-size:16px;font-family:"Times New Roman";color:black;'>Ultra II end prep buffer</span></p>
+                </td>
+                <td style="width: 92.15pt;border-top: none;border-left: none;border-bottom: 1pt solid windowtext;border-right: 1pt solid windowtext;padding: 0cm 5.4pt;height: 16pt;vertical-align: bottom;">
+                    <p style='margin-top:0cm;margin-right:0cm;margin-bottom:8.0pt;margin-left:0cm;font-size:11.0pt;font-family:"Calibri",sans-serif;text-align:center;line-height:normal;'><span style='font-size:16px;font-family:"Times New Roman";color:black;'>1.75&nbsp;</span><span style='font-size:16px;font-family:"Times New Roman",serif;'>&micro;l</span></p>
+                </td>
+            </tr>
+            <tr>
+                <td style="width: 148.8pt;border-right: 1pt solid windowtext;border-bottom: 1pt solid windowtext;border-left: 1pt solid windowtext;border-image: initial;border-top: none;padding: 0cm 5.4pt;height: 16pt;vertical-align: bottom;">
+                    <p style='margin-top:0cm;margin-right:0cm;margin-bottom:8.0pt;margin-left:0cm;font-size:11.0pt;font-family:"Calibri",sans-serif;text-align:center;line-height:normal;'><span style='font-size:16px;font-family:"Times New Roman";color:black;'>Ultra II end prep enzyme</span></p>
+                </td>
+                <td style="width: 92.15pt;border-top: none;border-left: none;border-bottom: 1pt solid windowtext;border-right: 1pt solid windowtext;padding: 0cm 5.4pt;height: 16pt;vertical-align: bottom;">
+                    <p style='margin-top:0cm;margin-right:0cm;margin-bottom:8.0pt;margin-left:0cm;font-size:11.0pt;font-family:"Calibri",sans-serif;text-align:center;line-height:normal;'><span style='font-size:16px;font-family:"Times New Roman";color:black;'>0.75&nbsp;</span><span style='font-size:16px;font-family:"Times New Roman",serif;'>&micro;l</span></p>
+                </td>
+            </tr>
+            <tr>
+                <td style="width: 148.8pt;border-right: 1pt solid windowtext;border-bottom: 1pt solid windowtext;border-left: 1pt solid windowtext;border-image: initial;border-top: none;padding: 0cm 5.4pt;height: 18.25pt;vertical-align: bottom;">
+                    <p style='margin-top:0cm;margin-right:0cm;margin-bottom:8.0pt;margin-left:0cm;font-size:11.0pt;font-family:"Calibri",sans-serif;text-align:center;line-height:normal;'><span style='font-size:16px;font-family:"Times New Roman";color:black;'>Final volume&nbsp;</span></p>
+                </td>
+                <td style="width: 92.15pt;border-top: none;border-left: none;border-bottom: 1pt solid windowtext;border-right: 1pt solid windowtext;padding: 0cm 5.4pt;height: 18.25pt;vertical-align: bottom;">
+                    <p style='margin-top:0cm;margin-right:0cm;margin-bottom:8.0pt;margin-left:0cm;font-size:11.0pt;font-family:"Calibri",sans-serif;text-align:center;line-height:normal;'><span style='font-size:16px;font-family:"Times New Roman";color:black;'>15.0&nbsp;</span><span style='font-size:16px;font-family:"Times New Roman",serif;'>&micro;l</span></p>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+<p style='margin-top:5.0pt;margin-right:31.55pt;margin-bottom:8.0pt;margin-left:0cm;font-size:11.0pt;font-family:"Calibri",sans-serif;text-align:justify;line-height:115%;'><span style='font-size:16px;line-height:115%;font-family:"Times New Roman",serif;'>&nbsp;</span></p>
+<ol start="4" style="list-style-type: decimal;margin-left: 26px;">
+    <li><span style='line-height:115%;font-family:"Times New Roman",serif;font-size:16px;'>Mix well by pipetting. Seal the plate and spin down.&nbsp;</span></li>
+    <li><span style='line-height:115%;font-family:"Times New Roman",serif;font-size:16px;'>Incubate the end-prep plate in a thermal cycler at below mentioned condition:&nbsp;</span></li>
+</ol>
+<div align="center" style='margin-top:0cm;margin-right:0cm;margin-bottom:8.0pt;margin-left:0cm;font-size:11.0pt;font-family:"Calibri",sans-serif;'>
+    <table style="border: none;width: 346px;border-collapse: collapse;">
+        <tbody>
+            <tr>
+                <td colspan="3" style="width:259.75pt;border:solid windowtext 1.0pt;padding:0cm 5.4pt 0cm 5.4pt;height:16.0pt;">
+                    <p style='margin-top:0cm;margin-right:0cm;margin-bottom:8.0pt;margin-left:0cm;font-size:11.0pt;font-family:"Calibri",sans-serif;text-align:center;line-height:normal;'><strong><span style='font-size:16px;font-family:"Times New Roman";color:black;'>Thermal cycler Conditions</span></strong></p>
+                </td>
+            </tr>
+            <tr>
+                <td style="width:120.1pt;border:solid windowtext 1.0pt;border-top:none;padding:  0cm 5.4pt 0cm 5.4pt;height:18.0pt;">
+                    <p style='margin-top:0cm;margin-right:0cm;margin-bottom:8.0pt;margin-left:0cm;font-size:11.0pt;font-family:"Calibri",sans-serif;text-align:center;line-height:normal;'><strong><span style='font-size:16px;font-family:"Times New Roman";color:black;'>Temperature <sup>&nbsp;</sup>(&deg;C)</span></strong></p>
+                </td>
+                <td style="width:77.2pt;border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;padding:0cm 5.4pt 0cm 5.4pt;height:18.0pt;">
+                    <p style='margin-top:0cm;margin-right:0cm;margin-bottom:8.0pt;margin-left:0cm;font-size:11.0pt;font-family:"Calibri",sans-serif;text-align:center;line-height:normal;'><strong><span style='font-size:16px;font-family:"Times New Roman";color:black;'>Duration</span></strong></p>
+                </td>
+                <td style="width:62.45pt;border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;padding:0cm 5.4pt 0cm 5.4pt;height:18.0pt;">
+                    <p style='margin-top:0cm;margin-right:0cm;margin-bottom:8.0pt;margin-left:0cm;font-size:11.0pt;font-family:"Calibri",sans-serif;text-align:center;line-height:normal;'><strong><span style='font-size:16px;font-family:"Times New Roman";color:black;'>Cycles</span></strong></p>
+                </td>
+            </tr>
+            <tr>
+                <td style="width:120.1pt;border:solid windowtext 1.0pt;border-top:none;padding:  0cm 5.4pt 0cm 5.4pt;height:16.0pt;">
+                    <p style='margin-top:0cm;margin-right:0cm;margin-bottom:8.0pt;margin-left:0cm;font-size:11.0pt;font-family:"Calibri",sans-serif;text-align:center;line-height:normal;'><span style='font-size:16px;font-family:"Times New Roman";color:black;'>20</span></p>
+                    <p style='margin-top:0cm;margin-right:0cm;margin-bottom:8.0pt;margin-left:0cm;font-size:11.0pt;font-family:"Calibri",sans-serif;text-align:center;line-height:normal;'><span style='font-size:16px;font-family:"Times New Roman";color:black;'>Skip this step once the temp is achieved</span></p>
+                </td>
+                <td style="width:77.2pt;border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;padding:0cm 5.4pt 0cm 5.4pt;height:16.0pt;">
+                    <p style='margin-top:0cm;margin-right:0cm;margin-bottom:8.0pt;margin-left:0cm;font-size:11.0pt;font-family:"Calibri",sans-serif;text-align:center;line-height:normal;'><span style='font-size:16px;font-family:"Times New Roman";color:black;'>&infin;</span></p>
+                </td>
+                <td style="width:62.45pt;border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;padding:0cm 5.4pt 0cm 5.4pt;height:16.0pt;">
+                    <p style='margin-top:0cm;margin-right:0cm;margin-bottom:8.0pt;margin-left:0cm;font-size:11.0pt;font-family:"Calibri",sans-serif;text-align:center;line-height:normal;'><span style='font-size:16px;font-family:"Times New Roman";color:black;'>1X</span></p>
+                </td>
+            </tr>
+            <tr>
+                <td style="width:120.1pt;border:solid windowtext 1.0pt;border-top:none;padding:  0cm 5.4pt 0cm 5.4pt;height:16.0pt;">
+                    <p style='margin-top:0cm;margin-right:0cm;margin-bottom:8.0pt;margin-left:0cm;font-size:11.0pt;font-family:"Calibri",sans-serif;text-align:center;line-height:normal;'><span style='font-size:16px;font-family:"Times New Roman";color:black;'>20</span></p>
+                </td>
+                <td style="width:77.2pt;border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;padding:0cm 5.4pt 0cm 5.4pt;height:16.0pt;">
+                    <p style='margin-top:0cm;margin-right:0cm;margin-bottom:8.0pt;margin-left:0cm;font-size:11.0pt;font-family:"Calibri",sans-serif;text-align:center;line-height:normal;'><span style='font-size:16px;font-family:"Times New Roman";color:black;'>5 min</span></p>
+                </td>
+                <td style="width:62.45pt;border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;padding:0cm 5.4pt 0cm 5.4pt;height:16.0pt;">
+                    <p style='margin-top:0cm;margin-right:0cm;margin-bottom:8.0pt;margin-left:0cm;font-size:11.0pt;font-family:"Calibri",sans-serif;text-align:center;line-height:normal;'><span style='font-size:16px;font-family:"Times New Roman";color:black;'>1X</span></p>
+                </td>
+            </tr>
+            <tr>
+                <td style="width:120.1pt;border:solid windowtext 1.0pt;border-top:none;padding:  0cm 5.4pt 0cm 5.4pt;height:16.0pt;">
+                    <p style='margin-top:0cm;margin-right:0cm;margin-bottom:8.0pt;margin-left:0cm;font-size:11.0pt;font-family:"Calibri",sans-serif;text-align:center;line-height:normal;'><span style='font-size:16px;font-family:"Times New Roman";color:black;'>65</span></p>
+                </td>
+                <td style="width:77.2pt;border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;padding:0cm 5.4pt 0cm 5.4pt;height:16.0pt;">
+                    <p style='margin-top:0cm;margin-right:0cm;margin-bottom:8.0pt;margin-left:0cm;font-size:11.0pt;font-family:"Calibri",sans-serif;text-align:center;line-height:normal;'><span style='font-size:16px;font-family:"Times New Roman";color:black;'>5 min</span></p>
+                </td>
+                <td style="width:62.45pt;border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;padding:0cm 5.4pt 0cm 5.4pt;height:16.0pt;">
+                    <p style='margin-top:0cm;margin-right:0cm;margin-bottom:8.0pt;margin-left:0cm;font-size:11.0pt;font-family:"Calibri",sans-serif;text-align:center;line-height:normal;'><span style='font-size:16px;font-family:"Times New Roman";color:black;'>1X</span></p>
+                </td>
+            </tr>
+            <tr>
+                <td style="width:120.1pt;border:solid windowtext 1.0pt;border-top:none;padding:  0cm 5.4pt 0cm 5.4pt;height:16.0pt;">
+                    <p style='margin-top:0cm;margin-right:0cm;margin-bottom:8.0pt;margin-left:0cm;font-size:11.0pt;font-family:"Calibri",sans-serif;text-align:center;line-height:normal;'><span style='font-size:16px;font-family:"Times New Roman";color:black;'>4</span></p>
+                </td>
+                <td style="width:77.2pt;border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;padding:0cm 5.4pt 0cm 5.4pt;height:16.0pt;">
+                    <p style='margin-top:0cm;margin-right:0cm;margin-bottom:8.0pt;margin-left:0cm;font-size:11.0pt;font-family:"Calibri",sans-serif;text-align:center;line-height:normal;'><span style='font-size:16px;font-family:"Times New Roman";color:black;'>10 min</span></p>
+                </td>
+                <td style="width:62.45pt;border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;padding:0cm 5.4pt 0cm 5.4pt;height:16.0pt;">
+                    <p style='margin-top:0cm;margin-right:0cm;margin-bottom:8.0pt;margin-left:0cm;font-size:11.0pt;font-family:"Calibri",sans-serif;text-align:center;line-height:normal;'><span style='font-size:16px;font-family:"Times New Roman";color:black;'>1X</span></p>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+<p style='margin-top:5.0pt;margin-right:31.55pt;margin-bottom:12.0pt;margin-left:36.0pt;font-size:11.0pt;font-family:"Calibri",sans-serif;text-align:justify;line-height:115%;'><span style='font-size:16px;line-height:115%;font-family:"Times New Roman",serif;'>Note: While the end-prep reaction proceeds, Take out the barcode from -20 &deg;C and thaw at RT. Gentle vortex and spin down.&nbsp;</span></p>
+<p style='margin-top:0cm;margin-right:31.55pt;margin-bottom:12.0pt;margin-left:0cm;font-size:11.0pt;font-family:"Calibri",sans-serif;text-align:justify;line-height:115%;'><strong><span style='font-size:16px;line-height:115%;font-family:"Times New Roman",serif;'>Step V: Barcode Ligation, Pooling and clean up</span></strong></p>
+<ol class="decimal_type" style="list-style-type: decimal;margin-left: 26px;">
+    <li><span style='line-height:115%;font-family:"Times New Roman",serif;font-size:16px;'>Take a fresh 96-well plate and label as barcode-ligation plate.&nbsp;</span></li>
+    <li><span style='line-height:115%;font-family:"Times New Roman",serif;font-size:16px;'>Set the barcode ligation reaction by combining the reaction component as mentioned below:</span></li>
+</ol>
+<div align="center" style='margin-top:0cm;margin-right:0cm;margin-bottom:8.0pt;margin-left:0cm;font-size:11.0pt;font-family:"Calibri",sans-serif;'>
+    <table style="border: none;width: 297px;border-collapse: collapse;">
+        <tbody>
+            <tr>
+                <td style="width: 122.2pt;border: 1pt solid windowtext;padding: 0cm 5.4pt;height: 16pt;vertical-align: bottom;">
+                    <p style='margin-top:0cm;margin-right:0cm;margin-bottom:8.0pt;margin-left:0cm;font-size:11.0pt;font-family:"Calibri",sans-serif;text-align:center;line-height:normal;'><strong><span style='font-size:16px;font-family:"Times New Roman";color:black;'>Component</span></strong></p>
+                </td>
+                <td style="width: 100.9pt;border-top: 1pt solid windowtext;border-right: 1pt solid windowtext;border-bottom: 1pt solid windowtext;border-image: initial;border-left: none;padding: 0cm 5.4pt;height: 16pt;vertical-align: bottom;">
+                    <p style='margin-top:0cm;margin-right:0cm;margin-bottom:8.0pt;margin-left:0cm;font-size:11.0pt;font-family:"Calibri",sans-serif;text-align:center;line-height:normal;'><strong><span style='font-size:16px;font-family:"Times New Roman";color:black;'>Volume (&micro;l)</span></strong></p>
+                </td>
+            </tr>
+            <tr>
+                <td style="width: 122.2pt;border-right: 1pt solid windowtext;border-bottom: 1pt solid windowtext;border-left: 1pt solid windowtext;border-image: initial;border-top: none;padding: 0cm 5.4pt;height: 16pt;vertical-align: bottom;">
+                    <p style='margin-top:0cm;margin-right:0cm;margin-bottom:8.0pt;margin-left:0cm;font-size:11.0pt;font-family:"Calibri",sans-serif;text-align:center;line-height:normal;'><span style='font-size:16px;font-family:"Times New Roman";color:black;'>End-prepped DNA</span></p>
+                </td>
+                <td style="width: 100.9pt;border-top: none;border-left: none;border-bottom: 1pt solid windowtext;border-right: 1pt solid windowtext;padding: 0cm 5.4pt;height: 16pt;vertical-align: bottom;">
+                    <p style='margin-top:0cm;margin-right:0cm;margin-bottom:8.0pt;margin-left:0cm;font-size:11.0pt;font-family:"Calibri",sans-serif;text-align:center;line-height:normal;'><span style='font-size:16px;font-family:"Times New Roman";color:black;'>7.5</span></p>
+                </td>
+            </tr>
+            <tr>
+                <td style="width: 122.2pt;border-right: 1pt solid windowtext;border-bottom: 1pt solid windowtext;border-left: 1pt solid windowtext;border-image: initial;border-top: none;padding: 0cm 5.4pt;height: 16pt;vertical-align: bottom;">
+                    <p style='margin-top:0cm;margin-right:0cm;margin-bottom:8.0pt;margin-left:0cm;font-size:11.0pt;font-family:"Calibri",sans-serif;text-align:center;line-height:normal;'><span style='font-size:16px;font-family:"Times New Roman";color:black;'>Native Barcode</span></p>
+                </td>
+                <td style="width: 100.9pt;border-top: none;border-left: none;border-bottom: 1pt solid windowtext;border-right: 1pt solid windowtext;padding: 0cm 5.4pt;height: 16pt;vertical-align: bottom;">
+                    <p style='margin-top:0cm;margin-right:0cm;margin-bottom:8.0pt;margin-left:0cm;font-size:11.0pt;font-family:"Calibri",sans-serif;text-align:center;line-height:normal;'><span style='font-size:16px;font-family:"Times New Roman";color:black;'>2.5</span></p>
+                </td>
+            </tr>
+            <tr>
+                <td style="width: 122.2pt;border-right: 1pt solid windowtext;border-bottom: 1pt solid windowtext;border-left: 1pt solid windowtext;border-image: initial;border-top: none;padding: 0cm 5.4pt;height: 16pt;vertical-align: bottom;">
+                    <p style='margin-top:0cm;margin-right:0cm;margin-bottom:8.0pt;margin-left:0cm;font-size:11.0pt;font-family:"Calibri",sans-serif;text-align:center;line-height:normal;'><span style='font-size:16px;font-family:"Times New Roman";color:black;'>2X Blunt TA ligase master mix</span></p>
+                </td>
+                <td style="width: 100.9pt;border-top: none;border-left: none;border-bottom: 1pt solid windowtext;border-right: 1pt solid windowtext;padding: 0cm 5.4pt;height: 16pt;vertical-align: bottom;">
+                    <p style='margin-top:0cm;margin-right:0cm;margin-bottom:8.0pt;margin-left:0cm;font-size:11.0pt;font-family:"Calibri",sans-serif;text-align:center;line-height:normal;'><span style='font-size:16px;font-family:"Times New Roman";color:black;'>10</span></p>
+                </td>
+            </tr>
+            <tr>
+                <td style="width: 122.2pt;border-right: 1pt solid windowtext;border-bottom: 1pt solid windowtext;border-left: 1pt solid windowtext;border-image: initial;border-top: none;padding: 0cm 5.4pt;height: 16pt;vertical-align: bottom;">
+                    <p style='margin-top:0cm;margin-right:0cm;margin-bottom:8.0pt;margin-left:0cm;font-size:11.0pt;font-family:"Calibri",sans-serif;text-align:center;line-height:normal;'><span style='font-size:16px;font-family:"Times New Roman";color:black;'>Final volume of mix</span></p>
+                </td>
+                <td style="width: 100.9pt;border-top: none;border-left: none;border-bottom: 1pt solid windowtext;border-right: 1pt solid windowtext;padding: 0cm 5.4pt;height: 16pt;vertical-align: bottom;">
+                    <p style='margin-top:0cm;margin-right:0cm;margin-bottom:8.0pt;margin-left:0cm;font-size:11.0pt;font-family:"Calibri",sans-serif;text-align:center;line-height:normal;'><span style='font-size:16px;font-family:"Times New Roman";color:black;'>20.0</span></p>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+<ol start="3" style="list-style-type: decimal;margin-left: 26px;">
+    <li><span style='line-height:115%;font-family:"Times New Roman",serif;font-size:16px;'>Thoroughly mix the reaction by gently pipetting. &nbsp; Seal the plate and give a short spin.&nbsp;</span></li>
+    <li><span style='line-height:115%;font-family:"Times New Roman",serif;font-size:16px;'>Incubate the plate at RT for 20 min. &nbsp;</span></li>
+    <li><span style='line-height:115%;font-family:"Times New Roman",serif;font-size:16px;'>Thaw EDTA, AXP beads and SFB at RT. Prepare 80 % Ethanol.&nbsp;</span></li>
+    <li><span style='line-height:115%;font-family:"Times New Roman",serif;font-size:16px;'>Followed by the incubation of 20 min, add 2 &micro;l EDTA (from clear cap EDTA-vial) or 4 &micro;l EDTA (from blue cap EDTA-vail) to each well. Mix thoroughly by pipetting and spin down briefly.</span></li>
+    <li><span style='line-height:115%;font-family:"Times New Roman",serif;font-size:16px;'>Resuspend the AXP beads by vortexing. Add 9</span><span style='line-height:115%;font-family:"Times New Roman",serif;font-size:16px;color:black;'>&nbsp;&micro;l of AXP beads (if EDTA was added from clear cap vail) or 10&nbsp;</span><span style='line-height:115%;font-family:"Times New Roman",serif;font-size:16px;'>&micro;l of AXP beads (if EDTA was added from blue cap vail)</span><span style='line-height:115%;font-family:"Times New Roman",serif;font-size:16px;color:black;'>&nbsp;to the each well. Mix well using the pipette.&nbsp;</span></li>
+    <li><strong><span style='line-height:115%;font-family:"Times New Roman",serif;font-size:16px;color:black;'>Pool the content from all the wells in a 1.5 ml centrifuge tube (Eppendorf DNA LoBind tube is recommended). &nbsp;&nbsp;</span></strong></li>
+    <li><span style='line-height:115%;font-family:"Times New Roman",serif;font-size:16px;color:black;'>Incubate on a Hula mixer for 10 min at RT (35 rpm). Intermittently, flick the tubes to ensure the better mixing of the content.&nbsp;</span></li>
+    <li><span style='line-height:115%;font-family:"Times New Roman",serif;font-size:16px;color:black;'>Spin down the sample and place the tube on a magnetic stand for 5 min. Observe for the clear and colourless supernatant. Using the pipette, discard the supernatant without disturbing the pellet.</span></li>
+    <li><span style='line-height:115%;font-family:"Times New Roman",serif;font-size:16px;color:black;'>To wash the pellet, add 700&nbsp;</span><span style='line-height:115%;font-family:"Times New Roman",serif;font-size:16px;'>&micro;l</span><span style='line-height:115%;font-family:"Times New Roman",serif;font-size:16px;color:black;'>&nbsp;of freshly prepared 80 % ethanol without disturbing the pellet. To avoid any disturbance to the pellet, add ethanol slowly through the wall of the tube, away from the pellet. &nbsp;Remove the ethanol using the pipette and discard.&nbsp;</span></li>
+    <li><span style='line-height:115%;font-family:"Times New Roman",serif;font-size:16px;color:black;'>Repeat the ethanol wash as per step 11.&nbsp;</span></li>
+    <li><span style='line-height:115%;font-family:"Times New Roman",serif;font-size:16px;color:black;'>Spin down briefly and place the tube back on a magnetic stand. Remove any residual ethanol. Allow the pellet to dry for 30 secs to 1 min. Do not let the pellet to crack.&nbsp;</span></li>
+    <li><span style='line-height:115%;font-family:"Times New Roman",serif;font-size:16px;color:black;'>Remove the tube from the magnetic stand and add 35&nbsp;</span><span style='line-height:115%;font-family:"Times New Roman",serif;font-size:16px;'>&micro;l of nuclease free water on the pellet. Resuspend the pellet by gently flicking.&nbsp;</span></li>
+    <li><span style='line-height:115%;font-family:"Times New Roman",serif;font-size:16px;color:black;'>Incubate for 10 min at 37&deg;C. At every 2 min, gently flicking the tube is recommended for the enhance DNA elution.&nbsp;</span></li>
+    <li><span style='line-height:115%;font-family:"Times New Roman",serif;font-size:16px;color:black;'>Place the tube on a magnetic stand until the eluate is clear and colourless (Approx. 2 min).&nbsp;</span></li>
+    <li><span style='line-height:115%;font-family:"Times New Roman",serif;font-size:16px;color:black;'>Collect 35&micro;L of eluate in a fresh 1.5 ml micro centrifuge tube. &nbsp;&nbsp;</span></li>
+    <li><span style='line-height:115%;font-family:"Times New Roman",serif;font-size:16px;color:black;'>Measure the concentration of DNA in the eluate using Qubit.</span></li>
+</ol>
+<p style='margin-top:5.0pt;margin-right:31.55pt;margin-bottom:0cm;margin-left:36.0pt;font-size:11.0pt;font-family:"Calibri",sans-serif;text-align:justify;line-height:115%;'><span style='font-size:16px;line-height:115%;font-family:"Times New Roman",serif;'>&nbsp;</span></p>
+<p style='margin-top:5.0pt;margin-right:31.55pt;margin-bottom:12.0pt;margin-left:0cm;font-size:11.0pt;font-family:"Calibri",sans-serif;text-align:justify;line-height:115%;'><strong><span style='font-size:16px;line-height:115%;font-family:"Times New Roman",serif;'>Step VI: Adaptor Ligation and clean up&nbsp;</span></strong></p>
+<div style='margin-top:0cm;margin-right:0cm;margin-bottom:8.0pt;margin-left:0cm;font-size:11.0pt;font-family:"Calibri",sans-serif;'>
+    <ol style="margin-bottom:0cm;list-style-type: decimal;margin-left: 26px;">
+        <li style='margin-top:0cm;margin-right:0cm;margin-bottom:8.0pt;margin-left:0cm;font-size:11.0pt;font-family:"Calibri",sans-serif;'><span style='line-height:115%;font-family:"Times New Roman",serif;font-size:16px;'>Prepare adaptor ligation mix as follow:</span></li>
+    </ol>
+</div>
+<table style="margin: 0 auto; border: none; width: 420px; border-collapse: collapse;">
+    <tbody>
+        <tr>
+            <td style="width: 130.95pt;border: 1pt solid windowtext;padding: 0cm 5.4pt;height: 16pt;vertical-align: bottom;">
+                <p style='margin-top:0cm;margin-right:0cm;margin-bottom:8.0pt;margin-left:0cm;font-size:11.0pt;font-family:"Calibri",sans-serif;line-height:normal;'><strong><span style='font-size:16px;font-family:  "Times New Roman";color:black;'>Reagent</span></strong></p>
+            </td>
+            <td style="width: 184.3pt;border-top: 1pt solid windowtext;border-right: 1pt solid windowtext;border-bottom: 1pt solid windowtext;border-image: initial;border-left: none;padding: 0cm 5.4pt;height: 16pt;vertical-align: top;">
+                <p style='margin-top:0cm;margin-right:0cm;margin-bottom:8.0pt;margin-left:0cm;font-size:11.0pt;font-family:"Calibri",sans-serif;text-align:center;line-height:normal;'><strong><span style='font-size:16px;font-family:"Times New Roman";color:black;'>Volume&nbsp;</span></strong></p>
+            </td>
+        </tr>
+        <tr>
+            <td style="width: 130.95pt;border-right: 1pt solid windowtext;border-bottom: 1pt solid windowtext;border-left: 1pt solid windowtext;border-image: initial;border-top: none;padding: 0cm 5.4pt;height: 16pt;vertical-align: bottom;">
+                <p style='margin-top:0cm;margin-right:0cm;margin-bottom:8.0pt;margin-left:0cm;font-size:11.0pt;font-family:"Calibri",sans-serif;line-height:normal;'><span style='font-size:16px;font-family:  "Times New Roman";color:black;'>Pooled barcoded DNA</span></p>
+            </td>
+            <td style="width: 184.3pt;border-top: none;border-left: none;border-bottom: 1pt solid black;border-right: 1pt solid windowtext;padding: 0cm 5.4pt;height: 16pt;vertical-align: top;">
+                <p style='margin-top:0cm;margin-right:0cm;margin-bottom:8.0pt;margin-left:0cm;font-size:11.0pt;font-family:"Calibri",sans-serif;text-align:center;line-height:normal;'><span style='font-size:16px;font-family:"Times New Roman";color:black;'>20 ng (x&nbsp;</span><span style='font-size:16px;font-family:"Times New Roman",serif;'>&micro;l)</span></p>
+            </td>
+        </tr>
+        <tr>
+            <td style="width: 130.95pt;border-right: 1pt solid windowtext;border-bottom: 1pt solid windowtext;border-left: 1pt solid windowtext;border-image: initial;border-top: none;padding: 0cm 5.4pt;height: 16pt;vertical-align: bottom;">
+                <p style='margin-top:0cm;margin-right:0cm;margin-bottom:8.0pt;margin-left:0cm;font-size:11.0pt;font-family:"Calibri",sans-serif;line-height:normal;'><span style='font-size:16px;font-family:  "Times New Roman";color:black;'>NFW</span></p>
+            </td>
+            <td style="width: 184.3pt;border-top: none;border-left: none;border-bottom: 1pt solid black;border-right: 1pt solid windowtext;padding: 0cm 5.4pt;height: 16pt;vertical-align: top;">
+                <p style='margin-top:0cm;margin-right:0cm;margin-bottom:8.0pt;margin-left:0cm;font-size:11.0pt;font-family:"Calibri",sans-serif;text-align:center;line-height:normal;'><span style='font-size:16px;font-family:"Times New Roman";color:black;'>30&nbsp;</span><span style='font-size:16px;font-family:"Times New Roman",serif;'>&micro;l</span><span style='font-size:16px;font-family:"Times New Roman";color:black;'>&nbsp;&ndash; x&nbsp;</span><span style='font-size:16px;font-family:"Times New Roman",serif;'>&micro;l</span></p>
+            </td>
+        </tr>
+        <tr>
+            <td style="width: 130.95pt;border-right: 1pt solid windowtext;border-bottom: 1pt solid windowtext;border-left: 1pt solid windowtext;border-image: initial;border-top: none;padding: 0cm 5.4pt;height: 16pt;vertical-align: bottom;">
+                <p style='margin-top:0cm;margin-right:0cm;margin-bottom:8.0pt;margin-left:0cm;font-size:11.0pt;font-family:"Calibri",sans-serif;line-height:normal;'><span style='font-size:16px;font-family:  "Times New Roman";color:black;'>Native adaptor (NA)</span></p>
+            </td>
+            <td style="width: 184.3pt;border-top: none;border-left: none;border-bottom: 1pt solid windowtext;border-right: 1pt solid windowtext;padding: 0cm 5.4pt;height: 16pt;vertical-align: bottom;">
+                <p style='margin-top:0cm;margin-right:0cm;margin-bottom:8.0pt;margin-left:0cm;font-size:11.0pt;font-family:"Calibri",sans-serif;text-align:center;line-height:normal;'><span style='font-size:16px;font-family:"Times New Roman";color:black;'>5&nbsp;</span><span style='font-size:16px;font-family:"Times New Roman",serif;'>&micro;l</span></p>
+            </td>
+        </tr>
+        <tr>
+            <td style="width: 130.95pt;border-right: 1pt solid windowtext;border-bottom: 1pt solid windowtext;border-left: 1pt solid windowtext;border-image: initial;border-top: none;padding: 0cm 5.4pt;height: 16pt;vertical-align: bottom;">
+                <p style='margin-top:0cm;margin-right:0cm;margin-bottom:8.0pt;margin-left:0cm;font-size:11.0pt;font-family:"Calibri",sans-serif;line-height:normal;'><span style='font-size:16px;font-family:  "Times New Roman";color:black;'>5X NEB Next Quick Ligation buffer</span></p>
+            </td>
+            <td style="width: 184.3pt;border-top: none;border-left: none;border-bottom: 1pt solid windowtext;border-right: 1pt solid windowtext;padding: 0cm 5.4pt;height: 16pt;vertical-align: bottom;">
+                <p style='margin-top:0cm;margin-right:0cm;margin-bottom:8.0pt;margin-left:0cm;font-size:11.0pt;font-family:"Calibri",sans-serif;text-align:center;line-height:normal;'><span style='font-size:16px;font-family:"Times New Roman";color:black;'>10</span><span style='font-size:16px;font-family:"Times New Roman",serif;'>&nbsp;&micro;l</span></p>
+            </td>
+        </tr>
+        <tr>
+            <td style="width: 130.95pt;border-right: 1pt solid windowtext;border-bottom: 1pt solid windowtext;border-left: 1pt solid windowtext;border-image: initial;border-top: none;padding: 0cm 5.4pt;height: 16pt;vertical-align: bottom;">
+                <p style='margin-top:0cm;margin-right:0cm;margin-bottom:8.0pt;margin-left:0cm;font-size:11.0pt;font-family:"Calibri",sans-serif;line-height:normal;'><span style='font-size:16px;font-family:  "Times New Roman";color:black;'>Quick T4 DNA ligase</span></p>
+            </td>
+            <td style="width: 184.3pt;border-top: none;border-left: none;border-bottom: 1pt solid windowtext;border-right: 1pt solid windowtext;padding: 0cm 5.4pt;height: 16pt;vertical-align: bottom;">
+                <p style='margin-top:0cm;margin-right:0cm;margin-bottom:8.0pt;margin-left:0cm;font-size:11.0pt;font-family:"Calibri",sans-serif;text-align:center;line-height:normal;'><span style='font-size:16px;font-family:"Times New Roman";color:black;'>5</span><span style='font-size:16px;font-family:"Times New Roman",serif;'>&nbsp;&micro;l</span></p>
+            </td>
+        </tr>
+        <tr>
+            <td style="width: 130.95pt;border-right: 1pt solid windowtext;border-bottom: 1pt solid windowtext;border-left: 1pt solid windowtext;border-image: initial;border-top: none;padding: 0cm 5.4pt;height: 16pt;vertical-align: bottom;">
+                <p style='margin-top:0cm;margin-right:0cm;margin-bottom:8.0pt;margin-left:0cm;font-size:11.0pt;font-family:"Calibri",sans-serif;line-height:normal;'><span style='font-size:16px;font-family:  "Times New Roman";color:black;'>Final volume&nbsp;</span></p>
+            </td>
+            <td style="width: 184.3pt;border-top: none;border-left: none;border-bottom: 1pt solid windowtext;border-right: 1pt solid windowtext;padding: 0cm 5.4pt;height: 16pt;vertical-align: bottom;">
+                <p style='margin-top:0cm;margin-right:0cm;margin-bottom:8.0pt;margin-left:0cm;font-size:11.0pt;font-family:"Calibri",sans-serif;text-align:center;line-height:normal;'><span style='font-size:16px;font-family:"Times New Roman";color:black;'>50&nbsp;</span><span style='font-size:16px;font-family:"Times New Roman",serif;'>&micro;l&nbsp;</span></p>
+            </td>
+        </tr>
+    </tbody>
+</table>
+<p style='margin-top:5.0pt;margin-right:31.55pt;margin-bottom:8.0pt;margin-left:0cm;font-size:11.0pt;font-family:"Calibri",sans-serif;text-align:justify;line-height:115%;'><span style='font-size:16px;line-height:115%;font-family:"Times New Roman",serif;'>Note: While adaptor ligation incubation, thaw SB, LIB, FCT, FCF and EB at RT. Vortex and spin except LIB.&nbsp;</span></p>
+<ol start="2" style="list-style-type: decimal;margin-left: 26px;">
+    <li><span style='line-height:115%;font-family:"Times New Roman",serif;font-size:16px;'>Mix the reaction by gently pipetting. Spin down briefly. &nbsp;</span></li>
+    <li><span style='line-height:115%;font-family:"Times New Roman",serif;font-size:16px;'>Incubate for 20 min at RT.</span></li>
+    <li><span style='line-height:115%;font-family:"Times New Roman",serif;font-size:16px;'>Vortex AXP beads.&nbsp;</span></li>
+    <li><span style='line-height:115%;font-family:"Times New Roman",serif;font-size:16px;'>Add (0.6x volume) 30</span><span style='line-height:115%;font-family:"Times New Roman",serif;font-size:16px;color:black;'>&nbsp;&micro;L of AXP beads and mix by pipetting.</span></li>
+    <li><span style='line-height:115%;font-family:"Times New Roman",serif;font-size:16px;color:black;'>Incubate the tube on Hula mixer for 10 min at RT.&nbsp;</span></li>
+    <li><span style='line-height:115%;font-family:"Times New Roman",serif;font-size:16px;color:black;'>Spin down briefly and place the tube on a magnetic stand. Observe for the clear supernatant. Pipette off the clear supernatant.&nbsp;</span></li>
+    <li><span style='line-height:115%;font-family:"Times New Roman",serif;font-size:16px;'>Wash the beads using SFB. Add 125</span><span style='line-height:115%;font-family:"Times New Roman",serif;font-size:16px;color:black;'>&nbsp;</span><span style='line-height:115%;font-family:"Times New Roman",serif;font-size:16px;'>&micro;l</span><span style='line-height:115%;font-family:"Times New Roman",serif;font-size:16px;color:black;'>&nbsp;SFB to the beads. Flick the beads to resuspend, briefly spin down and place the tube on a magnetic stand and allow the beads to pellet. Remove the clear supernatant through pipette. &nbsp;</span></li>
+    <li><span style='line-height:115%;font-family:"Times New Roman",serif;font-size:16px;color:black;'>Repeat the SFB wash of the beads as per the step 8. &nbsp;</span></li>
+    <li><span style='line-height:115%;font-family:"Times New Roman",serif;font-size:16px;'>Briefly spin down and place the tube on magnetic stand. Remove any residual supernatant.&nbsp;</span></li>
+    <li><span style='line-height:115%;font-family:"Times New Roman",serif;font-size:16px;'>Resuspend the pellet in 15 &micro;l of elution buffer. Spin down and incubate for 10 min&nbsp;</span><span style='line-height:115%;font-family:"Times New Roman",serif;font-size:16px;color:black;'>at 37&deg;C. At every 2 min, gently flicking the tube is recommended for the enhance DNA elution.&nbsp;</span></li>
+    <li><span style='line-height:115%;font-family:"Times New Roman",serif;font-size:16px;color:black;'>Place the tube on a magnetic stand until the eluate is clear and colourless (Approx. 2 min).&nbsp;</span></li>
+    <li><span style='line-height:115%;font-family:"Times New Roman",serif;font-size:16px;color:black;'>Collect 15 &micro;L of eluate in a fresh 1.5 ml micro centrifuge tube. &nbsp; &nbsp;</span></li>
+    <li><span style='line-height:115%;font-family:"Times New Roman",serif;font-size:16px;color:black;'>Measure the concentration of DNA in the eluate using Qubit.</span></li>
+</ol>
+<p style='margin-top:5.0pt;margin-right:31.55pt;margin-bottom:12.0pt;margin-left:0cm;font-size:11.0pt;font-family:"Calibri",sans-serif;text-align:justify;line-height:115%;'><strong><span style='font-size:16px;line-height:115%;font-family:"Times New Roman",serif;'>Step VII: Priming and loading the SpoTON flow cell</span></strong></p>
+<ol style="list-style-type: decimal;margin-left: 26px;">
+    <li><span style='line-height:115%;font-family:"Times New Roman",serif;font-size:16px;'>Take out the flow cell from 4 &deg;C at least 30 min before&nbsp;the flow cell priming and thaw at RT.</span></li>
+    <li><span style='line-height:115%;font-family:"Times New Roman",serif;font-size:16px;'>Set the flow cell on the sequencing device (MK1c or GridION). Perform the flow cell QC and check the number of pores in the flow cell before its priming.&nbsp;</span></li>
+    <li><span style='line-height:115%;font-family:"Times New Roman",serif;font-size:16px;'>Prepare flow cell priming mix in a fresh 1.5 ml tube as follow: &nbsp;</span></li>
+</ol>
+<table style="margin: 0 auto; border: none; width: 420px; border-collapse: collapse;">
+    <tbody>
+        <tr>
+            <td style="width: 130.95pt;border: 1pt solid windowtext;padding: 0cm 5.4pt;height: 16pt;vertical-align: bottom;">
+                <p style='margin-top:0cm;margin-right:0cm;margin-bottom:8.0pt;margin-left:0cm;font-size:11.0pt;font-family:"Calibri",sans-serif;line-height:normal;'><strong><span style='font-size:16px;font-family:  "Times New Roman";color:black;'>Reagent</span></strong></p>
+            </td>
+            <td style="width: 184.3pt;border-top: 1pt solid windowtext;border-right: 1pt solid windowtext;border-bottom: 1pt solid windowtext;border-image: initial;border-left: none;padding: 0cm 5.4pt;height: 16pt;vertical-align: top;">
+                <p style='margin-top:0cm;margin-right:0cm;margin-bottom:8.0pt;margin-left:0cm;font-size:11.0pt;font-family:"Calibri",sans-serif;text-align:center;line-height:normal;'><strong><span style='font-size:16px;font-family:"Times New Roman";color:black;'>Volume (&micro;l)</span></strong></p>
+            </td>
+        </tr>
+        <tr>
+            <td style="width: 130.95pt;border-right: 1pt solid windowtext;border-bottom: 1pt solid windowtext;border-left: 1pt solid windowtext;border-image: initial;border-top: none;padding: 0cm 5.4pt;height: 16pt;vertical-align: bottom;">
+                <p style='margin-top:0cm;margin-right:0cm;margin-bottom:8.0pt;margin-left:0cm;font-size:11.0pt;font-family:"Calibri",sans-serif;line-height:normal;'><span style='font-size:16px;font-family:  "Times New Roman";color:black;'>Flush buffer (FCF)</span></p>
+            </td>
+            <td style="width: 184.3pt;border-top: none;border-left: none;border-bottom: 1pt solid black;border-right: 1pt solid windowtext;padding: 0cm 5.4pt;height: 16pt;vertical-align: top;">
+                <p style='margin-top:0cm;margin-right:0cm;margin-bottom:8.0pt;margin-left:0cm;font-size:11.0pt;font-family:"Calibri",sans-serif;text-align:center;line-height:normal;'><span style='font-size:16px;font-family:"Times New Roman";color:black;'>1170</span></p>
+            </td>
+        </tr>
+        <tr>
+            <td style="width: 130.95pt;border-right: 1pt solid windowtext;border-bottom: 1pt solid windowtext;border-left: 1pt solid windowtext;border-image: initial;border-top: none;padding: 0cm 5.4pt;height: 16pt;vertical-align: bottom;">
+                <p style='margin-top:0cm;margin-right:0cm;margin-bottom:8.0pt;margin-left:0cm;font-size:11.0pt;font-family:"Calibri",sans-serif;line-height:normal;'><span style='font-size:16px;font-family:  "Times New Roman";color:black;'>Flush tether (FCT)</span></p>
+            </td>
+            <td style="width: 184.3pt;border-top: none;border-left: none;border-bottom: 1pt solid black;border-right: 1pt solid windowtext;padding: 0cm 5.4pt;height: 16pt;vertical-align: top;">
+                <p style='margin-top:0cm;margin-right:0cm;margin-bottom:8.0pt;margin-left:0cm;font-size:11.0pt;font-family:"Calibri",sans-serif;text-align:center;line-height:normal;'><span style='font-size:16px;font-family:"Times New Roman";color:black;'>30</span></p>
+            </td>
+        </tr>
+        <tr>
+            <td style="width: 130.95pt;border-right: 1pt solid windowtext;border-bottom: 1pt solid windowtext;border-left: 1pt solid windowtext;border-image: initial;border-top: none;padding: 0cm 5.4pt;height: 16pt;vertical-align: bottom;">
+                <p style='margin-top:0cm;margin-right:0cm;margin-bottom:8.0pt;margin-left:0cm;font-size:11.0pt;font-family:"Calibri",sans-serif;line-height:normal;'><span style='font-size:16px;font-family:  "Times New Roman";color:black;'>Final volume of mix</span></p>
+            </td>
+            <td style="width: 184.3pt;border-top: none;border-left: none;border-bottom: 1pt solid windowtext;border-right: 1pt solid windowtext;padding: 0cm 5.4pt;height: 16pt;vertical-align: bottom;">
+                <p style='margin-top:0cm;margin-right:0cm;margin-bottom:8.0pt;margin-left:0cm;font-size:11.0pt;font-family:"Calibri",sans-serif;text-align:center;line-height:normal;'><span style='font-size:16px;font-family:"Times New Roman";color:black;'>1200</span></p>
+            </td>
+        </tr>
+    </tbody>
+</table>
+<ol start="4" style="list-style-type: decimal;margin-left: 26px;">
+    <li><span style='line-height:115%;font-family:"Times New Roman",serif;font-size:16px;'>Vortex and spin down the priming mix.</span></li>
+    <li><span style='line-height:115%;font-family:"Times New Roman",serif;font-size:16px;'>Open the priming port.</span></li>
+    <li><span style='line-height:115%;font-family:"Times New Roman",serif;font-size:16px;'>After opening the priming port, check for a small air bubble under the cover. Draw back a small volume to remove any bubbles:</span>
+        <ol style="list-style-type: lower-alpha;">
+            <li><span style='line-height:115%;font-family:"Times New Roman",serif;font-size:16px;'>Set a P1000 pipette to 200 &micro;l.</span></li>
+            <li><span style='line-height:115%;font-family:"Times New Roman",serif;font-size:16px;'>Insert the tip into the priming port.</span></li>
+            <li><span style='line-height:115%;font-family:"Times New Roman",serif;font-size:16px;'>Turn the wheel until the dial shows 220-230 &micro;l, to draw back 20-30 ul, or until you can see a small volume of buffer entering the pipette tip.</span></li>
+        </ol>
+    </li>
+</ol>
+<p style='margin-top:5.0pt;margin-right:31.55pt;margin-bottom:8.0pt;margin-left:36.0pt;font-size:11.0pt;font-family:"Calibri",sans-serif;text-align:justify;line-height:115%;'><span style='font-size:16px;line-height:115%;font-family:"Times New Roman",serif;'>Note: Visually check that there is continuous buffer from the priming port across the sensor array.</span></p>
+<div style='margin-top:0cm;margin-right:0cm;margin-bottom:8.0pt;margin-left:0cm;font-size:11.0pt;font-family:"Calibri",sans-serif;'>
+    <ol start="7" style="margin-bottom:0cm;list-style-type: decimal;margin-left: 26px;">
+        <li style='margin-top:0cm;margin-right:0cm;margin-bottom:8.0pt;margin-left:0cm;font-size:11.0pt;font-family:"Calibri",sans-serif;'><span style='line-height:115%;font-family:"Times New Roman",serif;font-size:16px;'>Load 800 &micro;l of the priming mix into the flow cell via the priming port, avoid introducing air bubbles. Wait for 5 min before second priming. Utilize this incubation period to prepare the library-loading mix by combining following components:</span></li>
+    </ol>
+</div>
+<table style="margin: 0 auto; border: none; width: 420px; border-collapse: collapse;">
+    <tbody>
+        <tr>
+            <td style="width: 132.4pt;border: 1pt solid windowtext;padding: 0cm 5.4pt;height: 12.1pt;vertical-align: bottom;">
+                <p style='margin-top:0cm;margin-right:0cm;margin-bottom:8.0pt;margin-left:0cm;font-size:11.0pt;font-family:"Calibri",sans-serif;line-height:normal;'><strong><span style='font-size:16px;font-family:  "Times New Roman";color:black;'>Reagents</span></strong></p>
+            </td>
+            <td style="width: 176pt;border-top: 1pt solid windowtext;border-right: 1pt solid windowtext;border-bottom: 1pt solid windowtext;border-image: initial;border-left: none;padding: 0cm 5.4pt;height: 12.1pt;vertical-align: top;">
+                <p style='margin-top:0cm;margin-right:0cm;margin-bottom:8.0pt;margin-left:0cm;font-size:11.0pt;font-family:"Calibri",sans-serif;text-align:center;line-height:normal;'><strong><span style='font-size:16px;font-family:"Times New Roman";color:black;'>Volume (</span></strong><span style='font-size:16px;font-family:"Times New Roman",serif;'>&micro;l</span><strong><span style='font-size:16px;font-family:"Times New Roman";color:black;'>)</span></strong></p>
+            </td>
+        </tr>
+        <tr>
+            <td style="width: 132.4pt;border-right: 1pt solid windowtext;border-bottom: 1pt solid windowtext;border-left: 1pt solid windowtext;border-image: initial;border-top: none;padding: 0cm 5.4pt;height: 17.6pt;vertical-align: bottom;">
+                <p style='margin-top:0cm;margin-right:0cm;margin-bottom:8.0pt;margin-left:0cm;font-size:11.0pt;font-family:"Calibri",sans-serif;line-height:normal;'><span style='font-size:16px;font-family:  "Times New Roman";color:black;'>Sequencing buffer (SB)</span></p>
+            </td>
+            <td style="width:176.0pt;border-top:none;border-left:none;border-bottom:solid black 1.0pt;border-right:solid windowtext 1.0pt;padding:0cm 5.4pt 0cm 5.4pt;height:17.6pt;">
+                <p style='margin-top:0cm;margin-right:0cm;margin-bottom:8.0pt;margin-left:0cm;font-size:11.0pt;font-family:"Calibri",sans-serif;text-align:center;line-height:normal;'><span style='font-size:16px;font-family:"Times New Roman";color:black;'>37.5</span></p>
+            </td>
+        </tr>
+        <tr>
+            <td style="width: 132.4pt;border-right: 1pt solid windowtext;border-bottom: 1pt solid windowtext;border-left: 1pt solid windowtext;border-image: initial;border-top: none;padding: 0cm 5.4pt;height: 12.1pt;vertical-align: bottom;">
+                <p style='margin-top:0cm;margin-right:0cm;margin-bottom:8.0pt;margin-left:0cm;font-size:11.0pt;font-family:"Calibri",sans-serif;line-height:normal;'><span style='font-size:16px;font-family:  "Times New Roman";color:black;'>Library beads (LB)&nbsp;</span></p>
+            </td>
+            <td style="width:176.0pt;border-top:none;border-left:none;border-bottom:solid black 1.0pt;border-right:solid windowtext 1.0pt;padding:0cm 5.4pt 0cm 5.4pt;height:12.1pt;">
+                <p style='margin-top:0cm;margin-right:0cm;margin-bottom:8.0pt;margin-left:0cm;font-size:11.0pt;font-family:"Calibri",sans-serif;text-align:center;line-height:normal;'><span style='font-size:16px;font-family:"Times New Roman";color:black;'>25.5</span></p>
+            </td>
+        </tr>
+        <tr>
+            <td style="width: 132.4pt;border-right: 1pt solid windowtext;border-bottom: 1pt solid windowtext;border-left: 1pt solid windowtext;border-image: initial;border-top: none;padding: 0cm 5.4pt;height: 11.2pt;vertical-align: bottom;">
+                <p style='margin-top:0cm;margin-right:0cm;margin-bottom:8.0pt;margin-left:0cm;font-size:11.0pt;font-family:"Calibri",sans-serif;line-height:normal;'><span style='font-size:16px;font-family:  "Times New Roman";color:black;'>DNA library</span></p>
+            </td>
+            <td style="width:176.0pt;border-top:none;border-left:none;border-bottom:solid black 1.0pt;border-right:solid windowtext 1.0pt;padding:0cm 5.4pt 0cm 5.4pt;height:11.2pt;">
+                <p style='margin-top:0cm;margin-right:0cm;margin-bottom:8.0pt;margin-left:0cm;font-size:11.0pt;font-family:"Calibri",sans-serif;text-align:center;line-height:normal;'><span style='font-size:16px;font-family:"Times New Roman";color:black;'>12.0&nbsp;</span></p>
+            </td>
+        </tr>
+        <tr>
+            <td style="width: 132.4pt;border-right: 1pt solid windowtext;border-bottom: 1pt solid windowtext;border-left: 1pt solid windowtext;border-image: initial;border-top: none;padding: 0cm 5.4pt;height: 15.05pt;vertical-align: bottom;">
+                <p style='margin-top:0cm;margin-right:0cm;margin-bottom:8.0pt;margin-left:0cm;font-size:11.0pt;font-family:"Calibri",sans-serif;line-height:normal;'><span style='font-size:16px;font-family:  "Times New Roman";color:black;'>Final volume&nbsp;</span></p>
+            </td>
+            <td style="width:176.0pt;border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;padding:0cm 5.4pt 0cm 5.4pt;height:15.05pt;">
+                <p style='margin-top:0cm;margin-right:0cm;margin-bottom:8.0pt;margin-left:0cm;font-size:11.0pt;font-family:"Calibri",sans-serif;text-align:center;line-height:normal;'><span style='font-size:16px;font-family:"Times New Roman";color:black;'>75.0</span></p>
+            </td>
+        </tr>
+    </tbody>
+</table>
+<p style='margin-top:5.0pt;margin-right:31.55pt;margin-bottom:12.0pt;margin-left:36.0pt;font-size:11.0pt;font-family:"Calibri",sans-serif;text-align:justify;line-height:115%;'><span style='font-size:16px;line-height:115%;font-family:"Times New Roman",serif;'>&nbsp;</span></p>
+<ol start="8" style="list-style-type: decimal;margin-left: 26px;">
+    <li><span style='line-height:115%;font-family:"Times New Roman",serif;font-size:16px;'>Gently lift the SpotON sample port cover to make the SpotON sample port accessible.</span></li>
+    <li><span style='line-height:115%;font-family:"Times New Roman",serif;font-size:16px;'>Load 200 &micro;l of the priming mix into the flow cell priming port (make sure SpotON is open while doing second priming). &nbsp;Avoid introducing air bubbles.</span></li>
+    <li><span style='line-height:115%;font-family:"Times New Roman",serif;font-size:16px;'>Mix thoroughly library-loading mix by gently pipetting up and down just prior to loading.</span></li>
+    <li><span style='line-height:115%;font-family:"Times New Roman",serif;font-size:16px;'>Add 75 &mu;l of the library-loading mix to the flow cell via the SpotON port (sample port) in a dropwise fashion. Ensure each drop flows into the port before adding the next.</span></li>
+    <li><span style='line-height:115%;font-family:"Times New Roman",serif;font-size:16px;'>Gently replace the SpotON port cover, making sure the bung enters the SpotON port, close the priming port and replace the MinION device lid.</span></li>
+    <li><span style='line-height:115%;font-family:"Times New Roman",serif;font-size:16px;'>Start the sequencing.</span></li>
+</ol>
+<p style='margin-top:5.0pt;margin-right:31.55pt;margin-bottom:12.0pt;margin-left:0cm;font-size:11.0pt;font-family:"Calibri",sans-serif;text-align:justify;line-height:115%;'><strong><span style='font-size:16px;line-height:115%;font-family:"Times New Roman",serif;'>Step VIII: Washing of the Flow cell</span></strong></p>
+<ol style="list-style-type: decimal;margin-left: 26px;">
+    <li><span style='line-height:115%;font-family:"Times New Roman",serif;font-size:16px;'>Once the sequencing is complete, flow cell may be washed to reuse it for next sequencing run.</span></li>
+    <li><span style='line-height:115%;font-family:"Times New Roman",serif;font-size:16px;'>Thaw DIL, WMX and storage solutions. Make a flow cell wash mix by adding 2 &micro;l of WMX to the 398 &micro;l of DIL. Mix thoroughly by pipetting. Spin down briefly.</span></li>
+    <li><span style='line-height:115%;font-family:"Times New Roman",serif;font-size:16px;'>While SpotON and priming ports remain closed, slowly pipette off the content of flow cell through waste port and discard it.&nbsp;</span></li>
+    <li><span style='line-height:115%;font-family:"Times New Roman",serif;font-size:16px;'>As mentioned earlier (point 6 of step VII), checked for the small air bubble from priming port.&nbsp;</span></li>
+    <li><span style='line-height:115%;font-family:"Times New Roman",serif;font-size:16px;'>Through priming port slowly add the flow cell wash mix and incubate the flow cell at RT for 1 h.&nbsp;</span></li>
+    <li><span style='line-height:115%;font-family:"Times New Roman",serif;font-size:16px;'>Followed by the incubation of 1 h, remove the content through waste port of the flow cell.</span></li>
+    <li><span style='line-height:115%;font-family:"Times New Roman",serif;font-size:16px;'>Again, do the bubble check (point 6 of step VII)</span></li>
+    <li><span style='line-height:115%;font-family:"Times New Roman",serif;font-size:16px;'>Through priming port, add 500 &micro;l of storage solution. Perform the QC of flow cell and store it for reuse in next run.</span></li>
+</ol>
+<p><br></p>
+</body>
+
+</html>

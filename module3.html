@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+
+    <style>
+        /* Existing CSS styles */
+        body {
+            font-family: Calibri, sans-serif;
+            font-size: 12pt;
+            margin: 20px 10%; /* Reduced top margin */
+            padding-top: 120px; /* Increase padding to match the larger header box */
+        }
+
+        /* Fixed header styles */
+        .fixed-header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background-color: #7AB2D3; /* Match the original background color */
+            padding: 0;
+            z-index: 1000;
+            text-align: center;
+            box-shadow: 0px 4px 2px -2px gray; /* Add a shadow for clearer separation */
+        }
+
+        .fixed-header h1 {
+            margin: 0;
+            padding: 30px; /* Increase the padding to make the box bigger */
+            font-size: 50px;
+            font-weight: bold;
+            color: white; /* Change the text color to white */
+            text-align: center;
+            line-height: 1.5; /* Adjust the line-height for better spacing */
+        }
+
+        /* Responsive styles for smaller screens */
+        @media (max-width: 1024px) {
+            body {
+                margin: 10px 7%; /* Reduce top margin for smaller screens */
+            }
+        }
+
+        @media (max-width: 768px) {
+            body {
+                margin: 5px 5%; /* Further reduce top margin on smaller devices */
+            }
+        }
+
+        @media (max-width: 480px) {
+            body {
+                margin: 5px 2%; /* Minimal margins for mobile devices */
+            }
+
+            .fixed-header h1 {
+                font-size: 24px; /* Adjust header font size for small screens */
+                padding: 20px; /* Adjust padding for smaller screens */
+            }
+        }
+    </style>
+	
+    <title></title>
+</head>
+
+<body lang="EN-US" spellcheck="false" style="overflow-wrap: break-word;">
+
+    <!-- Fixed header section -->
+    <div class="fixed-header">
+        <h1>Module 3</h1>
+    </div>
+<p style='margin-top:12.0pt;margin-right:0cm;margin-bottom:8.0pt;margin-left:0cm;font-size:11.0pt;font-family:"Times New Roman",sans-serif;text-align:center;line-height:115%;'><strong><span style='font-size:20px;line-height:115%;font-family:"Times New Roman";'>Nanopore based Data Analysis and AMR detection</span></strong></p>
+<div style='margin-top:0cm;margin-right:0cm;margin-bottom:8.0pt;margin-left:0cm;font-size:11.0pt;font-family:"Times New Roman",sans-serif;'>
+<ol start="1" style="margin-bottom:0cm;list-style-type: decimal;margin-left:0px;padding-left: 0;">
+		<li style='margin-top:0cm;margin-right:0cm;margin-bottom:8.0pt;margin-left:0cm;font-size:11.0pt;font-family:"Times New Roman",sans-serif;'><strong><em><span style='font-family:"Times New Roman",serif;font-size:18px;color:black;'>Prerequisite and Software Setup</span></em></strong></li>
+		</ol>
+</div>
+<p style='margin-right:0cm;margin-left:0cm;font-size:16px;font-family:"Times New Roman",sans-serif;margin-top:0cm;margin-bottom:8.0pt;font-size:11.0pt;line-height:normal;'><strong><span style='font-size:16px;font-family:"Times New Roman";'>1.1 Ubuntu: Installation (Windows)</span></strong></p>
+<div style='margin-top:0cm;margin-right:0cm;margin-bottom:8.0pt;margin-left:0cm;font-size:11.0pt;font-family:"Times New Roman",sans-serif;'>
+    <ul style="margin-bottom:0cm;list-style-type: square;">
+        <li style='margin-top:0cm;margin-right:0cm;margin-bottom:8.0pt;margin-left:0cm;font-size:11.0pt;font-family:"Times New Roman",sans-serif;'><span style='font-family:"Times New Roman",serif;font-size:16px;'>Open Windows Powershell and run as administrator mode. Tip: search &ldquo;powershell&rdquo; in Windows search</span></li>
+    </ul>
+</div>
+<div style='margin-top:0cm;margin-right:0cm;margin-bottom:8.0pt;margin-left:0cm;font-size:11.0pt;font-family:"Times New Roman",sans-serif;'>
+    <ul style="margin-bottom:0cm;list-style-type: square;">
+        <li style='margin-top:0cm;margin-right:0cm;margin-bottom:8.0pt;margin-left:0cm;font-size:11.0pt;font-family:"Times New Roman",sans-serif;'><span style='font-family:"Times New Roman",serif;font-size:16px;'>To install WSL, run the command:</span></li>
+    </ul>
+</div>
+
+<div style='margin-top:0cm;margin-right:0cm;margin-bottom:8.0pt;margin-left:0cm;font-size:11.0pt;font-family:"Times New Roman",sans-serif;'>
+    <ul style="margin-bottom:0cm;list-style-type: square;">
+        <li style='margin-top:0cm;margin-right:0cm;margin-bottom:8.0pt;margin-left:0cm;font-size:11.0pt;font-family:"Times New Roman",sans-serif;'><span style='font-family:"Times New Roman",serif;font-size:16px;'>To set your root password, enter a new user and password.</span></li>
+    </ul>
+</div>
+
+<div style='margin-top:0cm;margin-right:0cm;margin-bottom:8.0pt;margin-left:0cm;font-size:11.0pt;font-family:"Times New Roman",sans-serif;'>
+    <ul style="margin-bottom:0cm;list-style-type: square;">
+        <li style='margin-top:0cm;margin-right:0cm;margin-bottom:8.0pt;margin-left:0cm;font-size:11.0pt;font-family:"Times New Roman",sans-serif;'><span style='font-family:"Times New Roman",serif;font-size:16px;'>When installation is finished, reboot the machine.</span></li>
+    </ul>
+</div>
+<p style='margin-right:0cm;margin-left:0cm;font-size:16px;font-family:"Times New Roman",sans-serif;margin-top:0cm;margin-bottom:8.0pt;font-size:11.0pt;'><strong><span style='font-size:16px;line-height:107%;font-family:"Times New Roman",serif;'>1.2 Installing&nbsp;</span></strong><strong><span style='font-size:16px;line-height:107%;font-family:"Times New Roman";color:#222222;'>Custom Conda Environment (</span></strong><strong><span style='font-size:16px;line-height:107%;font-family:"Times New Roman",serif;'>Miniconda)</span></strong></p>
+<div style='margin-top:0cm;margin-right:0cm;margin-bottom:8.0pt;margin-left:0cm;font-size:11.0pt;font-family:"Times New Roman",sans-serif;'>
+    <ul style="margin-bottom:0cm;list-style-type: square;">
+        <li style='margin-top:0cm;margin-right:0cm;margin-bottom:8.0pt;margin-left:0cm;font-size:11.0pt;font-family:"Times New Roman",sans-serif;'><span style='font-family:"Times New Roman",serif;font-size:16px;'>Open Ubuntu terminal from Windows Start menu. Click on the &ldquo;Windows&rdquo; button and search for &ldquo;ubuntu&rdquo;. Clicking on the application will open an Ubuntu terminal, which is a LINUX terminal</span></li>
+    </ul>
+</div>
+
+<div style='margin-top:0cm;margin-right:0cm;margin-bottom:8.0pt;margin-left:0cm;font-size:11.0pt;font-family:"Times New Roman",sans-serif;'>
+    <ul style="margin-bottom:0cm;list-style-type: square;">
+        <li style='margin-top:0cm;margin-right:0cm;margin-bottom:8.0pt;margin-left:0cm;font-size:11.0pt;font-family:"Times New Roman",sans-serif;'><span style='font-family:"Times New Roman",serif;font-size:16px;'>If prompted, enter your username and password from step 1.</span></li>
+    </ul>
+</div>
+
+<div style='margin-top:0cm;margin-right:0cm;margin-bottom:8.0pt;margin-left:0cm;font-size:11.0pt;font-family:"Times New Roman",sans-serif;'>
+    <ul style="margin-bottom:0cm;list-style-type: square;">
+        <li style='margin-top:0cm;margin-right:0cm;margin-bottom:8.0pt;margin-left:0cm;font-size:11.0pt;font-family:"Times New Roman",sans-serif;'><span style='font-family:"Times New Roman",serif;font-size:16px;'>In this workshop, we will be using Miniconda&nbsp;</span><span style='font-family:"Times New Roman",serif;font-size:16px;color:#222222;'>(recommended as it is relatively small and quick to install)</span><span style='font-family:"Times New Roman",serif;font-size:16px;'>&nbsp;as a package manager to facilitate replication of working environments with all necessary software packages. To learn more about Conda, see:&nbsp;</span><a href="https://docs.conda.io/projects/conda/en/latest/user-guide/index.html"><span style='font-family:"Times New Roman",serif;font-size:16px;'>conda user-guide</span></a></li>
+    </ul>
+</div>
+
+<div style='margin-top:0cm;margin-right:0cm;margin-bottom:8.0pt;margin-left:0cm;font-size:11.0pt;font-family:"Times New Roman",sans-serif;'>
+    <ul style="margin-bottom:0cm;list-style-type: square;">
+        <li style='margin-top:0cm;margin-right:0cm;margin-bottom:8.0pt;margin-left:0cm;font-size:11.0pt;font-family:"Times New Roman",sans-serif;'><span style='font-family:"Times New Roman",serif;font-size:16px;'>Download the latest Miniconda installer for Linux:</span></li>
+    </ul>
+</div>
+
+<ul style="list-style-type: square;">
+    <li><span style='line-height:107%;font-family:"Times New Roman",serif;font-size:16px;'>Run the installer:</span></li>
+</ul>
+<ul style="list-style-type: square;margin-left: 26px;"><span style='line-height:107%;font-family:"Times New Roman",serif;font-size:16px;'>
+    <li>Follow the prompts to complete the installation</li>
+    <li>Close and reopen the terminal to apply changes</li>
+    <li>If you have followed the instructions properly, you should be able to see "(base)" at the beginning of the command line. This means that Miniconda is activated.</span></li>
+</ul>
+<p style='margin-right:0cm;margin-left:36.0pt;font-size:16px;font-family:"Times New Roman",sans-serif;margin-top:0cm;margin-bottom:8.0pt;font-size:11.0pt;'><img src="data:image/png;base64,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" alt="image" width="194" height="28"></p>
+<div style='margin-top:0cm;margin-right:0cm;margin-bottom:8.0pt;margin-left:0cm;font-size:11.0pt;font-family:"Times New Roman",sans-serif;'>
+    <ul style="margin-bottom:0cm;list-style-type: square;margin-left: 26px;">
+        <li style='margin-top:0cm;margin-right:0cm;margin-bottom:8.0pt;margin-left:0cm;font-size:11.0pt;font-family:"Times New Roman",sans-serif;'>Otherwise, activate conda:</li>
+    </ul>
+</div>
+
+<p style='margin-right:0cm;margin-left:0cm;font-size:16px;font-family:"Times New Roman",sans-serif;margin-top:0cm;margin-bottom:8.0pt;font-size:11.0pt;'><strong><span style='font-size:16px;line-height:107%;font-family:"Times New Roman";color:#222222;'>1.3 ONT Minknow</span></strong><strong><span style='font-size:16px;line-height:107%;font-family:"Times New Roman",serif;'>&nbsp;and Guppy Installation</span></strong></p>
+<p style='margin-right:0cm;margin-left:0cm;font-size:16px;font-family:"Times New Roman",sans-serif;margin-top:0cm;margin-bottom:8.0pt;font-size:11.0pt;text-align:justify;'><span style='font-size:16px;line-height:107%;font-family:"Times New Roman",serif;'>Depending on whether the user is basecalling on a CPU or a GPU, you will need to choose an appropriate Guppy package. These packages are available as separate installers on the&nbsp;</span><span style='font-size:16px;line-height:107%;font-family:"Times New Roman";color:#222222;'>Oxford</span><span style='font-size:16px;line-height:107%;font-family:"Times New Roman",serif;'>&nbsp;Nanopore&nbsp;</span><span style='font-size:16px;line-height:107%;font-family:"Times New Roman";color:#222222;'>Technologies</span><span style='font-size:16px;line-height:107%;font-family:"Times New Roman",serif;'>&nbsp;community website (</span><a href="https://community.nanoporetech.com"><span style='font-size:16px;line-height:107%;font-family:"Times New Roman",serif;'>https://community.nanoporetech.com</span></a><span style='font-size:16px;line-height:107%;font-family:"Times New Roman",serif;'>).</span></p>
+<ul class="decimal_type" style="list-style-type: square;">
+    <li><span style='line-height:107%;font-family:"Times New Roman",serif;font-size:16px;'>CPU-only basecalling is available in the&nbsp;</span><span style='font-family:"Courier New";'>ont-guppy-cpu</span><span style='font-family:"Times New Roman",serif;'>&nbsp;</span><span style='line-height:107%;font-family:"Times New Roman",serif;font-size:16px;'>package.</span></li>
+    <li><span style='line-height:107%;font-family:"Times New Roman",serif;font-size:16px;'>GPU basecalling is available in the&nbsp;</span><span style='font-family:"Courier New";'>ont-guppy</span><span style='font-family:"Times New Roman",serif;'>&nbsp;</span><span style='line-height:107%;font-family:"Times New Roman",serif;font-size:16px;'>package and will require a GPU driver for basecalling to work.&nbsp;</span><span style='line-height:107%;font-family:"Times New Roman",serif;font-size:16px;color:#222222;'>To install the GPU version of Guppy software for quicker basecalling, access the Software Downloads section on the Oxford Nanopore Technologies Community site (</span><a href="http://www.community.nanoporetech.com"><span style='line-height:107%;font-family:"Times New Roman",serif;font-size:16px;'>www.community.nanoporetech.com</span></a><span style='line-height:107%;font-family:"Times New Roman",serif;font-size:16px;color:#222222;'>).</span></li>
+    <li><span style='line-height:107%;font-family:"Times New Roman",serif;font-size:16px;'>Login to&nbsp;</span><span style='line-height:107%;font-family:"Times New Roman",serif;font-size:16px;color:#222222;'>Oxford</span><span style='line-height:107%;font-family:"Times New Roman",serif;font-size:16px;'>&nbsp;Nanopore community website (https://community.nanoporetech.com) using nanopore login credential, login id and password (</span><a href="https://community.nanoporetech.com/"><span style='line-height:107%;font-family:"Times New Roman",serif;font-size:16px;'>https://community.nanoporetech.com/</span></a><span style='line-height:107%;font-family:"Times New Roman",serif;font-size:16px;'>).</span></li>
+    <li><span style='line-height:107%;font-family:"Times New Roman",serif;font-size:16px;'>Direct to &ldquo;Software downloads&rdquo; page from right selection options (</span><a href="https://community.nanoporetech.com/downloads"><span style='line-height:107%;font-family:"Times New Roman",serif;font-size:16px;'>https://community.nanoporetech.com/downloads</span></a><span style='line-height:107%;font-family:"Times New Roman",serif;font-size:16px;'>).</span></li>
+    <li><span style='line-height:107%;font-family:"Times New Roman",serif;font-size:16px;'>Download Guppy (latest v6.5.7) for Linux 64-bit GPU download option.</span></li>
+    <li><span style='line-height:107%;font-family:"Times New Roman",serif;font-size:16px;'>Install Guppy to GPU enabled server by extracting the downloaded file named&nbsp;</span><span style='font-family:"Courier New";'>ont-guppy_6.5.7_linux64.tar</span><span style='line-height:107%;font-family:"Times New Roman",serif;font-size:16px;'>, which is typically a tarball archive file, with the below command,</span></li>
+</ul>
+<p style='margin-right:0cm;margin-left:0cm;font-size:16px;font-family:"Times New Roman",sans-serif;margin-top:0cm;margin-bottom:8.0pt;font-size:11.0pt;text-align:justify;'><span style='font-size:16px;line-height:107%;font-family:"Times New Roman",serif;'>&nbsp;</span></p>
+<div style='margin-top:0cm;margin-right:0cm;margin-bottom:8.0pt;margin-left:0cm;font-size:11.0pt;font-family:"Times New Roman",sans-serif;'>
+   <ol start="2" style="margin-bottom:0cm;list-style-type: decimal;margin-left:0px;padding-left: 0;">
+        <li style='margin-top:0cm;margin-right:0cm;margin-bottom:8.0pt;margin-left:0cm;font-size:11.0pt;font-family:"Times New Roman",sans-serif;'><strong><em><span style='font-family:"Times New Roman",serif;font-size:18px;color:black;'>Basecalling and Demultiplexing</span></em></strong></li>
+    
+</div>
+
+<p style='margin-right:0cm;margin-left:0cm;font-size:16px;font-family:"Times New Roman",sans-serif;margin-top:0cm;margin-bottom:8.0pt;font-size:11.0pt;text-align:justify;'><strong><span style='font-size:16px;line-height:107%;font-family:"Times New Roman";color:#222222;'>2.1 Basecalling using <em>guppy_basecaller</em>&nbsp;</span></strong><span style='font-size:16px;line-height:107%;font-family:"Times New Roman",serif;'>(High-Accuracy Model&nbsp;</span><span style='font-size:16px;line-height:107%;font-family:"Times New Roman";color:#222222;'>using GPU version)</span></p>
+<p style='margin-right:0cm;margin-left:0cm;font-size:16px;font-family:"Times New Roman",sans-serif;margin-top:0cm;margin-bottom:8.0pt;font-size:11.0pt;text-align:justify;'><span style='font-size:16px;line-height:107%;font-family:"Times New Roman";color:#222222;'>To convert the raw signal data (FAST5) from the nanopore sequencer into readable nucleotide sequences (FASTQ) we will perform basecalling using Guppy Basecaller using the GPU version with the following commands.&nbsp;</span></p>
+<p style='margin-right:0cm;margin-left:0cm;font-size:16px;font-family:"Times New Roman",sans-serif;margin-top:0cm;margin-bottom:8.0pt;font-size:11.0pt;text-align:justify;'><strong><span style='font-size:16px;line-height:107%;font-family:"Times New Roman";color:#222222;'>Note</span></strong><span style='font-size:16px;line-height:107%;font-family:"Times New Roman";color:#222222;'>: In case of Oxford Nanopore GridION sequencing device, if basecalling has been performed with itself from device, then this step can be skipped and directly <em>Demultiplexing</em> can be done.&nbsp;</span></p>
+<pre style='margin:0cm;font-size:13px;font-family:"Courier New";background:white;'><span style='font-size:16px;font-family:"Times New Roman",serif;color:black;'># <u>Without flowcell and kit name</u>:</span></pre>
+<p style='margin-right:0cm;margin-left:0cm;font-size:16px;font-family:"Times New Roman",sans-serif;margin-top:0cm;margin-bottom:0cm;font-size:11.0pt;text-align:justify;line-height:normal;border:none;'><em><span style='font-size:16px;font-family:"Times New Roman";color:black;'>&nbsp;</span></em></p>
+<div style='margin-top:0cm;margin-right:0cm;margin-bottom:8.0pt;margin-left:0cm;font-size:11.0pt;font-family:"Times New Roman",sans-serif;border:solid #CCCCCC 1.0pt;padding:7.0pt 7.0pt 7.0pt 7.0pt;background:white;'>
+    <pre style='margin:0cm;font-size:13px;font-family:"Courier New";margin-top:18.75pt;margin-right:0cm;margin-bottom:18.75pt;margin-left:0cm;background:white;border:none;padding:0cm;'><code style='font-family:"Courier New";'><span style="color:#333333;">guppy_basecaller </span></code><span style="color:navy;">-c</span><code style='font-family:"Courier New";'><span style="color:#333333;"> dna_r10.4.1_e8.2_400bps_hac.cfg </span></code><span style="color:navy;">-i</span><code style='font-family:"Courier New";'><span style="color:#333333;"> /path/to/Runfolder/ </span></code><span style="color:navy;">-s</span><code style='font-family:"Courier New";'><span style="color:#333333;"> ./basecalling/ </span></code><span style="color:navy;">-x</span><code style='font-family:"Courier New";'><span style="color:#333333;"> auto </span></code></pre>
+    <pre style='margin:0cm;font-size:13px;font-family:"Courier New";margin-top:18.75pt;margin-right:0cm;margin-bottom:18.75pt;margin-left:0cm;background:white;border:none;padding:0cm;'><code style='font-family:"Courier New";'><span style="color:#333333;"># The auto can be replaced with CUDA cores for GPU-basecalling using,</span></code></pre>
+    <pre style='margin:0cm;font-size:13px;font-family:"Courier New";margin-top:18.75pt;margin-right:0cm;margin-bottom:18.75pt;margin-left:0cm;background:white;border:none;padding:0cm;'><span style="color:black;">guppy_basecaller -c dna_r10.4.1_e8.2_400bps_hac.cfg -i /path/to/Runfolder/ -s ./basecalling/ -x &quot;cuda:1&quot; -r </span></pre>
+</div>
+<pre style='margin:0cm;font-size:13px;font-family:"Courier New";background:white;'><span style='font-size:16px;font-family:"Times New Roman",serif;color:black;'># <u>With flowcell and kit name</u>:</span></pre>
+<p style='margin-right:0cm;margin-left:0cm;font-size:16px;font-family:"Times New Roman",sans-serif;margin-top:0cm;margin-bottom:0cm;font-size:11.0pt;text-align:justify;line-height:normal;border:none;'><em><span style='font-size:16px;font-family:"Times New Roman";color:black;'>&nbsp;</span></em></p>
+<div style='margin-top:0cm;margin-right:0cm;margin-bottom:8.0pt;margin-left:0cm;font-size:11.0pt;font-family:"Times New Roman",sans-serif;border:solid #CCCCCC 1.0pt;padding:7.0pt 7.0pt 7.0pt 7.0pt;background:white;'>
+    <pre style='margin:0cm;font-size:13px;font-family:"Courier New";margin-top:18.75pt;margin-right:0cm;margin-bottom:18.75pt;margin-left:0cm;background:white;border:none;padding:0cm;'><code style='font-family:"Courier New";'><span style="color:#333333;">guppy_basecaller </span></code><span style="color:navy;">-c</span><code style='font-family:"Courier New";'><span style="color:#333333;"> </span></code><span style="color:black;">dna_r10.4.1_e8.2_400bps_hac.cfg</span><code style='font-family:"Courier New";'><span style="color:#333333;"> </span></code><span style="color:navy;">-i</span><code style='font-family:"Courier New";'><span style="color:#333333;"> /path/to/Runfolder/ </span></code><span style="color:navy;">-s</span><code style='font-family:"Courier New";'><span style="color:#333333;"> ./basecalling/ --flowcell FLO-MIN114 --kit SQK-NBD114-24 </span></code><span style="color:navy;">-x</span><code style='font-family:"Courier New";'><span style="color:#333333;"> auto -r </span></code></pre>
+    <pre style='margin:0cm;font-size:13px;font-family:"Courier New";margin-top:18.75pt;margin-right:0cm;margin-bottom:18.75pt;margin-left:0cm;background:white;border:none;padding:0cm;'><code style='font-family:"Courier New";'><span style="color:#333333;"># The auto can be replaced with CUDA cores for GPU-basecalling using,</span></code></pre>
+    <pre style='margin:0cm;font-size:13px;font-family:"Courier New";margin-top:18.75pt;margin-right:0cm;margin-bottom:18.75pt;margin-left:0cm;text-align:justify;background:white;border:none;padding:0cm;'><span style="color:black;">guppy_basecaller -c dna_r10.4.1_e8.2_400bps_hac.cfg -i /path/to/Runfolder/ -s ./basecalling/ --flowcell FLO-MIN114 --kit SQK-NBD114-24 -x &quot;cuda:1&quot; -r </span></pre>
+</div>
+<ul class="decimal_type" style="list-style-type: disc;margin-left: 25.450000000000003px;">
+    <li><span style="font-family:Consolas;font-size:15px;color:black;">-c:</span><span style='font-family:"Times New Roman",serif;font-size:15px;color:black;'>&nbsp;</span><span style='font-family:"Times New Roman",serif;font-size:16px;color:black;'>Configuration file</span></li>
+    <li><span style="font-family:Consolas;font-size:15px;color:black;">-x:</span><span style='font-family:"Times New Roman",serif;font-size:15px;color:black;'>&nbsp;</span><span style='font-family:"Times New Roman",serif;font-size:16px;color:black;'>Specify GPU device.</span></li>
+    <li><span style="font-family:Consolas;font-size:15px;color:black;">-r:</span><span style='font-family:"Times New Roman",serif;font-size:15px;color:black;'>&nbsp;</span><span style='font-family:"Times New Roman",serif;font-size:16px;color:black;'>Search for input file recursively.</span></li>
+    <li><code style='font-family:"Courier New";'><span style='font-family:"Times New Roman",serif;font-size:16px;color:#333333;'>Substitute</span></code><code style='font-family:"Courier New";'><span style='font-family:"Times New Roman",serif;font-size:15px;color:#333333;'>&nbsp;</span></code><span style="font-family:Consolas;color:black;">/path/to/Runfolder/&nbsp;</span><code style='font-family:"Courier New";'><span style='font-family:"Times New Roman",serif;font-size:16px;color:#333333;'>with folder where FAST5 files are present.</span></code></li>
+</ul>
+<p style='margin-right:0cm;margin-left:0cm;font-size:16px;font-family:"Times New Roman",sans-serif;margin-top:12.0pt;margin-bottom:8.0pt;font-size:11.0pt;text-align:justify;'><strong><span style='font-size:16px;line-height:107%;font-family:"Times New Roman",serif;'>2.2 Demultiplexing using&nbsp;</span></strong><strong><em><span style='font-family:"Times New Roman";'>guppy_barcode&nbsp;</span></em></strong><span style='font-size:16px;line-height:107%;font-family:"Times New Roman";color:#222222;'>(using GPU version)</span></p>
+<p style='margin-right:0cm;margin-left:0cm;font-size:16px;font-family:"Times New Roman",sans-serif;margin-top:0cm;margin-bottom:8.0pt;font-size:11.0pt;text-align:justify;'><span style='font-size:16px;line-height:107%;font-family:"Times New Roman",serif;'>As barcodes are used during library preparation, demultiplexing the reads into separate files for each barcode is required. We will use Guppy Barcoder here. This step will separate the reads belonging to different samples or barcodes.&nbsp;</span></p>
+<div style='margin-top:0cm;margin-right:0cm;margin-bottom:8.0pt;margin-left:0cm;font-size:11.0pt;font-family:"Times New Roman",sans-serif;border:solid #CCCCCC 1.0pt;padding:7.0pt 7.0pt 7.0pt 7.0pt;background:white;'>
+    <pre style='margin:0cm;font-size:13px;font-family:"Courier New";margin-top:18.75pt;margin-right:0cm;margin-bottom:18.75pt;margin-left:0cm;background:white;border:none;padding:0cm;'><code style='font-family:"Courier New";'><span style="color:black;">guppy_barcoder </span></code><span style="color:black;">-i</span><code style='font-family:"Courier New";'><span style="color:black;"> </span></code><span style="color:#333333;">./basecalling/ </span><span style="color:black;">-s</span><code style='font-family:"Courier New";'><span style="color:black;"> </span></code><span style="color:#333333;">./demultiplexing/ </span><span style="color:black;">&ndash;barcode_kits &quot;</span><span style="color:#C00000;">EXP-NBD114-24</span><span style="color:black;">&quot; -x auto</span></pre>
+</div>
+<ul style="list-style-type: disc;margin-left: 11.3px;">
+    <li><span style='font-family:"Courier New";font-size:13px;'>-i ./basecalling/</span><span style='font-family:"Times New Roman",serif;font-size:16px;'>: The input directory containing the basecalled reads (FASTQ files).</span></li>
+    <li><span style='font-family:"Courier New";font-size:13px;'>-s ./demultiplexing/</span><span style='font-family:"Times New Roman",serif;font-size:16px;'>: The output directory where demultiplexed reads will be saved.</span></li>
+    <li><span style='font-family:"Courier New";font-size:13px;'>--barcode_kits &quot;EXP-NBD114-24&quot;</span><span style='font-family:"Times New Roman",serif;font-size:16px;'>: Specifies the barcode kit (in this case, EXP-NBD114).</span></li>
+    <li><span style='font-family:"Courier New";'>-x auto:</span><span style='font-family:"Times New Roman",serif;font-size:16px;'>&nbsp;Uses GPU acceleration if available&nbsp;</span><span style='font-family:"Courier New";font-size:13px;'>(-x auto</span><span style='font-family:"Times New Roman",serif;font-size:19px;'>&nbsp;</span><span style='font-family:"Times New Roman",serif;font-size:16px;'>will automatically select the best available hardware).</span></li>
+</ul>
+<p style='margin-right:0cm;margin-left:0cm;font-size:16px;font-family:"Times New Roman",sans-serif;margin-top:0cm;margin-bottom:8.0pt;font-size:11.0pt;text-align:justify;'><strong><span style='font-size:16px;line-height:107%;font-family:"Times New Roman",serif;'>&nbsp;</span></strong></p>
+<div style='margin-top:0cm;margin-right:0cm;margin-bottom:8.0pt;margin-left:0cm;font-size:11.0pt;font-family:"Times New Roman",sans-serif;'>
+ <ol start="3" style="margin-bottom:0cm;list-style-type: decimal;margin-left:0px;padding-left: 0;">
+        <li style='margin-top:0cm;margin-right:0cm;margin-bottom:8.0pt;margin-left:0cm;font-size:11.0pt;font-family:"Times New Roman",sans-serif;'><strong><em><span style='font-family:"Times New Roman",serif;font-size:16px;color:black;'>Quality Control and Read Filtering</span></em></strong></li>
+    </ol>
+</div>
+<p style='margin-right:0cm;margin-left:0cm;font-size:16px;font-family:"Times New Roman",sans-serif;margin-top:0cm;margin-bottom:8.0pt;font-size:11.0pt;text-align:justify;'><span style='font-size:16px;line-height:107%;font-family:"Times New Roman",serif;'>The raw reads need to be filtered fir low-quality reads, adapters, and barcodes.</span></p>
+<h3 style='margin-top:14.0pt;margin-right:0cm;margin-bottom:4.0pt;margin-left:0cm;font-size:19px;font-family:"Times New Roman",sans-serif;font-weight:bold;'><span style='font-size:16px;line-height:107%;font-family:"Times New Roman",serif;'>3.1 Assessing Sequencing Statistics using NanoStat&nbsp;</span></h3>
+<p style='margin-right:0cm;margin-left:0cm;font-size:16px;font-family:"Times New Roman",sans-serif;margin-top:0cm;margin-bottom:8.0pt;font-size:11.0pt;'>Finally, generate a summary of the sequencing run using <strong>NanoStat</strong>.</p>
+<pre style='margin:0cm;font-size:13px;font-family:"Courier New";background:white;'><span style='font-size:16px;font-family:"Times New Roman",serif;color:black;'> </span></pre>
+<ul style="list-style-type: disc;margin-left: 25.450000000000003px;">
+    <li><code style='font-family:"Courier New";'><span style='font-family:"Times New Roman",serif;font-size:16px;'>--fastq</span></code><span style='font-family:"Times New Roman",serif;font-size:16px;'>: Input filtered FASTQ file.</span></li>
+    <li><code style='font-family:"Courier New";'><span style='font-family:"Times New Roman",serif;font-size:16px;'>--outdir</span></code><span style='font-family:"Times New Roman",serif;font-size:16px;'>: Directory for saving the sequencing statistics.</span></li>
+</ul>
+<p style='margin-right:0cm;margin-left:0cm;font-size:16px;font-family:"Times New Roman",sans-serif;margin-top:0cm;margin-bottom:8.0pt;font-size:11.0pt;text-align:justify;'>&nbsp;</p>
+<h3 style='margin-top:14.0pt;margin-right:0cm;margin-bottom:4.0pt;margin-left:0cm;font-size:19px;font-family:"Times New Roman",sans-serif;font-weight:bold;'><span style='font-size:16px;line-height:107%;font-family:"Times New Roman",serif;'>3.2 Adapter Trimming using Porechop</span></h3>
+<p style='margin-right:0cm;margin-left:0cm;font-size:16px;font-family:"Times New Roman",sans-serif;margin-top:0cm;margin-bottom:8.0pt;font-size:11.0pt;'>After basecalling, trim the adapter sequences from the FASTQ files using <strong>Porechop</strong>.</p>
+<ul type="disc" style="margin-bottom:0cm;">
+    <li style='margin-top:0cm;margin-right:0cm;margin-bottom:8.0pt;margin-left:0cm;font-size:11.0pt;font-family:"Times New Roman",sans-serif;line-height:normal;'><code style='font-family:"Courier New";'><span style="font-size:13px;font-family:Times New Roman;">-i</span></code><span style='font-size:16px;font-family:"Times New Roman",serif;'>: Input basecalled reads in FASTQ format.</span></li>
+    <li style='margin-top:0cm;margin-right:0cm;margin-bottom:8.0pt;margin-left:0cm;font-size:11.0pt;font-family:"Times New Roman",sans-serif;line-height:normal;'><code style='font-family:"Courier New";'><span style="font-size:13px;font-family:Times New Roman;">-o</span></code><span style='font-size:16px;font-family:"Times New Roman",serif;'>: Output file for trimmed reads.</span></li>
+    <li style='margin-top:0cm;margin-right:0cm;margin-bottom:8.0pt;margin-left:0cm;font-size:11.0pt;font-family:"Times New Roman",sans-serif;line-height:normal;'><code style='font-family:"Courier New";'><span style="font-size:13px;font-family:Times New Roman;">--threads</span></code><span style='font-size:16px;font-family:"Times New Roman",serif;'>: Number of CPU threads for faster processing.</span></li>
+</ul>
+<h3 style='margin-top:14.0pt;margin-right:0cm;margin-bottom:4.0pt;margin-left:0cm;font-size:19px;font-family:"Times New Roman",sans-serif;font-weight:bold;'><span style='font-size:16px;line-height:107%;font-family:"Times New Roman",serif;'>3.3 Low-Quality Reads Filtering using NanoFilt</span></h3>
+<p style='margin-right:0cm;margin-left:0cm;font-size:16px;font-family:"Times New Roman",sans-serif;margin-top:0cm;margin-bottom:8.0pt;font-size:11.0pt;'>Use <strong>NanoFilt</strong> to filter out reads with a Phred score below 9 and sequences shorter than 200 bp.</p>
+<ul type="disc" style="margin-bottom:0cm;">
+    <li style='margin-top:0cm;margin-right:0cm;margin-bottom:8.0pt;margin-left:0cm;font-size:11.0pt;font-family:"Times New Roman",sans-serif;line-height:normal;'><code style='font-family:"Courier New";'><span style="font-size:16px;font-family:Times New Roman;">zcat</span></code><span style='font-size:16px;font-family:"Times New Roman",serif;'>: Decompresses the <code style='font-family:"Courier New";'><span style="font-family:Times New Roman;">.fastq.gz</span></code> file.</span></li>
+    <li style='margin-top:0cm;margin-right:0cm;margin-bottom:8.0pt;margin-left:0cm;font-size:11.0pt;font-family:"Times New Roman",sans-serif;line-height:normal;'><code style='font-family:"Courier New";'><span style="font-size:16px;font-family:Times New Roman;">-q 9</span></code><span style='font-size:16px;font-family:"Times New Roman",serif;'>: Filters out reads with a Phred quality score below 9.</span></li>
+    <li style='margin-top:0cm;margin-right:0cm;margin-bottom:8.0pt;margin-left:0cm;font-size:11.0pt;font-family:"Times New Roman",sans-serif;line-height:normal;'><code style='font-family:"Courier New";'><span style="font-size:16px;font-family:Times New Roman;">-l 200</span></code><span style='font-size:16px;font-family:"Times New Roman",serif;'>: Removes reads shorter than 200 bp.</span></li>
+    <li style='margin-top:0cm;margin-right:0cm;margin-bottom:8.0pt;margin-left:0cm;font-size:11.0pt;font-family:"Times New Roman",sans-serif;color:#222222;text-align:justify;line-height:normal;background:white;'><span style='font-size:16px;font-family:"Times New Roman",serif;color:black;'>The output is recompressed and saved as <code style='font-family:"Courier New";'><span style="font-family:Times New Roman;">filtered_reads.fastq.gz</span></code>.</span></li>
+</ul>
+
+<div style='margin-top:0cm;margin-right:0cm;margin-bottom:8.0pt;margin-left:0cm;font-size:11.0pt;font-family:"Times New Roman",sans-serif;'>
+<ol start="4" style="margin-bottom:0cm;list-style-type: decimal;margin-left:0px;padding-left: 0;">
+        <li style='margin-top:0cm;margin-right:0cm;margin-bottom:8.0pt;margin-left:0cm;font-size:11.0pt;font-family:"Times New Roman",sans-serif;'><strong><em><span style='font-family:"Times New Roman",serif;font-size:16px;color:black;'>AMR Detection</span></em></strong><strong><em><span style='font-family:"Times New Roman",serif;font-size:16px;color:#222222;'>&nbsp;using&nbsp;</span></em></strong><strong><em><span style='font-family:"Times New Roman",serif;font-size:16px;color:black;'>ResFinder&nbsp;</span></em></strong></li>
+    </ol>
+</div>
+
+<p style='margin-right:0cm;margin-left:14.2pt;font-size:16px;font-family:"Times New Roman",sans-serif;margin-top:0cm;margin-bottom:0cm;font-size:11.0pt;text-align:justify;line-height:normal;background:white;'><span style='font-size:16px;font-family:"Times New Roman",serif;color:black;'>Provides a list of identified AMR genes, the level of coverage and identity, and statistics on the matches. It relies on the ResFinder database, which contains curated sequences of resistance genes for a wide range of antibiotic classes.</span></p>
+<p style='margin-right:0cm;margin-left:-3.8pt;font-size:16px;font-family:"Times New Roman",sans-serif;margin-top:0cm;margin-bottom:0cm;font-size:11.0pt;text-align:justify;line-height:normal;background:white;'><strong><span style='font-size:16px;font-family:"Times New Roman",serif;'>&nbsp;</span></strong></p>
+<p style='margin-right:0cm;margin-left:-3.8pt;font-size:16px;font-family:"Times New Roman",sans-serif;margin-top:0cm;margin-bottom:0cm;font-size:11.0pt;text-align:justify;line-height:normal;background:white;'><strong><span style='font-size:16px;font-family:"Times New Roman",serif;color:black;'>4.1 ResFinder Installation and Dependencies</span></strong></p>
+<p style='margin-right:0cm;margin-left:0cm;font-size:16px;font-family:"Times New Roman",sans-serif;margin-top:0cm;margin-bottom:0cm;font-size:11.0pt;text-align:justify;line-height:normal;background:white;'><strong><span style='font-size:16px;font-family:"Times New Roman",serif;'>&nbsp;</span></strong></p>
+
+<p style='margin-right:0cm;margin-left:0cm;font-size:16px;font-family:"Times New Roman",sans-serif;margin-top:0cm;margin-bottom:0cm;font-size:11.0pt;text-align:justify;line-height:normal;background:white;'><span style='font-size:16px;font-family:"Times New Roman",serif;color:black;'>Depending on how you plan to run ResFinder, either BLAST or KMA options can be used. BLAST is used to analyse assemblies (i.e. FASTA files). KMA is used to analyse read data (i.e. FASTQ files).</span></p>
+<p style='margin-right:0cm;margin-left:0cm;font-size:16px;font-family:"Times New Roman",sans-serif;margin-top:0cm;margin-bottom:0cm;font-size:11.0pt;text-align:justify;line-height:normal;background:white;'><strong><span style='font-size:16px;font-family:"Times New Roman",serif;'>&nbsp;</span></strong></p>
+<p style='margin-right:0cm;margin-left:0cm;font-size:16px;font-family:"Times New Roman",sans-serif;margin-top:0cm;margin-bottom:0cm;font-size:11.0pt;text-align:justify;line-height:normal;background:white;'><strong><span style='font-size:16px;font-family:"Times New Roman",serif;color:black;'>4.1.1 Python modules: Tabulate, BioPython, CGECore and Python-Git</span></strong></p>
+<p style='margin-right:0cm;margin-left:0cm;font-size:16px;font-family:"Times New Roman",sans-serif;margin-top:0cm;margin-bottom:0cm;font-size:11.0pt;text-align:justify;line-height:normal;background:white;'><strong><span style='font-size:16px;font-family:"Times New Roman",serif;'>&nbsp;</span></strong></p>
+<p style='margin-right:0cm;margin-left:0cm;font-size:16px;font-family:"Times New Roman",sans-serif;margin-top:0cm;margin-bottom:0cm;font-size:11.0pt;text-align:justify;line-height:normal;background:white;'><span style='font-size:16px;font-family:"Times New Roman",serif;color:black;'>To install the needed python modules you can use pip.</span></p>
+<p style='margin-right:0cm;margin-left:0cm;font-size:16px;font-family:"Times New Roman",sans-serif;margin-top:0cm;margin-bottom:0cm;font-size:11.0pt;text-align:justify;line-height:normal;background:white;'><span style='font-size:16px;font-family:"Times New Roman",serif;'>&nbsp;</span></p>
+<p style='margin-right:0cm;margin-left:0cm;font-size:16px;font-family:"Times New Roman",sans-serif;margin-top:0cm;margin-bottom:0cm;font-size:11.0pt;text-align:justify;line-height:normal;background:white;'><strong><span style='font-size:16px;font-family:"Times New Roman",serif;color:black;'>4.2 KMA</span></strong></p>
+<p style='margin-right:0cm;margin-left:0cm;font-size:16px;font-family:"Times New Roman",sans-serif;margin-top:0cm;margin-bottom:0cm;font-size:11.0pt;text-align:justify;line-height:normal;background:white;'><strong><span style='font-size:16px;font-family:"Times New Roman",serif;'>&nbsp;</span></strong></p>
+<p style='margin-right:0cm;margin-left:0cm;font-size:16px;font-family:"Times New Roman",sans-serif;margin-top:0cm;margin-bottom:0cm;font-size:11.0pt;text-align:justify;line-height:normal;background:white;'><span style='font-family:"Times New Roman",serif;color:black;'>KMA is a mapping method designed to map raw reads directly against redundant databases. The instructions here will install KMA in the default location ResFinder uses. KMA can be installed in another location but the path to KMA will then need to be specified every time you run ResFinder unless you add the kma program to your PATH.</span></p>
+<p style='margin-right:0cm;margin-left:0cm;font-size:16px;font-family:"Times New Roman",sans-serif;margin-top:0cm;margin-bottom:0cm;font-size:11.0pt;text-align:justify;line-height:normal;background:white;'><strong>&nbsp;</strong></p>
+<p style='margin-right:0cm;margin-left:0cm;font-size:16px;font-family:"Times New Roman",sans-serif;margin-top:0cm;margin-bottom:0cm;font-size:11.0pt;text-align:justify;line-height:normal;background:white;'><strong><span style='font-size:16px;font-family:"Times New Roman",serif;color:black;'>4.3</span></strong><span style='font-size:16px;font-family:"Times New Roman",serif;color:black;'>&nbsp;<strong>Databases</strong></span></p>
+<p style='margin-right:0cm;margin-left:0cm;font-size:16px;font-family:"Times New Roman",sans-serif;margin-top:0cm;margin-bottom:0cm;font-size:11.0pt;text-align:justify;line-height:normal;background:white;'><strong><span style='font-size:16px;font-family:"Times New Roman",serif;'>&nbsp;</span></strong></p>
+<p style='margin-right:0cm;margin-left:0cm;font-size:16px;font-family:"Times New Roman",sans-serif;margin-top:0cm;margin-bottom:0cm;font-size:11.0pt;text-align:justify;line-height:normal;background:white;'><span style='font-size:16px;font-family:"Times New Roman",serif;color:black;'>This section describes how to install the databases at the ResFinder default locations. The database locations can be changed, but must then be specified to ResFinder at run time.</span></p>
+<p style='margin-right:0cm;margin-left:0cm;font-size:16px;font-family:"Times New Roman",sans-serif;margin-top:0cm;margin-bottom:8.0pt;font-size:11.0pt;text-align:justify;line-height:normal;background:white;'><strong><span style='font-size:16px;font-family:"Times New Roman",serif;'>&nbsp;</span></strong></p>
+<p style='margin-right:0cm;margin-left:0cm;font-size:16px;font-family:"Times New Roman",sans-serif;margin-top:0cm;margin-bottom:8.0pt;font-size:11.0pt;text-align:justify;line-height:normal;background:white;'><strong><span style='font-size:16px;font-family:"Times New Roman",serif;color:black;'>4.3.1 ResFinder database</span></strong></p>
+<p style='margin-right:0cm;margin-left:0cm;font-size:16px;font-family:"Times New Roman",sans-serif;margin-top:0cm;margin-bottom:8.0pt;font-size:11.0pt;text-align:justify;line-height:normal;background:white;'><span style='font-size:16px;font-family:"Times New Roman",serif;color:black;'>Provides matches of resistance genes with details like identity, coverage, and alignment scores.</span></p>
+<p style='margin-right:0cm;margin-left:0cm;font-size:16px;font-family:"Times New Roman",sans-serif;margin-top:0cm;margin-bottom:8.0pt;font-size:11.0pt;text-align:justify;line-height:normal;background:white;'><strong><span style='font-size:16px;font-family:"Times New Roman",serif;'>&nbsp;</span></strong></p>
+<p style='margin-right:0cm;margin-left:0cm;font-size:16px;font-family:"Times New Roman",sans-serif;margin-top:0cm;margin-bottom:0cm;font-size:11.0pt;text-align:justify;line-height:normal;background:white;'><strong><span style='font-size:16px;font-family:"Times New Roman",serif;color:black;'>4.3.2 PointFinder database</span></strong></p>
+<p style='margin-right:0cm;margin-left:0cm;font-size:16px;font-family:"Times New Roman",sans-serif;margin-top:0cm;margin-bottom:0cm;font-size:11.0pt;text-align:justify;line-height:normal;background:white;'><span style='font-size:16px;font-family:"Times New Roman",serif;'>&nbsp;</span></p>
+<p style='margin-right:0cm;margin-left:0cm;font-size:16px;font-family:"Times New Roman",sans-serif;margin-top:0cm;margin-bottom:0cm;font-size:11.0pt;text-align:justify;line-height:normal;background:white;'><span style='font-size:16px;font-family:"Times New Roman",serif;color:black;'>Detects specific point mutations within genes that are known to cause antimicrobial resistance.</span></p>
+<p style='margin-right:0cm;margin-left:0cm;font-size:16px;font-family:"Times New Roman",sans-serif;margin-top:0cm;margin-bottom:0cm;font-size:11.0pt;text-align:justify;line-height:normal;background:white;'><br></p>
+<p style='margin-right:0cm;margin-left:0cm;font-size:16px;font-family:"Times New Roman",sans-serif;margin-top:0cm;margin-bottom:0cm;font-size:11.0pt;text-align:justify;line-height:normal;background:white;'><strong><span style='font-size:16px;font-family:"Times New Roman",serif;color:black;'>4.4 AMR Detection</span></strong></p>
+<p style='margin-right:0cm;margin-left:0cm;font-size:16px;font-family:"Times New Roman",sans-serif;margin-top:0cm;margin-bottom:0cm;font-size:11.0pt;text-align:justify;line-height:normal;background:white;'><strong><span style='font-size:16px;font-family:"Times New Roman",serif;'>&nbsp;</span></strong></p>
+<p style='margin-right:0cm;margin-left:0cm;font-size:16px;font-family:"Times New Roman",sans-serif;margin-top:0cm;margin-bottom:0cm;font-size:11.0pt;text-align:justify;line-height:normal;background:white;'><span style='font-size:16px;font-family:"Times New Roman",serif;color:black;'>Command you are using with KMA (k-mer alignment tool) for antimicrobial resistance (AMR) detection in Nanopore reads.</span></p>
+<p style='margin-right:0cm;margin-left:0cm;font-size:16px;font-family:"Times New Roman",sans-serif;margin-top:0cm;margin-bottom:0cm;font-size:11.0pt;text-align:justify;line-height:normal;background:white;'><strong><span style='font-size:16px;font-family:"Times New Roman",serif;'>&nbsp;</span></strong></p>
+<p style='margin-right:0cm;margin-left:1.0cm;font-size:16px;font-family:"Times New Roman",sans-serif;margin-top:0cm;margin-bottom:0cm;font-size:11.0pt;line-height:normal;'><span style='font-size:16px;font-family:"Times New Roman";'>&middot;</span><span style='font-size:16px;font-family:"Times New Roman";'>&nbsp;&nbsp;</span><span style='font-size:16px;font-family:"Courier New";'>-i nanoporeReads.fq.gz</span><span style='font-size:16px;font-family:"Times New Roman";'>: Input file containing the raw Nanopore reads in FASTQ format.</span></p>
+<p style='margin-right:0cm;margin-left:1.0cm;font-size:16px;font-family:"Times New Roman",sans-serif;margin-top:0cm;margin-bottom:0cm;font-size:11.0pt;line-height:normal;'><span style='font-size:16px;font-family:"Times New Roman";'>&middot;</span><span style='font-size:16px;font-family:"Times New Roman";'>&nbsp;&nbsp;</span><span style='font-size:16px;font-family:"Courier New";'>-o amr_out</span><span style='font-size:16px;font-family:"Times New Roman";'>: Output file prefix (results will be saved as&nbsp;</span><span style='font-size:16px;font-family:"Courier New";'>amr_out.*</span><span style='font-size:16px;font-family:"Times New Roman";'>).</span></p>
+<p style='margin-right:0cm;margin-left:1.0cm;font-size:16px;font-family:"Times New Roman",sans-serif;margin-top:0cm;margin-bottom:0cm;font-size:11.0pt;line-height:normal;'><span style='font-size:16px;font-family:"Times New Roman";'>&middot;</span><span style='font-size:16px;font-family:"Times New Roman";'>&nbsp;&nbsp;</span><span style='font-size:16px;font-family:"Courier New";'>-t_db ./resfinder/db_resfinder/all</span><span style='font-size:16px;font-family:"Times New Roman";'>: Specifies the ResFinder AMR database.</span></p>
+<p style='margin-right:0cm;margin-left:1.0cm;font-size:16px;font-family:"Times New Roman",sans-serif;margin-top:0cm;margin-bottom:0cm;font-size:11.0pt;line-height:normal;'><span style='font-size:16px;font-family:"Times New Roman";'>&middot;</span><span style='font-size:16px;font-family:"Times New Roman";'>&nbsp;&nbsp;</span><span style='font-size:16px;font-family:"Courier New";'>-mem_mode</span><span style='font-size:16px;font-family:"Times New Roman";'>: Enables memory mode, suitable for large datasets.</span></p>
+<p style='margin-right:0cm;margin-left:1.0cm;font-size:16px;font-family:"Times New Roman",sans-serif;margin-top:0cm;margin-bottom:0cm;font-size:11.0pt;line-height:normal;'><span style='font-size:16px;font-family:"Times New Roman";'>&middot;</span><span style='font-size:16px;font-family:"Times New Roman";'>&nbsp;&nbsp;</span><span style='font-size:16px;font-family:"Courier New";'>-mp 20</span><span style='font-size:16px;font-family:"Times New Roman";'>: Sets the minimum posterior value to 20 for the mapping.</span></p>
+<p style='margin-right:0cm;margin-left:1.0cm;font-size:16px;font-family:"Times New Roman",sans-serif;margin-top:0cm;margin-bottom:0cm;font-size:11.0pt;line-height:normal;'><span style='font-size:16px;font-family:"Times New Roman";'>&middot;</span><span style='font-size:16px;font-family:"Times New Roman";'>&nbsp;&nbsp;</span><span style='font-size:16px;font-family:"Courier New";'>-mrs 0.0</span><span style='font-size:16px;font-family:"Times New Roman";'>: Sets minimum relative score to 0.0, allowing all reads to be considered.</span></p>
+<p style='margin-right:0cm;margin-left:1.0cm;font-size:16px;font-family:"Times New Roman",sans-serif;margin-top:0cm;margin-bottom:0cm;font-size:11.0pt;line-height:normal;'><span style='font-size:16px;font-family:"Times New Roman";'>&middot;</span><span style='font-size:16px;font-family:"Times New Roman";'>&nbsp;&nbsp;</span><span style='font-size:16px;font-family:"Courier New";'>-bcNano</span><span style='font-size:16px;font-family:"Times New Roman";'>: Specifically optimized for Nanopore reads, taking into account their error profile.</span></p>
+<p style='margin-right:0cm;margin-left:1.0cm;font-size:16px;font-family:"Times New Roman",sans-serif;margin-top:0cm;margin-bottom:0cm;font-size:11.0pt;text-align:justify;line-height:normal;background:white;'><span style='font-size:16px;font-family:"Times New Roman";color:black;'>&middot;</span><span style='font-size:16px;font-family:"Times New Roman";color:black;'>&nbsp;&nbsp;</span><span style='font-size:16px;font-family:"Courier New";color:black;'>-bc 0.7</span><span style='font-size:16px;font-family:"Times New Roman";color:black;'>: Sets the minimum coverage to 70% for reporting a hit.</span></p>
+<p style='margin-right:0cm;margin-left:0cm;font-size:16px;font-family:"Times New Roman",sans-serif;margin-top:0cm;margin-bottom:0cm;font-size:11.0pt;text-align:justify;line-height:normal;background:white;'><strong><span style='font-size:16px;font-family:"Times New Roman",serif;'>&nbsp;</span></strong></p>
+<p style='margin-right:0cm;margin-left:0cm;font-size:16px;font-family:"Times New Roman",sans-serif;margin-top:0cm;margin-bottom:0cm;font-size:11.0pt;text-align:justify;line-height:normal;background:white;'><strong><span style='font-size:16px;font-family:"Times New Roman",serif;'>&nbsp;</span></strong></p>
+<p style='margin-right:0cm;margin-left:0cm;font-size:16px;font-family:"Times New Roman",sans-serif;margin-top:0cm;margin-bottom:0cm;font-size:11.0pt;text-align:justify;line-height:normal;background:white;'><strong><span style='font-size:16px;font-family:"Times New Roman",serif;'>&nbsp;</span></strong></p>
+<p style='margin-right:0cm;margin-left:0cm;font-size:16px;font-family:"Times New Roman",sans-serif;margin-top:0cm;margin-bottom:0cm;font-size:11.0pt;text-align:justify;line-height:normal;background:white;'><strong><span style='font-size:16px;font-family:"Times New Roman",serif;'>&nbsp;</span></strong></p>
+<p style='margin-right:0cm;margin-left:0cm;font-size:16px;font-family:"Times New Roman",sans-serif;margin-top:0cm;margin-bottom:0cm;font-size:11.0pt;text-align:justify;line-height:normal;background:white;'><strong><span style='font-size:16px;font-family:"Times New Roman",serif;'>&nbsp;</span></strong></p>
+<p style='margin-right:0cm;margin-left:0cm;font-size:16px;font-family:"Times New Roman",sans-serif;margin-top:0cm;margin-bottom:0cm;font-size:11.0pt;text-align:justify;line-height:normal;background:white;'><strong><span style='font-size:16px;font-family:"Times New Roman",serif;'>&nbsp;</span></strong></p>
+<p><br></p>
+</body>
+
+</html>

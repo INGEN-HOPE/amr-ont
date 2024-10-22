@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+
+    <style>
+        /* Existing CSS styles */
+        body {
+            font-family: Calibri, sans-serif;
+            font-size: 12pt;
+            margin: 20px 10%; /* Reduced top margin */
+            padding-top: 120px; /* Increase padding to match the larger header box */
+        }
+
+        /* Fixed header styles */
+        .fixed-header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background-color: #7AB2D3; /* Match the original background color */
+            padding: 0;
+            z-index: 1000;
+            text-align: center;
+            box-shadow: 0px 4px 2px -2px gray; /* Add a shadow for clearer separation */
+        }
+
+        .fixed-header h1 {
+            margin: 0;
+            padding: 30px; /* Increase the padding to make the box bigger */
+            font-size: 50px;
+            font-weight: bold;
+            color: white; /* Change the text color to white */
+            text-align: center;
+            line-height: 1.5; /* Adjust the line-height for better spacing */
+        }
+
+        /* Responsive styles for smaller screens */
+        @media (max-width: 1024px) {
+            body {
+                margin: 10px 7%; /* Reduce top margin for smaller screens */
+            }
+        }
+
+        @media (max-width: 768px) {
+            body {
+                margin: 5px 5%; /* Further reduce top margin on smaller devices */
+            }
+        }
+
+        @media (max-width: 480px) {
+            body {
+                margin: 5px 2%; /* Minimal margins for mobile devices */
+            }
+
+            .fixed-header h1 {
+                font-size: 24px; /* Adjust header font size for small screens */
+                padding: 20px; /* Adjust padding for smaller screens */
+            }
+        }
+    </style>
+	
+    <title></title>
+</head>
+
+<body lang="EN-US" spellcheck="false" style="overflow-wrap: break-word;">
+
+    <!-- Fixed header section -->
+    <div class="fixed-header">
+        <h1>Module 3</h1>
+    </div>
+	<p style='margin-top:0cm;margin-right:0cm;margin-bottom:0cm;margin-left:0cm;font-size:11.0pt;font-family:"Calibri",sans-serif;text-align:center;line-height:normal;background:white;'><strong><span style='font-size:16px;font-family:"Times New Roman",serif;color:black;'>AMR detection in Illumina based sequencing reads</span></strong></p>
+<p style='margin-top:0cm;margin-right:0cm;margin-bottom:0cm;margin-left:0cm;font-size:11.0pt;font-family:"Calibri",sans-serif;text-align:justify;line-height:normal;background:white;'><strong><span style='font-size:16px;font-family:"Times New Roman",serif;'>&nbsp;</span></strong></p>
+<div style='margin-top:0cm;margin-right:0cm;margin-bottom:8.0pt;margin-left:0cm;font-size:11.0pt;font-family:"Calibri",sans-serif;'>
+    <ol style="margin-bottom:0cm;list-style-type: decimal;margin-left: 4.199999999999999px;">
+        <li style='margin-top:0cm;margin-right:0cm;margin-bottom:8.0pt;margin-left:0cm;font-size:11.0pt;font-family:"Calibri",sans-serif;'><strong><em><span style='font-family:"Times New Roman",serif;font-size:16px;color:black;'>Background</span></em></strong></li>
+    </ol>
+</div>
+<p style='margin-top:0cm;margin-right:0cm;margin-bottom:0cm;margin-left:0cm;font-size:11.0pt;font-family:"Calibri",sans-serif;text-align:justify;line-height:normal;background:white;'><span style='font-size:16px;font-family:"Times New Roman";color:black;'>Based on sequencing platforms, a variety of computational methods are used to detect AMR determinants, and understand evolutionary processes like mutations and horizontal gene transfer (HGT), which are key drivers of resistance. Some of the key methods include:</span></p>
+<ul style="list-style-type: square;margin-left: 1cm;">
+    <li><span style='line-height:107%;font-family:"Times New Roman",serif;font-size:16px;'>Variant calling and analysis: This involves identifying single nucleotide polymorphisms (SNPs), insertions, deletions, and other genetic variations that contribute to AMR.</span></li>
+    <li><span style='line-height:107%;font-family:"Times New Roman",serif;font-size:16px;'>Gene annotation and resistance gene identification: Tools like CARD (Comprehensive Antibiotic Resistance Database) or ResFinder are used to map resistance genes within bacterial genomes.</span></li>
+    <li><span style='line-height:107%;font-family:"Times New Roman",serif;font-size:16px;'>Phylogenetic analysis: By constructing phylogenetic trees, researchers can track the evolution and spread of AMR strains across different regions or host populations.</span></li>
+    <li><span style='line-height:107%;font-family:"Times New Roman",serif;font-size:16px;'>Horizontal gene transfer (HGT) detection: Specialized tools are used to identify genes that have been acquired through HGT, a major mechanism by which bacteria acquire AMR traits from other species.</span></li>
+</ul>
+<p style='margin-top:14.0pt;margin-right:0cm;margin-bottom:8.0pt;margin-left:0cm;font-size:11.0pt;font-family:"Calibri",sans-serif;text-align:justify;'><span style='font-size:16px;line-height:107%;font-family:"Times New Roman";'>Through the integration of these sequencing technologies and bioinformatics methods, researchers can not only detect and monitor AMR but also gain a deeper understanding of how resistance evolves, spreads, and can be mitigated.</span></p>
+<p style='margin-top:14.0pt;margin-right:0cm;margin-bottom:8.0pt;margin-left:0cm;font-size:11.0pt;font-family:"Calibri",sans-serif;text-align:justify;'><strong><span style='font-size:16px;line-height:107%;font-family:"Times New Roman";'>1.1 Variant Calling</span></strong></p>
+<p style='margin-top:12.0pt;margin-right:0cm;margin-bottom:12.0pt;margin-left:0cm;font-size:11.0pt;font-family:"Calibri",sans-serif;text-align:justify;'><span style='font-size:16px;font-family:"Times New Roman",serif;font-family:"Times New Roman";color:#282828;background:white;'>Variant calling is the process of identifying genetic variants, such as single nucleotide polymorphisms (SNPs), insertions, deletions (INDELs), and structural variants (SVs), from sequencing data. This is crucial for detecting mutations that confer resistance to antibiotics.</span></p>
+<ul style="list-style-type: square;margin-left: 11.3px;">
+    <li><strong><span style='line-height:115%;font-family:"Times New Roman",serif;font-size:16px;color:#282828;background:white;'>Steps in Variant Calling</span></strong><span style='line-height:115%;font-family:"Times New Roman",serif;font-size:16px;color:#282828;background:white;'>:</span></li>
+</ul>
+<ol class="decimal_type" style="list-style-type: decimal;margin-left: 62px;">
+    <li><strong><span style='line-height:115%;font-family:"Times New Roman",serif;font-size:16px;color:#282828;background:white;'>Alignment</span></strong><span style='line-height:115%;font-family:"Times New Roman",serif;font-size:16px;color:#282828;background:white;'>: Raw sequence reads are aligned to a reference genome using tools like BWA, Bowtie2, or Minimap2.</span></li>
+    <li><strong><span style='line-height:115%;font-family:"Times New Roman",serif;font-size:16px;color:#282828;background:white;'>Calling Variants</span></strong><span style='line-height:115%;font-family:"Times New Roman",serif;font-size:16px;color:#282828;background:white;'>: Variants are called using tools like GATK (Genome Analysis Toolkit), FreeBayes, or Samtools mpileup.</span></li>
+    <li><strong><span style='line-height:115%;font-family:"Times New Roman",serif;font-size:16px;color:#282828;background:white;'>Filtering and Annotation</span></strong><span style='line-height:115%;font-family:"Times New Roman",serif;font-size:16px;color:#282828;background:white;'>: Variants are filtered based on quality metrics and then annotated using tools like SnpEff or VEP (Variant Effect Predictor) to determine their functional effects, including any impact on drug resistance genes.</span></li>
+</ol>
+<p style='margin-top:14.0pt;margin-right:0cm;margin-bottom:8.0pt;margin-left:0cm;font-size:11.0pt;font-family:"Calibri",sans-serif;text-align:justify;'><strong><span style='font-size:16px;line-height:107%;font-family:"Times New Roman";'>1.2 Antimicrobial Resistance Gene Detection</span></strong></p>
+<p style='margin-top:12.0pt;margin-right:0cm;margin-bottom:12.0pt;margin-left:0cm;font-size:11.0pt;font-family:"Calibri",sans-serif;text-align:justify;'><span style='font-size:16px;font-family:"Times New Roman",serif;font-family:"Times New Roman";color:#282828;background:white;'>Detection of AMR genes in bacterial genomes is done by comparing the genome sequence to known resistance gene databases. This process helps to identify genes responsible for enzymatic degradation, efflux pumps, and other resistance mechanisms.</span></p>
+<ul style="list-style-type: square;margin-left: 11.3px;">
+    <li><strong><span style='line-height:115%;font-family:"Times New Roman",serif;font-size:16px;color:#282828;background:white;'>Tools and Databases</span></strong><span style='line-height:115%;font-family:"Times New Roman",serif;font-size:16px;color:#282828;background:white;'>:</span></li>
+</ul>
+<ol class="decimal_type" style="list-style-type: circle;margin-left: 39.65px;">
+    <li><strong><span style='line-height:115%;font-family:"Times New Roman",serif;font-size:16px;color:#282828;background:white;'>CARD (Comprehensive Antibiotic Resistance Database)</span></strong><span style='line-height:115%;font-family:"Times New Roman",serif;font-size:16px;color:#282828;background:white;'>: A curated database of resistance genes.</span></li>
+    <li><strong><span style='line-height:115%;font-family:"Times New Roman",serif;font-size:16px;color:#282828;background:white;'>ResFinder</span></strong><span style='line-height:115%;font-family:"Times New Roman",serif;font-size:16px;color:#282828;background:white;'>: A tool that identifies acquired antimicrobial resistance genes using BLAST against a curated database.</span></li>
+    <li><strong><span style='line-height:115%;font-family:"Times New Roman",serif;font-size:16px;color:#282828;background:white;'>ARIBA</span></strong><span style='line-height:115%;font-family:"Times New Roman",serif;font-size:16px;color:#282828;background:white;'>: A rapid tool for identifying AMR genes and mutations from sequencing data.</span></li>
+    <li><strong><span style='line-height:115%;font-family:"Times New Roman",serif;font-size:16px;color:#282828;background:white;'>AMRFinderPlus</span></strong><span style='line-height:115%;font-family:"Times New Roman",serif;font-size:16px;color:#282828;background:white;'>: A tool for detecting AMR genes using BLAST or HMM (Hidden Markov Model)-based searches against a large database of resistance genes.</span></li>
+</ol>
+<p style='margin-top:14.0pt;margin-right:0cm;margin-bottom:8.0pt;margin-left:0cm;font-size:11.0pt;font-family:"Calibri",sans-serif;text-align:justify;'><strong><span style='font-size:16px;line-height:107%;font-family:"Times New Roman";'>1.3 Whole Genome Assembly and Annotation</span></strong></p>
+<p style='margin-top:12.0pt;margin-right:0cm;margin-bottom:12.0pt;margin-left:0cm;font-size:11.0pt;font-family:"Calibri",sans-serif;text-align:justify;'><span style='font-size:16px;font-family:"Times New Roman",serif;font-family:"Times New Roman";color:#282828;background:white;'>Genome assembly involves constructing a consensus genome sequence from raw sequencing reads, with or without using a reference genome. When no reference genome is used, it&rsquo;s called <em>de novo</em> genome assembly. Once assembled, the genome can be annotated to identify genes, including AMR genes.</span></p>
+<ul style="list-style-type: square;margin-left: 26px;">
+    <li><strong><span style='line-height:115%;font-family:"Times New Roman",serif;font-size:16px;color:#282828;background:white;'>Tools for <em>de novo</em> genome Assembly</span></strong><span style='line-height:115%;font-family:"Times New Roman",serif;font-size:16px;color:#282828;background:white;'>:</span>
+        <ul style="list-style-type: undefined margin-left: 62px;">
+            <li><strong><span style='line-height:115%;font-family:"Times New Roman",serif;font-size:16px;color:#282828;background:white;'>SPAdes</span></strong><span style='line-height:115%;font-family:"Times New Roman",serif;font-size:16px;color:#282828;background:white;'>: Commonly used for bacterial genome assembly.</span></li>
+            <li><strong><span style='line-height:115%;font-family:"Times New Roman",serif;font-size:16px;color:#282828;background:white;'>Velvet</span></strong><span style='line-height:115%;font-family:"Times New Roman",serif;font-size:16px;color:#282828;background:white;'>: Another assembler often used for small genomes like bacteria.</span></li>
+            <li><strong><span style='line-height:115%;font-family:"Times New Roman",serif;font-size:16px;color:#282828;background:white;'>Unicycler</span></strong><span style='line-height:115%;font-family:"Times New Roman",serif;font-size:16px;color:#282828;background:white;'>: Specialized for bacterial genome assembly, particularly for hybrid assembly (short and long reads).</span></li>
+        </ul>
+    </li>
+</ul>
+<ul style="list-style-type: square;">
+    <li><strong><span style='line-height:115%;font-family:"Times New Roman",serif;font-size:16px;color:#282828;background:white;'>Genome Annotation</span></strong><span style='line-height:115%;font-family:"Times New Roman",serif;font-size:16px;color:#282828;background:white;'>:</span>
+        <ul class="decimal_type" style="list-style-type: undefined margin-left: 62px;">
+            <li><strong><span style='line-height:115%;font-family:"Times New Roman",serif;font-size:16px;color:#282828;background:white;'>Prokka</span></strong><span style='line-height:115%;font-family:"Times New Roman",serif;font-size:16px;color:#282828;background:white;'>: Rapid annotation of prokaryotic genomes, including identification of AMR genes.</span></li>
+            <li><strong><span style='line-height:115%;font-family:"Times New Roman",serif;font-size:16px;color:#282828;background:white;'>RAST (Rapid Annotation using Subsystem Technology)</span></strong><span style='line-height:115%;font-family:"Times New Roman",serif;font-size:16px;color:#282828;background:white;'>: Another tool for genome annotation, which provides functional categories for genes.</span></li>
+        </ul>
+    </li>
+</ul>
+<p style='margin-top:14.0pt;margin-right:0cm;margin-bottom:8.0pt;margin-left:0cm;font-size:11.0pt;font-family:"Calibri",sans-serif;text-align:justify;'><strong><span style='font-size:16px;line-height:107%;font-family:"Times New Roman";'>1.4 Phylogenetic Analysis</span></strong></p>
+<p style='margin-top:12.0pt;margin-right:0cm;margin-bottom:12.0pt;margin-left:0cm;font-size:11.0pt;font-family:"Calibri",sans-serif;text-align:justify;'><span style='font-size:16px;font-family:"Times New Roman",serif;font-family:"Times New Roman";color:#282828;background:white;'>Phylogenetic analysis helps to infer evolutionary relationships between bacterial strains, allowing researchers to track the spread of resistance genes across populations or geographical regions.</span></p>
+<ul style="list-style-type: square;margin-left: 26px;">
+    <li><strong><span style='line-height:115%;font-family:"Times New Roman",serif;font-size:16px;color:#282828;background:white;'>Tools for Phylogenetics</span></strong><span style='line-height:115%;font-family:"Times New Roman",serif;font-size:16px;color:#282828;background:white;'>:</span>
+        <ul class="decimal_type" style="list-style-type: undefined margin-left: 62px;">
+            <li><strong><span style='line-height:115%;font-family:"Times New Roman",serif;font-size:16px;color:#282828;background:white;'>IQ-TREE</span></strong><span style='line-height:115%;font-family:"Times New Roman",serif;font-size:16px;color:#282828;background:white;'>: A fast and efficient tool for constructing phylogenetic trees from sequence data.</span></li>
+            <li><strong><span style='line-height:115%;font-family:"Times New Roman",serif;font-size:16px;color:#282828;background:white;'>RAxML</span></strong><span style='line-height:115%;font-family:"Times New Roman",serif;font-size:16px;color:#282828;background:white;'>: Commonly used for large-scale phylogenetic tree construction.</span></li>
+            <li><strong><span style='line-height:115%;font-family:"Times New Roman",serif;font-size:16px;color:#282828;background:white;'>MEGA</span></strong><span style='line-height:115%;font-family:"Times New Roman",serif;font-size:16px;color:#282828;background:white;'>: A user-friendly tool for evolutionary analysis.</span></li>
+        </ul>
+    </li>
+</ul>
+<p style='margin-top:12.0pt;margin-right:0cm;margin-bottom:12.0pt;margin-left:0cm;font-size:11.0pt;font-family:"Calibri",sans-serif;text-align:justify;'><strong><span style='font-size:16px;font-family:"Times New Roman",serif;font-family:"Times New Roman";color:#282828;background:white;'>1.5 KEGG Pathway Enrichment Analysis</span></strong></p>
+<p style='margin-top:12.0pt;margin-right:0cm;margin-bottom:12.0pt;margin-left:0cm;font-size:11.0pt;font-family:"Calibri",sans-serif;text-align:justify;'><span style='font-size:16px;line-height:107%;font-family:"Times New Roman";'>KEGG Enrichment Analysis is a statistical method used to identify KEGG pathways that are significantly overrepresented in a given set of genes or proteins. This analysis helps in understanding the biological significance of gene expression data, identifying pathways that are potentially involved in specific biological processes or diseases.</span></p>
+<ul style="list-style-type: square;margin-left: 26px;">
+    <li><strong><span style='line-height:115%;font-family:"Times New Roman",serif;font-size:16px;color:#282828;background:white;'>Tools for KEGG ortholog annotation</span></strong>
+        <ul style="list-style-type: undefined margin-left: 62px;">
+            <li><strong><span style='line-height:115%;font-family:"Times New Roman",serif;font-size:16px;'>KAAS:&nbsp;</span></strong><span style='line-height:115%;font-family:"Times New Roman",serif;font-size:16px;'>KEGG Automatic Annotation Server provides functional annotation of genes by BLAST or GHOST comparisons against the manually curated KEGG GENES database.</span></li>
+            <li><strong><span style='line-height:115%;font-family:"Times New Roman",serif;font-size:16px;'>eggNOG</span></strong><span style='line-height:115%;font-family:"Times New Roman",serif;font-size:16px;'>-<strong>mapper:&nbsp;</strong></span><strong><span style='line-height:115%;font-family:"Times New Roman",serif;font-size:16px;color:#4D5156;background:white;'>&nbsp;</span></strong><span style='line-height:115%;font-family:"Times New Roman",serif;font-size:16px;'>functional annotation tool for large sets of sequences based on fast orthology assignments.</span></li>
+            <li><strong><span style='line-height:115%;font-family:"Times New Roman",serif;font-size:16px;'>BlastKOALA:</span></strong><span style='line-height:115%;font-family:"Times New Roman",serif;font-size:16px;'>KEGG&apos;s internal annotation tool for KO (K number) assignment using SSEARCH computation.<br>&nbsp;<br>&nbsp;</span></li>
+        </ul>
+    </li>
+    <li><strong><span style='line-height:115%;font-family:"Times New Roman",serif;font-size:16px;'>Tools for KEGG pathway enrichment analysis</span></strong>
+        <ul style="list-style-type: undefined margin-left: 62px;">
+            <li><strong><span style='line-height:115%;font-family:"Times New Roman",serif;font-size:16px;'>getENRICH:</span></strong><span style='line-height:115%;font-family:"Times New Roman",serif;font-size:16px;'>&nbsp;Designed to facilitate comprehensive gene enrichment analysis, particularly for non-model organisms.</span></li>
+            <li><strong><span style='line-height:115%;font-family:"Times New Roman",serif;font-size:16px;'>DAVID:&nbsp;</span></strong><span style='line-height:115%;font-family:"Times New Roman",serif;font-size:16px;'>provides a comprehensive set of functional annotation tools for investigators to understand the biological meaning behind large lists of genes.</span><strong><span style='line-height:115%;font-family:"Times New Roman",serif;font-size:16px;color:#212529;background:white;'>&nbsp;</span></strong></li>
+            <li><strong><span style='line-height:115%;font-family:"Times New Roman",serif;font-size:16px;'>ShinyGO:&nbsp;</span></strong><span style='line-height:115%;font-family:"Times New Roman",serif;font-size:16px;'>ShinyGO based on a large annotation database derived from Ensembl and STRING and KEGG.</span></li>
+        </ul>
+    </li>
+</ul>
+<p style='margin-top:12.0pt;margin-right:0cm;margin-bottom:12.0pt;margin-left:36.0pt;font-size:11.0pt;font-family:"Calibri",sans-serif;'><strong><span style='font-size:16px;line-height:107%;font-family:"Times New Roman";'>Link for the tutorial: &nbsp;</span></strong><u><span style='font-size:16px;line-height:107%;font-family:"Times New Roman";color:#1155CC;'>https://docs.google.com/document/d/15w8AleProvenZ65K-CmkED6E4QUC9gef75cop23Lu34/edit?tab=t.0</span></u></p>
+<p style='margin-top:14.0pt;margin-right:0cm;margin-bottom:8.0pt;margin-left:0cm;font-size:11.0pt;font-family:"Calibri",sans-serif;text-align:justify;'><strong><span style='font-size:16px;line-height:107%;font-family:"Times New Roman";'>1.6 Comparative Genomics</span></strong></p>
+<p style='margin-top:12.0pt;margin-right:0cm;margin-bottom:12.0pt;margin-left:0cm;font-size:11.0pt;font-family:"Calibri",sans-serif;text-align:justify;'><span style='font-size:16px;font-family:"Times New Roman",serif;font-family:"Times New Roman";color:#282828;background:white;'>Comparative genomics involves comparing the genomes of different bacterial strains or species to identify genetic differences, including AMR determinants, mobile genetic elements (e.g., plasmids), and virulence factors.</span></p>
+<ul style="list-style-type: square;margin-left: 26px;">
+    <li><strong><span style='line-height:115%;font-family:"Times New Roman",serif;font-size:16px;color:#282828;background:white;'>Tools for Comparative Genomics</span></strong><span style='line-height:115%;font-family:"Times New Roman",serif;font-size:16px;color:#282828;background:white;'>:</span>
+        <ul style="list-style-type: undefined margin-left: 62px;">
+            <li><strong><span style='line-height:115%;font-family:"Times New Roman",serif;font-size:16px;color:#282828;background:white;'>Roary</span></strong><span style='line-height:115%;font-family:"Times New Roman",serif;font-size:16px;color:#282828;background:white;'>: A tool to perform pangenome analysis, identifying core and accessory genes across multiple genomes.</span></li>
+            <li><strong><span style='line-height:115%;font-family:"Times New Roman",serif;font-size:16px;color:#282828;background:white;'>Mauve</span></strong><span style='line-height:115%;font-family:"Times New Roman",serif;font-size:16px;color:#282828;background:white;'>: Used for genome alignment and identifying large-scale genomic rearrangements.</span></li>
+        </ul>
+    </li>
+</ul>
+<ol style="list-style-type: decimal;margin-left: 11.3px;">
+    <li><strong><em><span style='line-height:115%;font-family:"Times New Roman",serif;font-size:16px;'>Illumina based AMR detection analysis</span></em></strong></li>
+</ol>
+<table style="border: none;border-collapse: collapse;width: 602px;">
+    <tbody>
+        <tr>
+            <td style="width: 451.45pt;background: white;padding: 5pt;vertical-align: top;">
+                <p style='margin-top:12.0pt;margin-right:0cm;margin-bottom:  12.0pt;margin-left:0cm;font-size:11.0pt;font-family:"Calibri",sans-serif;'><span style='font-size:16px;font-family:"Times New Roman";color:#282828;background:white;'>We&rsquo;ll be working on an example dataset of <em>Acinetobacter baumannii</em>, retrieved from NCBI SRA, where raw genome data is publicly available and will be performing variant calling and genome assembly and annotation. We will be making use of Conda package manager to download and install tools and perform our analysis:</span></p>
+                <p style='margin-top:12.0pt;margin-right:0cm;margin-bottom:  12.0pt;margin-left:0cm;font-size:11.0pt;font-family:"Calibri",sans-serif;'><span style="font-size:16px;font-family:Consolas;color:black;background:white;">We&rsquo;ll be retrieving dataset SRR30953553 from NCBI SRA (</span><span style="color:black;"><a href="https://www.ncbi.nlm.nih.gov/sra"><span style='font-size:16px;font-family:"Times New Roman",serif;font-family:  Consolas;color:black;background:white;'>https://www.ncbi.nlm.nih.gov/sra</span></a></span><span style='font-size:16px;font-family:"Times New Roman",serif;font-family:Consolas;color:black;background:white;'>) and downloading it using the following code:</span></p>
+                <p style='margin-top:0cm;margin-right:0cm;margin-bottom:8.0pt;margin-left:0cm;font-size:11.0pt;font-family:"Calibri",sans-serif;border:none;'><strong><span style='font-size:16px;font-family:"Times New Roman",serif;font-family:Consolas;color:black;background:white;'>#&nbsp;</span></strong><strong><span style="font-family:  Consolas;color:black;background:white;">We&rsquo;ll be creating a new conda environment and activating it using the following code</span></strong></p>
+                <p style='margin-top:0cm;margin-right:0cm;margin-bottom:8.0pt;margin-left:0cm;font-size:11.0pt;font-family:"Calibri",sans-serif;border:none;'><strong><span style='font-size:16px;font-family:"Times New Roman",serif;font-family:Consolas;background:white;'>&nbsp;</span></strong></p>
+                <p style='margin-top:0cm;margin-right:0cm;margin-bottom:8.0pt;margin-left:0cm;font-size:11.0pt;font-family:"Calibri",sans-serif;border:none;'><strong><span style="font-size:16px;line-height:  107%;font-family:Consolas;color:black;background:white;">#&nbsp;</span></strong><strong><span style="font-family:Consolas;color:black;background:white;">We&rsquo;ll be installing the sra-tools utility to download our dataset</span></strong></p>
+                <p style='margin-top:0cm;margin-right:0cm;margin-bottom:8.0pt;margin-left:0cm;font-size:11.0pt;font-family:"Calibri",sans-serif;border:none;'><strong><span style='font-size:16px;font-family:"Times New Roman",serif;font-family:Consolas;color:black;background:white;'>#&nbsp;</span></strong><strong><span style="font-family:  Consolas;color:black;background:white;">Now we&rsquo;ll download and extract our data using the following command</span></strong></p>
+                <p style='margin-top:0cm;margin-right:0cm;margin-bottom:8.0pt;margin-left:0cm;font-size:11.0pt;font-family:"Calibri",sans-serif;border:none;'><strong><span style='font-size:16px;font-family:"Times New Roman",serif;font-family:Consolas;color:black;background:white;'>#&nbsp;</span></strong><strong><span style="font-family:  Consolas;color:black;background:white;">We should get 2 output files in .fastq format as output</span></strong></p>
+                <p style='margin-top:0cm;margin-right:0cm;margin-bottom:0cm;margin-left:0cm;font-size:11.0pt;font-family:"Calibri",sans-serif;border:none;'><strong><span style="font-size:16px;line-height:  107%;font-family:Consolas;color:black;background:white;">#&nbsp;</span></strong><strong><span style="font-family:Consolas;color:black;background:white;">We&rsquo;ll compress this FASTQ data in order to speed up our analysis and save space using:</span></strong></p>
+            </td>
+        </tr>
+        <tr>
+            <td style="width: 451.45pt;background: white;padding: 5pt;vertical-align: top;">
+                <p style='margin-top:0cm;margin-right:0cm;margin-bottom:0cm;margin-left:0cm;font-size:11.0pt;font-family:"Calibri",sans-serif;border:none;'><strong><span style="font-size:16px;line-height:  107%;font-family:Consolas;color:black;background:white;">#&nbsp;</span></strong><strong><span style="font-family:Consolas;color:black;background:white;">Once the data is downloaded, we&rsquo;re ready to perform quality control #(QC) step, first, we&rsquo;ll assess the quality of our data using FASTQC</span></strong></p>
+                <p style='margin-top:0cm;margin-right:0cm;margin-bottom:8.0pt;margin-left:0cm;font-size:11.0pt;font-family:"Calibri",sans-serif;border:none;'><strong><span style="font-size:16px;line-height:  107%;font-family:Consolas;color:black;background:white;">#&nbsp;</span></strong><strong><span style="font-family:Consolas;color:black;background:white;">FASTQC</span></strong></p>
+                <p style='margin-top:0cm;margin-right:0cm;margin-bottom:8.0pt;margin-left:0cm;font-size:11.0pt;font-family:"Calibri",sans-serif;border:none;'><strong><span style='font-size:16px;font-family:"Times New Roman",serif;font-family:Consolas;color:black;background:white;'>#&nbsp;</span></strong><strong><span style="font-family:  Consolas;color:black;background:white;">Create an output directory to store your results in:</span></strong></p>
+                <p style='margin-top:0cm;margin-right:0cm;margin-bottom:8.0pt;margin-left:0cm;font-size:11.0pt;font-family:"Calibri",sans-serif;border:none;'><strong><span style='font-size:16px;font-family:"Times New Roman",serif;font-family:Consolas;color:black;background:white;'>#&nbsp;</span></strong><strong><span style="font-family:  Consolas;color:black;background:white;">Run FASTQC using:</span></strong></p>
+                <p style='margin-top:0cm;margin-right:0cm;margin-bottom:8.0pt;margin-left:0cm;font-size:11.0pt;font-family:"Calibri",sans-serif;border:none;'><strong><span style='font-size:16px;font-family:"Times New Roman",serif;font-family:Consolas;color:black;background:white;'>#&nbsp;</span></strong><strong><span style="font-family:  Consolas;color:black;background:white;">The FASTQC report contains comprehensive information and a manual can #be found at: #</span></strong><span style="color:black;"><a href="https://www.bioinformatics.babraham.ac.uk/projects/fastqc/Help/"><strong><span style="font-family:Consolas;color:black;background:white;">https://www.bioinformatics.babraham.ac.uk/projects/fastqc/Help/</span></strong></a></span></p>
+                <p style='margin-top:0cm;margin-right:0cm;margin-bottom:8.0pt;margin-left:0cm;font-size:11.0pt;font-family:"Calibri",sans-serif;border:none;'><strong><span style='font-size:16px;font-family:"Times New Roman",serif;font-family:Consolas;color:black;background:white;'>#&nbsp;</span></strong><strong><span style="font-family:  Consolas;color:black;background:white;">Now, we&rsquo;ll perform the next step of our QC, removing adapter sequences #and low quality reads using a tool called Trim-galore</span></strong></p>
+                <p style='margin-top:0cm;margin-right:0cm;margin-bottom:8.0pt;margin-left:0cm;font-size:11.0pt;font-family:"Calibri",sans-serif;border:none;'><strong><span style='font-size:16px;font-family:"Times New Roman",serif;font-family:Consolas;color:black;background:white;'>#&nbsp;</span></strong><strong><span style="font-family:  Consolas;color:black;background:white;">Install</span></strong></p>
+                <p style='margin-top:0cm;margin-right:0cm;margin-bottom:8.0pt;margin-left:0cm;font-size:11.0pt;font-family:"Calibri",sans-serif;border:none;'><strong><span style='font-size:16px;font-family:"Times New Roman",serif;font-family:Consolas;color:black;background:white;'>#&nbsp;</span></strong><strong><span style="font-family:  Consolas;color:black;background:white;">Now we&rsquo;ll trim our data&nbsp;</span></strong></p>
+                <p style='margin-top:0cm;margin-right:0cm;margin-bottom:8.0pt;margin-left:0cm;font-size:11.0pt;font-family:"Calibri",sans-serif;border:none;'><strong><span style='font-size:16px;font-family:"Times New Roman",serif;font-family:Consolas;color:black;background:white;'>#&nbsp;</span></strong><strong><span style="font-family:  Consolas;color:black;background:white;">This will result in new FASTQ files (.fq.gz) being created, including #a FASTQC report of your data after trimming.</span></strong></p>
+                <p style='margin-top:0cm;margin-right:0cm;margin-bottom:8.0pt;margin-left:0cm;font-size:11.0pt;font-family:"Calibri",sans-serif;border:none;'><strong><span style='font-size:16px;font-family:"Times New Roman",serif;font-family:Consolas;color:black;background:white;'>#&nbsp;</span></strong><strong><span style="font-family:  Consolas;color:black;background:white;">Now our data is filtered, we&rsquo;ll use it to perform the next step, # Called mapping/alignment, where we&rsquo;ll align our data against a #reference genome. First, we&rsquo;ll install the tools needed for downloading # Our reference and mapping, then we&rsquo;ll perform the step.</span></strong><span style="font-family:Consolas;color:black;background:white;">&nbsp; &nbsp;</span></p>
+                <p style='margin-top:0cm;margin-right:0cm;margin-bottom:8.0pt;margin-left:0cm;font-size:11.0pt;font-family:"Calibri",sans-serif;border:none;'><strong><span style='font-size:16px;font-family:"Times New Roman",serif;font-family:Consolas;color:black;background:white;'>#&nbsp;</span></strong><strong><span style="font-family:  Consolas;color:black;background:white;">Now we&rsquo;ll download the <em>A. baumannii ATCC 19606</em> reference genome from #NCBI using the following command:</span></strong></p>
+                <p style='margin-top:0cm;margin-right:0cm;margin-bottom:8.0pt;margin-left:0cm;font-size:11.0pt;font-family:"Calibri",sans-serif;border:none;'><strong><span style='font-size:16px;font-family:"Times New Roman",serif;font-family:Consolas;color:black;background:white;'>#&nbsp;</span></strong><strong><span style="font-family:  Consolas;color:black;background:white;">We&rsquo;ll get a ncbi_dataset.zip file, which we&rsquo;ll decompress and copy our # reference genome in FASTA (.fna) format to the present directory.</span></strong></p>
+                <p style='margin-top:0cm;margin-right:0cm;margin-bottom:8.0pt;margin-left:0cm;font-size:11.0pt;font-family:"Calibri",sans-serif;border:none;'><strong><span style='font-size:16px;font-family:"Times New Roman",serif;font-family:Consolas;color:black;background:white;'>#&nbsp;</span></strong><strong><span style="font-family:  Consolas;color:black;background:white;">Firstly, we&rsquo;ll index our reference genome</span></strong></p>
+                <p style='margin-top:0cm;margin-right:0cm;margin-bottom:8.0pt;margin-left:0cm;font-size:11.0pt;font-family:"Calibri",sans-serif;border:none;'><strong><span style='font-size:16px;font-family:"Times New Roman",serif;font-family:Consolas;color:black;background:white;'>#&nbsp;</span></strong><strong><span style="font-family:  Consolas;color:black;background:white;">Now, we&rsquo;ll perform alignment</span></strong></p>
+                <p style='margin-top:0cm;margin-right:0cm;margin-bottom:8.0pt;margin-left:0cm;font-size:11.0pt;font-family:"Calibri",sans-serif;border:none;'><strong><span style='font-size:16px;font-family:"Times New Roman",serif;font-family:Consolas;color:black;background:white;'>#&nbsp;</span></strong><strong><span style="font-family:  Consolas;color:black;background:white;">This will result in a .SAM (Sequence Alignment Map) format file containing alignment sequences and their quality. For faster processing and decreasing space, we&rsquo;ll convert the SAM format to BAM (Binary Alignment Map) using Samtools.</span></strong></p>
+                <p style='margin-top:0cm;margin-right:0cm;margin-bottom:8.0pt;margin-left:0cm;font-size:11.0pt;font-family:"Calibri",sans-serif;border:none;'><strong><span style='font-size:16px;font-family:"Times New Roman",serif;font-family:Consolas;color:black;background:white;'>#&nbsp;</span></strong><strong><span style="font-family:  Consolas;color:black;background:white;">We&rsquo;ll assess our mapping stats using:</span></strong></p>
+                <p style='margin-top:0cm;margin-right:0cm;margin-bottom:8.0pt;margin-left:0cm;font-size:11.0pt;font-family:"Calibri",sans-serif;border:none;'><strong><span style='font-size:16px;font-family:"Times New Roman",serif;font-family:Consolas;color:black;background:white;'>#&nbsp;</span></strong><strong><span style="font-family:  Consolas;color:black;background:white;">Now that our data is aligned, we can perform Variant Calling and identify SNPs and INDELs. We&rsquo;ll be doing that using Freebayes.</span></strong></p>
+                <p style='margin-top:0cm;margin-right:0cm;margin-bottom:8.0pt;margin-left:0cm;font-size:11.0pt;font-family:"Calibri",sans-serif;border:none;'><strong><span style='font-size:16px;font-family:"Times New Roman",serif;font-family:Consolas;color:black;background:white;'>#&nbsp;</span></strong><strong><span style="font-family:  Consolas;color:black;background:white;">We need a BAM file sorted by reference position in order to call #variants by Freebayes, we can do that by the following command:</span></strong></p>
+                <p style='margin-top:0cm;margin-right:0cm;margin-bottom:8.0pt;margin-left:0cm;font-size:11.0pt;font-family:"Calibri",sans-serif;border:none;'><strong><span style='font-size:16px;font-family:"Times New Roman",serif;font-family:Consolas;color:black;background:white;'>#&nbsp;</span></strong><strong><span style="font-family:  Consolas;color:black;background:white;">Now that we have a sorted BAM file, we&rsquo;ll call variant by providing #our reference FASTA file and our sorted BAM file:</span></strong></p>
+                <p style='margin-top:0cm;margin-right:0cm;margin-bottom:0cm;margin-left:0cm;font-size:11.0pt;font-family:"Calibri",sans-serif;border:none;'><strong><span style="font-size:16px;line-height:  107%;font-family:Consolas;color:black;background:white;">#&nbsp;</span></strong><strong><span style="font-family:Consolas;color:black;background:white;">The next step in order to find AMR genes is to perform genome assembly</span></strong><span style="font-family:Consolas;color:black;background:white;">&nbsp;</span></p>
+                <p style='margin-top:0cm;margin-right:0cm;margin-bottom:8.0pt;margin-left:0cm;font-size:11.0pt;font-family:"Calibri",sans-serif;'><strong><span style='font-size:16px;font-family:"Times New Roman",serif;font-family:Consolas;color:black;background:white;'>#&nbsp;</span></strong><strong><span style="font-family:  Consolas;color:black;background:white;">We&rsquo;ll be using Spades to perform <em>de novo&nbsp;</em>genome assembly</span></strong></p>
+                <p style='margin-top:0cm;margin-right:0cm;margin-bottom:8.0pt;margin-left:0cm;font-size:11.0pt;font-family:"Calibri",sans-serif;'><span style='font-size:16px;font-family:"Times New Roman",serif;font-family:  Consolas;background:white;'>&nbsp;</span></p>
+                <p style='margin-top:0cm;margin-right:0cm;margin-bottom:8.0pt;margin-left:0cm;font-size:11.0pt;font-family:"Calibri",sans-serif;border:none;'><strong><span style='font-size:16px;font-family:"Times New Roman",serif;font-family:Consolas;color:black;background:white;'>#&nbsp;</span></strong><strong><span style="font-family:  Consolas;color:black;background:white;">We&rsquo;ll be using our filtered data as input to perform genome assembly.</span></strong></p>
+                <p style='margin-top:0cm;margin-right:0cm;margin-bottom:8.0pt;margin-left:0cm;font-size:11.0pt;font-family:"Calibri",sans-serif;'><strong><span style='font-size:16px;font-family:"Times New Roman",serif;font-family:Consolas;color:black;background:white;'>#&nbsp;</span></strong><strong><span style="font-family:  Consolas;color:black;background:white;">The contigs.fasta file, in our assembly directory, contains the genome assembly.&nbsp;</span></strong><strong><span style='font-size:16px;font-family:"Times New Roman",serif;font-family:Consolas;color:black;background:white;'>We&rsquo;ll&nbsp;</span></strong><strong><span style="font-family:  Consolas;color:black;background:white;">search for AMR genes in this dataset using AMRFinderPlus, since it can take both nucleotide and protein FASTA files as input</span></strong></p>
+                <p style='margin-top:0cm;margin-right:0cm;margin-bottom:8.0pt;margin-left:0cm;font-size:11.0pt;font-family:"Calibri",sans-serif;border:none;'><strong><span style='font-size:16px;font-family:"Times New Roman",serif;font-family:Consolas;color:black;background:white;'>#&nbsp;</span></strong><strong><span style="font-family:  Consolas;color:black;background:white;">Now, we&rsquo;ll set up our database using</span></strong></p>
+                <p style='margin-top:0cm;margin-right:0cm;margin-bottom:8.0pt;margin-left:0cm;font-size:11.0pt;font-family:"Calibri",sans-serif;border:none;'><strong><span style='font-size:16px;font-family:"Times New Roman",serif;font-family:Consolas;color:black;background:white;'>#&nbsp;</span></strong><strong><span style="font-family:  Consolas;color:black;background:white;">Now, we&rsquo;ll run amrfinder</span></strong></p>
+                <p style='margin-top:0cm;margin-right:0cm;margin-bottom:0cm;margin-left:0cm;font-size:11.0pt;font-family:"Calibri",sans-serif;'><strong><span style="font-size:16px;line-height:  107%;font-family:Consolas;color:black;background:white;">#&nbsp;</span></strong><strong><span style="font-family:Consolas;color:black;background:white;">In order to retrieve amino acid sequences, we need to annotate our #genome assembly. We&rsquo;ll achieve this by using PROKKA.</span></strong></p>
+                <p style='margin-top:0cm;margin-right:0cm;margin-bottom:0cm;margin-left:0cm;font-size:11.0pt;font-family:"Calibri",sans-serif;'><strong><span style="font-family:Consolas;color:black;background:white;"># Install PROKKA</span></strong></p>
+                <p style='margin-top:0cm;margin-right:0cm;margin-bottom:8.0pt;margin-left:0cm;font-size:11.0pt;font-family:"Calibri",sans-serif;'><strong><span style='font-size:16px;font-family:"Times New Roman",serif;font-family:Consolas;color:black;background:white;'>#&nbsp;</span></strong><strong><span style="font-family:  Consolas;color:black;background:white;">We&rsquo;ll run PROKKA using:</span></strong></p>
+                <p style='margin-top:0cm;margin-right:0cm;margin-bottom:8.0pt;margin-left:0cm;font-size:11.0pt;font-family:"Calibri",sans-serif;border:none;'><strong><span style='font-size:16px;font-family:"Times New Roman",serif;font-family:Consolas;color:black;background:white;'>#&nbsp;</span></strong><strong><span style="font-family:  Consolas;color:black;background:white;">The PROKKA output will contain various types of files, including nucleotide and amino acid FASTA.</span></strong></p>
+            </td>
+        </tr>
+    </tbody>
+</table>
+<p><br></p>
